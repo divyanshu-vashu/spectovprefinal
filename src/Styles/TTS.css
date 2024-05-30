@@ -1,0 +1,39 @@
+/* index.css */
+.tts-button {
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .tts-button:hover {
+    background-color: deepskyblue;
+  }
+
+  .tts-button {
+    padding: 10px 20px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .tts-button:hover {
+    background-color: rgb(0, 82, 189);
+  }
+  
+  .tts_select {
+    background-color: black;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  
