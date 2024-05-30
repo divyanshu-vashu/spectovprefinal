@@ -5,6 +5,7 @@ import ProductPage from "./pages/Product.jsx";
 import './index.css';
 import Defxv from "./components/Defxv";
 import Footer from "./components/Footer";
+import TextToSpeech from "./components/TextToSpeech.jsx"
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const MainLayout = () => {
       </div> */}
       
       <Footer />
+      <TextToSpeech/>
     </div>
   );
 };
