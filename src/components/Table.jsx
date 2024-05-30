@@ -7,23 +7,23 @@ function Table()
         <table className="special-features">
             <tr>
                 <td>
-                    <img src="src\assets\noun-lidar-3123571-black.png" alt="Lidar Symbol" className='lidar'/><br />
+                    <img src="../assets/noun-lidar-3123571-black.png" alt="Lidar Symbol" className='lidar'/><br />
                     <p className="description d5">LiDAR sensor</p>
                     {/* <i className="fa fa-solid fa-battery-full battery"></i> */}
                 </td>
                 <td>
-                    <img src="src\assets\noun-camera-lens-1636178-black.png" alt="Lens Symbol" className='lens'/><br />
+                    <img src="../assets/noun-camera-lens-1636178-black.png" alt="Lens Symbol" className='lens'/><br />
                     <p className="description d6">Lens built by<br /> <b>SONY</b></p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="src\assets\battery_spectov-black.png" alt="Battery Symbol" className='battery'/><br />
+                    <img src="../assets/battery_spectov-black.png" alt="Battery Symbol" className='battery'/><br />
                     <p className="description d1">Long Lasting Battery <br /><b>Upto 36Hrs</b></p>
                     {/* <i className="fa fa-solid fa-battery-full battery"></i> */}
                 </td>
                 <td>
-                    <img src="src\assets\noun-camera-lens-1636178-black.png" alt="Lens Symbol" className='lens'/><br />
+                    <img src="../assets/noun-camera-lens-1636178-black.png" alt="Lens Symbol" className='lens'/><br />
                     <p className="description d2">Lens built by<br /> <b>SONY</b></p>
                 </td>
             </tr>
