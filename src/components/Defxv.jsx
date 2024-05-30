@@ -17,7 +17,7 @@ const Defxv = () => {
         </div>
       </div>
       <div className="right-content">
-        <img src="../public/glasses2.jpg" alt="alternative_text" />
+        <img src="/glasses2.jpg" alt="alternative_text" />
       </div>
     </div>
   );
