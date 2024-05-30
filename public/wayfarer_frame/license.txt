@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wayfarer Frame
+* source:	https://sketchfab.com/3d-models/wayfarer-frame-2b479d8f706d44fa87b85151e33caf53
+* author:	kaveshkoli3 (https://sketchfab.com/kaveshkoli3)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wayfarer Frame" (https://sketchfab.com/3d-models/wayfarer-frame-2b479d8f706d44fa87b85151e33caf53) by kaveshkoli3 (https://sketchfab.com/kaveshkoli3) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

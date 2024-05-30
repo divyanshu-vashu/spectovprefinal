@@ -1,0 +1,11 @@
+Model Information:
+* title:	Virtual Reality Headset MillionPainter
+* source:	https://sketchfab.com/3d-models/virtual-reality-headset-millionpainter-81f6fe5982fa4cefaf46692eab773d50
+* author:	TheMillionPainter (https://sketchfab.com/TheMillionPainter)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Virtual Reality Headset MillionPainter" (https://sketchfab.com/3d-models/virtual-reality-headset-millionpainter-81f6fe5982fa4cefaf46692eab773d50) by TheMillionPainter (https://sketchfab.com/TheMillionPainter) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

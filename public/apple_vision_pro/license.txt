@@ -1,0 +1,11 @@
+Model Information:
+* title:	Apple Vision Pro
+* source:	https://sketchfab.com/3d-models/apple-vision-pro-3341d1f3f75e41b59fcedd1f46f03d56
+* author:	DextonOfficial (https://sketchfab.com/DextonOfficial)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Apple Vision Pro" (https://sketchfab.com/3d-models/apple-vision-pro-3341d1f3f75e41b59fcedd1f46f03d56) by DextonOfficial (https://sketchfab.com/DextonOfficial) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

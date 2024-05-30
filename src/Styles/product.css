@@ -1,0 +1,19 @@
+:root {
+    --primary: #ffff;
+    --secondary: #000;
+    --black-100: #41474d;
+    --black-200: #090325;
+    --white-100: #f3f3f3;
+    --blue-100: #46a9b6;
+    --yellow-100: #f7c860;
+    --red-100: #d65c6e;
+  }
+  
+
+.product_container
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ebe8e8;
+}
+

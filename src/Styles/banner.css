@@ -1,0 +1,79 @@
+.banner_container {
+  /* background: linear-gradient(to bottom, #0a0a0a, #252525, #0b0b0b); */
+background-color: rgb(255, 255, 255);
+  /* background-color: rgb(20, 20, 20); */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.banner_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.banner_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.banner_text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.banner_title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0000FF;
+}
+
+.banner_desc {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  margin-bottom: 30px;
+}
+
+.banner_price {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  color: #ff5040;
+}
+
+.buy_now_button {
+  margin-left: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff5040;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buy_now_button:hover {
+  background-color: rgb(235, 208, 0);
+}
+
+.banner_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.banner_image img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
