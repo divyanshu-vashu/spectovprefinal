@@ -11,8 +11,6 @@ import Specs from '../components/Specs'
 import Table from '../components/Table'
 import TextToSpeech from '../components/TextToSpeech'
 
-
-
 const product = () => {
   return (
     <div>
