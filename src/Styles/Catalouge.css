@@ -6,7 +6,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: #f9f9f9;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   
   .catalouge_title {
@@ -26,10 +26,9 @@
     width: 100vw;
   }
   
-  /* .card_container {
+  .card_container {
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 350px;
-  } */
-  
+  }
