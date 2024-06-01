@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { debounce } from "lodash";
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = debounce((event) => {
       const x = Math.max(0, Math.min(event.clientX, window.innerWidth - 10));
       const y = Math.max(
         0,
@@ -14,7 +15,7 @@ const Cursor = () => {
         )
       );
       setPosition({ x, y });
-    };
+    }, 5); // debounce delay in milliseconds
 
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -30,15 +31,15 @@ const Cursor = () => {
         style={{
           left: `${position.x - 75}px`,
           top: `${position.y - 75}px`,
-          transition: "left 0.1s ease-out, top 0.1s ease-out",
+          transition: "left 0s ease-out, top 0s ease-out",
         }}
       ></span>
       <span
-        className="absolute h-[10px] w-[10px] bg-black z-10  rounded-full mix-blend-screen pointer-events-none overflow-hidden"
+        className="absolute h-[10px] w-[10px] bg-black z-10 rounded-full mix-blend-screen pointer-events-none overflow-hidden"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          transition: "left 0.1s ease-out, top 0.1s ease-out",
+          transition: "left 0s ease-out, top 0s ease-out",
         }}
       ></span>
       <span
@@ -46,7 +47,7 @@ const Cursor = () => {
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          transition: "left 0.1s ease-out, top 0.1s ease-out",
+          transition: "left 0s ease-out, top 0s ease-out",
         }}
       ></span>
       <span
@@ -54,7 +55,7 @@ const Cursor = () => {
         style={{
           left: `${position.x - 75}px`,
           top: `${position.y}px`,
-          transition: "left 0.15s ease-out, top 0.15s ease-out",
+          transition: "left 0s ease-out, top 0s ease-out",
         }}
       ></span>
       <span
@@ -62,7 +63,7 @@ const Cursor = () => {
         style={{
           left: `${position.x - 50}px`,
           top: `${position.y - 75}px`,
-          transition: "left 0.2s ease-out, top 0.2s ease-out",
+          transition: "left 0s ease-out, top 0s ease-out",
         }}
       ></span>
     </div>
