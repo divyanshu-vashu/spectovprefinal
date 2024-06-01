@@ -1,94 +1,119 @@
-/* #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+
+.center-container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.special-features {
+  width: 100%;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.special-features td {
+  padding: 20px;
+  vertical-align: top;
+}
+
+.battery, .lens, .lidar, .chip, .port {
+  display: block;
+  margin: 0 auto;
+}
+
+.battery {
+  height: 35px;
+  width: 60px;
+}
+
+.lens {
+  height: 70px;
+}
+
+.chip {
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.port {
+  height: 50px;
+}
+
+.lidar {
+  height: 75px;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.spf {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .spf {
+      font-size: 2rem;
+  }
+
+  .description {
+      font-size: 1.2rem;
+  }
+
+  .special-features {
+      width: 90%;
+  }
+
+  .special-features td {
+      padding-right: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .spf {
+      font-size: 1.5rem;
+  }
+
+  .description {
+      font-size: 1rem;
+  }
+
+  .special-features {
+      width: 100%;
+      display: block;
+  }
+
+  .special-features tr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+
+  .special-features td {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .battery, .lens, .chip, .lidar, .port {
+      height: auto;
+      width: 50px;
+      margin-bottom: 10px;
+  }
+  .center-container
+  {
     text-align: center;
-  } */
-  body{
-    background-color: white;
+    display: flex;
+    justify-content: center;
   }
-  
-  .battery
-  {
-    height: 35px;
-    width: 60px;
-  }
-  
-  .lens
-  {
-    height: 70px;
-  }
-  
-  td
-  {
-    padding-right: 40px;
-  }
-  .d2
-  {
-    position: relative;
-    top: -17px;
-  }
-  
-  .d4
-  {
-    position: relative;
-    top: -75px;
-  }
-  
-  .description
-  {
-    font-size:1.5rem;
-    font-weight: 500;
-  }
+}
 
-  .chip
-  {
-    height: 100px;
-    border:2px solid black;
-    border-radius: 10px;
-    padding: -80px;
-  }
-  
-  .port
-  {
-    height: 250px;
-  }
   
   
-  .lidar
-  {
-    height: 75px;
-  }
-  
-  .loww
-  {
-    position: relative;
-    top: -60px;
-  }
-
-  .lidar,.battery,.chip
-  {
-    position: relative;
-    left: 90px;
-  }
-
-  .lens
-  {
-    position: relative;
-    left: 100px;
-  }
-
-  .special-features
-  {
-    position: relative;
-    left: 550px;
-  }
-
-  .spf
-  {
-    font-size:3rem;
-    font-weight: 600;
-    text-align: center;
-    position: relative;
-    left: 50px;
-  }
