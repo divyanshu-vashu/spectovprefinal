@@ -10,13 +10,14 @@ import Testimonials from '../components/Testimonials'
 import Specs from '../components/Specs'
 import Table from '../components/Table'
 import TextToSpeech from '../components/TextToSpeech'
-
+import Cursor from '../components/Cursor'
 
 
 const product = () => {
   return (
     <div>
-    <div className='product_container'>
+    <div className='product_container cursor-none'>
+        <Cursor/>
         <Navbar/>
         <Banner/>
         <Catalouge/>
