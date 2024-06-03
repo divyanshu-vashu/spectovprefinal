@@ -1,6 +1,6 @@
 .banner_container {
   /* background: linear-gradient(to bottom, #0a0a0a, #252525, #0b0b0b); */
-background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   /* background-color: rgb(20, 20, 20); */
   color: black;
   display: flex;
@@ -21,7 +21,6 @@ background-color: rgb(255, 255, 255);
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
 }
 
 .banner_text {
@@ -32,7 +31,7 @@ background-color: rgb(255, 255, 255);
 .banner_title {
   font-size: 4rem;
   font-weight: bold;
-  color: #0000FF;
+  color: #0000ff;
 }
 
 .banner_desc {

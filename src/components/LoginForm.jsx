@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function LoginPage() {
-  const [loginData, setLoginData] = useState({ email: '', password: '' });
-  const [registerData, setRegisterData] = useState({ email: '', password: '', confirmPassword: '' });
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
+  const [registerData, setRegisterData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const [isLoginForm, setIsLoginForm] = useState(true);
 
   const handleLoginInputChange = (e) => {
@@ -17,13 +21,13 @@ function LoginPage() {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log('Login form submitted with:', loginData);
+    console.log("Login form submitted with:", loginData);
     // Add your login logic here
   };
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log('Register form submitted with:', registerData);
+    console.log("Register form submitted with:", registerData);
     // Add your register logic here
   };
 
@@ -33,7 +37,7 @@ function LoginPage() {
 
   return (
     <div>
-      <h1>{isLoginForm ? 'Login Page' : 'Register Page'}</h1>
+      <h1>{isLoginForm ? "Login Page" : "Register Page"}</h1>
       {isLoginForm ? (
         <form onSubmit={handleLoginSubmit}>
           <div>
@@ -60,7 +64,10 @@ function LoginPage() {
           </div>
           <button type="submit">Login</button>
           <p>
-            Don't have an account? <button type="button" onClick={toggleForm}>Register</button>
+            Don't have an account?{" "}
+            <button type="button" onClick={toggleForm}>
+              Register
+            </button>
           </p>
         </form>
       ) : (
@@ -100,7 +107,10 @@ function LoginPage() {
           </div>
           <button type="submit">Register</button>
           <p>
-            Already have an account? <button type="button" onClick={toggleForm}>Login</button>
+            Already have an account?{" "}
+            <button type="button" onClick={toggleForm}>
+              Login
+            </button>
           </p>
         </form>
       )}

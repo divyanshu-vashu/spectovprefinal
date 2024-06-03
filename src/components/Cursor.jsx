@@ -11,8 +11,8 @@ const Cursor = () => {
         0,
         Math.min(
           event.clientY + window.scrollY,
-          document.documentElement.scrollHeight - 10
-        )
+          document.documentElement.scrollHeight - 10,
+        ),
       );
       setPosition({ x, y });
     }, 5); // debounce delay in milliseconds
@@ -25,9 +25,9 @@ const Cursor = () => {
   }, []);
 
   return (
-    <div className="hidden md:block cursorReplace">
+    <div className="cursorReplace hidden md:block">
       <span
-        className="absolute h-[100px] w-[100px] bg-white z-10 rounded-full pointer-events-none overflow-hidden blur-3xl"
+        className="pointer-events-none absolute z-10 h-[100px] w-[100px] overflow-hidden rounded-full bg-white blur-3xl"
         style={{
           left: `${position.x - 75}px`,
           top: `${position.y - 75}px`,
@@ -35,7 +35,7 @@ const Cursor = () => {
         }}
       ></span>
       <span
-        className="absolute h-[10px] w-[10px] bg-black z-10 rounded-full mix-blend-screen pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute z-10 h-[10px] w-[10px] overflow-hidden rounded-full bg-black mix-blend-screen"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
@@ -43,7 +43,7 @@ const Cursor = () => {
         }}
       ></span>
       <span
-        className="absolute h-[75px] w-[75px] bg-[#43A7B6] z-10 blur-2xl overflow-x-hidden pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute z-10 h-[75px] w-[75px] overflow-hidden overflow-x-hidden bg-[#43A7B6] blur-2xl"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
@@ -51,7 +51,7 @@ const Cursor = () => {
         }}
       ></span>
       <span
-        className="absolute h-[75px] w-[75px] bg-[#DD5061] z-10 blur-2xl overflow-x-hidden pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute z-10 h-[75px] w-[75px] overflow-hidden overflow-x-hidden bg-[#DD5061] blur-2xl"
         style={{
           left: `${position.x - 75}px`,
           top: `${position.y}px`,
@@ -59,7 +59,7 @@ const Cursor = () => {
         }}
       ></span>
       <span
-        className="absolute h-[75px] w-[75px] bg-[#FDC654] z-10 blur-2xl overflow-x-hidden pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute z-10 h-[75px] w-[75px] overflow-hidden overflow-x-hidden bg-[#FDC654] blur-2xl"
         style={{
           left: `${position.x - 50}px`,
           top: `${position.y - 75}px`,

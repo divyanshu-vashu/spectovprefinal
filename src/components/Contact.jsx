@@ -42,7 +42,7 @@ const Contact = () => {
           to_email: "vdkalife@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -60,64 +60,65 @@ const Contact = () => {
           console.error(error);
 
           alert("Ahh, something went wrong. Please try again.");
-        }
+        },
       );
   };
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden bg-white rounded-2xl`}
+      className={`flex flex-col-reverse gap-10 overflow-hidden rounded-2xl bg-white xl:mt-12 xl:flex-row`}
     >
-
       {/* bg-white bg-black-100*/}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-white p-8 rounded-2xl'
+        className="flex-[0.75] rounded-2xl bg-white p-8"
       >
         <h3 className={styles.sectionHeadText}>Contact us</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className="mt-12 flex flex-col gap-8"
         >
-          <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your Name</span>
-            <input required
-              type='text'
-              name='name'
+          <label className="flex flex-col">
+            <span className="mb-4 font-medium text-black">Your Name</span>
+            <input
+              required
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
+              className="rounded-lg border-none bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-[#dddbe7]"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your email</span>
-            <input required
-              type='email'
-              name='email'
+          <label className="flex flex-col">
+            <span className="mb-4 font-medium text-black">Your email</span>
+            <input
+              required
+              type="email"
+              name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
+              className="rounded-lg border-none bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-[#dddbe7]"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your Message</span>
+          <label className="flex flex-col">
+            <span className="mb-4 font-medium text-black">Your Message</span>
             <textarea
               rows={7}
-              name='message'
+              name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
+              placeholder="What you want to say?"
+              className="rounded-lg border-none bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-[#dddbe7]"
             />
           </label>
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            type="submit"
+            className="w-fit rounded-xl bg-tertiary px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -126,13 +127,12 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
         {/* <EarthCanvas /> */}
         <div className="contact-img">
           <img src="/c2.png" alt="" />
         </div>
-        
       </motion.div>
     </div>
   );
