@@ -74,8 +74,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-white p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>Contact us</h3>
 
         <form
           ref={formRef}
@@ -84,24 +83,24 @@ const Contact = () => {
         >
           <label className='flex flex-col'>
             <span className='text-black font-medium mb-4'>Your Name</span>
-            <input
+            <input required
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-black font-medium mb-4'>Your email</span>
-            <input
+            <input required
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -112,7 +111,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-[#dddbe7] text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 

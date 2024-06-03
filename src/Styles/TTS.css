@@ -1,41 +1,5 @@
-.tts-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 20px;
-  background-color: #ff5040;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: ease-in 0.15s;
-}
 
-.tts-button:hover {
-  background-color: rgb(230, 203, 0);
-  color: black;
-}
 
-.tts-popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  width: 50vw;
-  height: 30vh;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: rgb(255, 51, 0) 0px 0px 3px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 1000;
-}
 
 .close-button {
   background: none;
