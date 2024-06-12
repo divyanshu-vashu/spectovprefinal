@@ -29,11 +29,11 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-white" : "bg-white"
+      } fixed top-0 z-20 flex w-full items-center py-5 ${
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -42,58 +42,70 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-black text-[18px] font-bold cursor-pointer flex ">
+          <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+          <p className="flex cursor-pointer text-[18px] font-bold text-black">
             SpectoV &nbsp;
-            <span className="sm:block hidden"> | </span>
+            <span className="hidden sm:block"> | </span>
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-  <li
-    className={`relative ${
-      active === 'Product' ? 'text-red-500' : 'text-red-500'
-    } hover:bg-red-500 hover:text-white text-[18px] font-medium cursor-pointer`}
-    onClick={() => setActive('Product')}
-  >
-    <Link to="/products" className="text-inherit block px-3 py-1">
-      Product
-    </Link>
-  </li>
-  {navLinks.map((nav) => (
-    <li
-      key={nav.id}
-      className={`${
-        active === nav.title ? 'text-red-500' : 'text-black'
-      } hover:text-red-500 text-[18px] font-medium cursor-pointer`}
-      onClick={() => setActive(nav.title)}
-    >
-      <a href={`#${nav.id}`} className="block px-3 py-1">
-        {nav.title}
-      </a>
-    </li>
-  ))}
-</ul>
+        <ul className="hidden list-none flex-row gap-10 sm:flex">
+          <li
+            className={`${
+              active === "Product" ? "text-red-500" : "text-black"
+            } cursor-pointer text-[18px] font-medium hover:text-red-500`}
+            onClick={() => setActive("Product")}
+          >
+            <Link to="/products" className="block px-3 py-1 text-inherit">
+              Product
+            </Link>
+          </li>
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.title ? "text-red-500" : "text-black"
+              } cursor-pointer text-[18px] font-medium hover:text-red-500`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`#${nav.id}`} className="block px-3 py-1">
+                {nav.title}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="flex flex-1 items-center justify-end sm:hidden">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="h-[28px] w-[28px] cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl bg-white p-6 shadow-lg`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
+              <li
+                className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                  active === "Product" ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("Product");
+                }}
+              >
+                <Link to="/products" className="block px-3 py-1">
+                  Product
+                </Link>
+              </li>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-poppins cursor-pointer text-[16px] font-medium ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
@@ -101,7 +113,9 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${nav.id}`} className="block px-3 py-1">
+                    {nav.title}
+                  </a>
                 </li>
               ))}
             </ul>

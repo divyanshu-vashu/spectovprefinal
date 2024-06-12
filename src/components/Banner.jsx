@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../Styles/banner.css';
-import productImage from '../assets/glasses-removebg.png';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../Styles/banner.css";
+import productImage from "../assets/glasses-removebg.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,12 +18,12 @@ const Banner = () => {
         opacity: 1,
         x: 0,
         duration: 1,
-        ease: 'easeOut',
+        ease: "easeOut",
         scrollTrigger: {
           trigger: bannerTextRef.current,
-          start: 'top 80%', // When the top of the banner_text hits 80% of the viewport height
+          start: "top 80%", // When the top of the banner_text hits 80% of the viewport height
         },
-      }
+      },
     );
 
     gsap.to(bannerImageRef.current, {
@@ -32,7 +32,7 @@ const Banner = () => {
       duration: 2,
       repeat: -1,
       yoyo: true,
-      ease: 'power1.inOut',
+      ease: "power1.inOut",
       motionPath: {
         path: [
           { x: 0, y: 0 },
@@ -48,26 +48,27 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className='banner_container'>
-      <div className='banner_main'>
-        <div className='banner_content'>
-          <div className='banner_text' ref={bannerTextRef}>
-            <div className='banner_title'>DefXV</div>
-            <p className='banner_desc'>
-            Empowering communication through AI-driven sign language translation and intuitive gesture control.
+    <div className="banner_container">
+      <div className="banner_main">
+        <div className="banner_content">
+          <div className="banner_text" ref={bannerTextRef}>
+            <div className="banner_title">DefXV</div>
+            <p className="banner_desc">
+              Empowering communication through AI-driven sign language
+              translation and intuitive gesture control.
             </p>
-            <div className='banner_price'>
+            <div className="banner_price">
               $199
-              <button className='buy_now_button'>Buy Now</button>
+              <button className="buy_now_button">Buy Now</button>
             </div>
           </div>
-          <div className='banner_image' ref={bannerImageRef}>
-            <img src={productImage} alt='DefXV Product' />
+          <div className="banner_image" ref={bannerImageRef}>
+            <img src={productImage} alt="DefXV Product" />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Banner;

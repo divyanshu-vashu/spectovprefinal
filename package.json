@@ -22,9 +22,9 @@
     "nodemon": "^3.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-parallax-tilt": "^1.7.227",
     "react-router-dom": "^6.23.0",
     "react-scripts": "^3.0.1",
-    "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.149.0",
     "typed.js": "^2.1.0",
@@ -36,6 +36,8 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
+    "prettier": "^3.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.1",
     "tailwindcss": "^3.4.3",
     "vite": "^4.1.0"
   }

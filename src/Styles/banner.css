@@ -21,7 +21,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
 }
 
 .banner_text {
@@ -32,7 +31,7 @@
 .banner_title {
   font-size: 4rem;
   font-weight: bold;
-  color: #0000FF;
+  color: #0000ff;
 }
 
 .banner_desc {

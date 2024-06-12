@@ -17,7 +17,11 @@
   vertical-align: top;
 }
 
-.battery, .lens, .lidar, .chip, .port {
+.battery,
+.lens,
+.lidar,
+.chip,
+.port {
   display: block;
   margin: 0 auto;
 }
@@ -59,61 +63,65 @@
 
 @media (max-width: 900px) {   /*max-width: 768px */
   .spf {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .description {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .special-features {
-      width: 90%;
+    width: 90%;
   }
 
   .special-features td {
-      padding-right: 10px;
+    padding-right: 10px;
   }
 }
 
 @media (max-width: 900px) { /*max-width: 500px */
   .spf {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .description {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .special-features {
-      width: 100%;
-      display: block;
+    width: 100%;
+    display: block;
   }
 
   .special-features tr {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .special-features td {
-      padding: 10px;
-      text-align: center;
+    padding: 10px;
+    text-align: center;
   }
 
-  .battery, .lens, .chip, .lidar, .port {
-      height: auto;
-      width: 50px;
-      margin-bottom: 10px;
+  .battery,
+  .lens,
+  .chip,
+  .lidar,
+  .port {
+    height: auto;
+    width: 50px;
+    margin-bottom: 10px;
   }
-  .center-container
-  {
+  .center-container {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 }
+
 
 @media only screen and (max-width: 900px){
   tbody{
@@ -123,3 +131,4 @@
   }
 }
   
+

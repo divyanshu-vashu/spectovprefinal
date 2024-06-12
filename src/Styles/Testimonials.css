@@ -14,8 +14,12 @@
   font-weight: 500;
   margin-bottom: 50px;
   color: black;
+
   border-bottom: solid rgb(168, 168, 168) 2px ;
   border-top: solid rgb(168, 168, 168) 2px ;
+
+ 
+
   width: fit-content;
 }
 
@@ -26,7 +30,10 @@
   gap: 20px;
 }
 
-.testimonial_customers, .testimonial_reviews {
+
+.testimonial_customers,
+.testimonial_reviews {
+
   overflow: hidden;
   position: relative;
   white-space: nowrap;
@@ -57,22 +64,18 @@
 }
 
 .testimonial_card img {
+
   width:20vw;
+
   /* height: auto; */
   object-fit: cover;
   border-radius: 8px;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
 
-/* @keyframes marquee-reverse {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(100%); }
-}
-*/
+  
+
 
 @media only screen and (max-width: 700px){
   .marquee{
@@ -92,3 +95,12 @@
     margin: 30px 10px -100px 10px;
   }
 }
+
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
