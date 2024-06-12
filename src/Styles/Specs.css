@@ -1,3 +1,4 @@
+
 body {
   background-color: white;
   color: rgb(51, 50, 50);
@@ -37,6 +38,7 @@ body {
 .specs-table td:first-child {
   border-left: none;
 }
+
 
 .specs-table th:last-child,
 .specs-table td:last-child {
