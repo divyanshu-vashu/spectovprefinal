@@ -1,5 +1,4 @@
 import {
-  
   mobile,
   backend,
   creator,
@@ -35,7 +34,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  
 ];
 
 const services = [
@@ -152,7 +150,6 @@ const experiences = [
       "Gratitude Overflowing: SpectoV extends heartfelt thanks to VNest, VIT Chennai, and supporters for their belief and encouragement, vital to our success.",
     ],
   },
-  
 ];
 
 const testimonials = [
@@ -187,7 +184,7 @@ const projects = [
     name: "Guardian Activated",
     description:
       "Punch, swing, grab and stretch out your arms with the confidence of knowing you're clear of all obstructions.",
-    
+
     image: carrent,
     source_code_link: "https://github.com/",
   },
@@ -195,7 +192,7 @@ const projects = [
     name: "Share the experience",
     description:
       "Bring friends into battle or collaborate on a presentation. Cast directly to an enabled TV or phone using the our software app.",
-    
+
     image: jobit,
     source_code_link: "https://github.com/",
   },
@@ -203,7 +200,7 @@ const projects = [
     name: "Safety with passthrough",
     description:
       "Set up Guardian by using your controller to trace a virtual boundary around a safe play area in your physical space.",
-    
+
     image: tripguide,
     source_code_link: "https://github.com/",
   },
