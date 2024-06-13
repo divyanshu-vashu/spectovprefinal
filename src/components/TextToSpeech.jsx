@@ -4,60 +4,35 @@ import "../Styles/TTS.css";
 const TextToSpeech = () => {
   const [isEnabled, setIsEnabled] = useState(true);
   const [showPopup, setShowPopup] = useState(true);
-  const [popupTimer, setPopupTimer] = useState(12);
-  const [soundAllowed, setSoundAllowed] = useState(true);
+  const [popupTimer, setPopupTimer] = useState(1000);
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
-    // Check if sound is allowed in the browser
-    const checkSoundPermission = () => {
-      const utterance = new SpeechSynthesisUtterance();
-      utterance.text = ' ';
-      utterance.onend = () => setSoundAllowed(true);
-      window.speechSynthesis.speak(utterance);
-    };
-
-    checkSoundPermission();
-
-    // Start speaking when component mounts if sound is allowed
-    if (isEnabled && showPopup && soundAllowed) {
+    if (isEnabled && showPopup) {
       speakPopup();
-    } else if (isEnabled && !showPopup && soundAllowed) {
+    } else if (isEnabled && !showPopup) {
       speakContent();
     } else {
       window.speechSynthesis.cancel();
     }
-
-    return () => {
-      clearTimeout(popupTimeoutRef.current);
-      window.speechSynthesis.cancel(); // Cancel speech synthesis on component unmount
-    };
-  }, [isEnabled, showPopup, soundAllowed]);
+  }, [isEnabled, showPopup]);
 
   useEffect(() => {
-    if (showPopup && soundAllowed) {
+    if (showPopup) {
       startPopupTimer();
       popupTimeoutRef.current = setTimeout(() => {
         setShowPopup(false);
-      }, 12000); // Popup will close automatically after 12 seconds
+      }, 12000);
     } else {
       clearTimeout(popupTimeoutRef.current);
-      setPopupTimer(12); // Reset popup timer duration
+      setPopupTimer(12);
     }
 
     return () => {
       clearTimeout(popupTimeoutRef.current);
       window.speechSynthesis.cancel(); // Cancel speech synthesis on component unmount
     };
-  }, [showPopup, soundAllowed]);
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      window.speechSynthesis.cancel(); // Cancel speech synthesis on component unmount
-    };
-  }, []);
+  }, [showPopup]);
 
   const startPopupTimer = () => {
     const timerInterval = setInterval(() => {
@@ -67,7 +42,7 @@ const TextToSpeech = () => {
     return () => clearInterval(timerInterval);
   };
 
-  const speakPopup = async () => {
+  const speakPopup = () => {
     const popupText = `If you want to disable Text-to-Speech, press the spacebar. Popup will close in ${popupTimer} seconds.`;
     speakText(popupText);
   };
@@ -79,7 +54,7 @@ const TextToSpeech = () => {
 
   const speakText = (text) => {
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.voice = window.speechSynthesis.getVoices()[0]; // Use the browser's default voice
+    utterance.voice = getMicrosoftMarkVoice();
     window.speechSynthesis.speak(utterance);
   };
 
