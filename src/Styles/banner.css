@@ -1,6 +1,6 @@
 .banner_container {
   /* background: linear-gradient(to bottom, #0a0a0a, #252525, #0b0b0b); */
-background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   /* background-color: rgb(20, 20, 20); */
   color: black;
   display: flex;
@@ -76,4 +76,27 @@ background-color: rgb(255, 255, 255);
   max-height: 100%;
   width: auto;
   object-fit: cover;
+}
+
+
+@media only screen and (max-width: 1150px){
+  .banner_title{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .banner_container{
+    height: 125vh;
+  }
+  .banner_price{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .banner_content{
+    flex-direction: column;
+  }
+  .banner_text{
+    text-align: center;
+  }
 }

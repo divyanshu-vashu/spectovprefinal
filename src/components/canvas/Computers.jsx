@@ -5,7 +5,6 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  
   // const computer = useGLTF("./oculus_quest_vr_headset/scene.gltf");
   // const computer = useGLTF("./virtual_reality_headset_millionpainter/scene.gltf");
   // const computer = useGLTF("./apple_vision_pro/scene.gltf");
@@ -13,7 +12,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={3.85} groundColor='white' />
+      <hemisphereLight intensity={3.85} groundColor="white" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -59,7 +58,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
@@ -71,7 +70,6 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          
         />
         <Computers isMobile={isMobile} />
       </Suspense>

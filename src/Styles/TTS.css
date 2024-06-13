@@ -104,21 +104,5 @@
 }
 
 .close-button:hover {
-  color: black;
-  background-color: rgb(233, 221, 0);
-}
-
-.tts-button-cont {
-  display: flex;
-  gap: 10px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999; /* Below the popup but above the rest of the content */
+  color: red;
 }

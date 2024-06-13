@@ -1,75 +1,94 @@
 .testimonial_container {
-    text-align: center;
-    /* padding: 20px; */
-    background-color: white;
-    padding-top: 100px;
-    width: 100%;
+  text-align: center;
+  /* padding: 20px; */
+  background-color: white;
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial_title {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+  color: black;
+  border-bottom: solid rgb(168, 168, 168) 2px ;
+  border-top: solid rgb(168, 168, 168) 2px ;
+  width: fit-content;
+}
+
+.review_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial_customers, .testimonial_reviews {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+
+.marquee.reverse {
+  animation: marquee 20s linear infinite reverse;
+}
+
+.marquee_content {
+  display: flex;
+}
+
+.testimonial_card {
+  display: flex;
+  width: 25vw;
+  height: 45vh;
+  margin: 25px 20px;
+  border-radius: 50%;
+  /* background-color: black; */
+  justify-content: center;
+}
+
+.testimonial_card img {
+  width:20vw;
+  /* height: auto; */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* @keyframes marquee-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+*/
+
+@media only screen and (max-width: 700px){
+  .marquee{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto -10px;
   }
-  
-  .testimonial_title {
-    font-size: 4rem;
-    font-weight: 500;
-    margin-bottom: 50px;
-    color: black;
-    border-bottom: solid rgb(168, 168, 168) 2px ;
-    border-top: solid rgb(168, 168, 168) 2px ;
-    width: fit-content;
+  .testimonial_title{
+    font-size: 3rem;
+    margin: 5px;
   }
-  
-  .review_container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .testimonial_card img{
+    width: 35vw;
+    height: 20vh;
   }
-  
-  .testimonial_customers, .testimonial_reviews {
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
+  .testimonial_card{
+    width: 25vh;
+    margin: 30px 10px -100px 10px;
   }
-  
-  .marquee {
-    display: flex;
-    animation: marquee 20s linear infinite;
-  }
-  
-  
-  .marquee.reverse {
-    animation: marquee 20s linear infinite reverse;
-  }
-  
-  .marquee_content {
-    display: flex;
-  }
-  
-  .testimonial_card {
-    display: flex;
-    width: 25vw;
-    height: 45vh;
-    margin: 25px 20px;
-    border-radius: 50%;
-    /* background-color: black; */
-    justify-content: center;
-  }
-  
-  .testimonial_card img {
-    width:20vw;
-    /* height: auto; */
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  /* @keyframes marquee-reverse {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100%); }
-  }
-   */
+}

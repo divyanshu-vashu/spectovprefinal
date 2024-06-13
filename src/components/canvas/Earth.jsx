@@ -1,5 +1,4 @@
-
-import React, { Suspense , useEffect, useState} from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -10,17 +9,17 @@ const Earth = () => {
 
   return (
     <mesh>
-    <hemisphereLight intensity={3.85} groundColor='white' />
-    <spotLight
-      position={[-20, 50, 10]}
-      angle={0.12}
-      penumbra={1}
-      intensity={9}
-      castShadow
-      shadow-mapSize={1024}
-    />
-    <pointLight intensity={1} />
-    <primitive object={earth.scene} scale={6} position-y={0} rotation-y={0} />
+      <hemisphereLight intensity={3.85} groundColor="white" />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={9}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <pointLight intensity={1} />
+      <primitive object={earth.scene} scale={6} position-y={0} rotation-y={0} />
     </mesh>
   );
 };
@@ -29,7 +28,7 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{

@@ -1,9 +1,8 @@
-import React, { useEffect, useRef }  from 'react';
+import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-// import './Footer.css'; // Assuming you have a CSS file for styling
+import '../Styles/Footer.css';
 
 const Footer = () => {
-
   const typedEl = useRef(null);
 
   useEffect(() => {
@@ -26,25 +25,25 @@ const Footer = () => {
     <>
       <section className="access">
         <div className="footer-container text-black bg-white">
-          <h1 className='h1'>Join us on</h1>
-          <p className="type"><span ref={typedEl}/></p>
+          <h1 className="h1">Join us on</h1>
+          <p className="type"><span ref={typedEl} /></p>
           <div className="footer-socialmedia">
-          <div className='footer-socialmedia-link'>
-            <img src="https://img.icons8.com/wired/64/000000/youtube.png" alt="YouTube" />
-            <p className="pt-3">YouTube</p>
-          </div>
-          <div className='footer-socialmedia-link'>
-            <img src="https://img.icons8.com/dotty/64/000000/instagram.png" alt="Instagram" />
-            <p className="pt-3">Instagram</p>
-          </div>
-          <div className='footer-socialmedia-link'>
-            <img src="https://img.icons8.com/wired/64/000000/x.png" alt="Twitter" />
-            <p className="pt-3">Twitter</p>
-          </div>
-          <div className='footer-socialmedia-link'>
-            <img src="https://img.icons8.com/ios/64/000000/linkedin.png" alt="LinkedIn" />
-            <p className="pt-3">LinkedIn</p>
-          </div>
+            <div className="footer-socialmedia-link">
+              <img src="https://img.icons8.com/wired/64/000000/youtube.png" alt="YouTube" />
+              <p className="pt-3">YouTube</p>
+            </div>
+            <div className="footer-socialmedia-link">
+              <img src="https://img.icons8.com/dotty/64/000000/instagram.png" alt="Instagram" />
+              <p className="pt-3">Instagram</p>
+            </div>
+            <div className="footer-socialmedia-link">
+              <img src="https://img.icons8.com/wired/64/000000/x.png" alt="Twitter" />
+              <p className="pt-3">Twitter</p>
+            </div>
+            <div className="footer-socialmedia-link">
+              <img src="https://img.icons8.com/ios/64/000000/linkedin.png" alt="LinkedIn" />
+              <p className="pt-3">LinkedIn</p>
+            </div>
           </div>
         </div>
       </section>
@@ -52,16 +51,14 @@ const Footer = () => {
       <footer className="page-footer font-small indigo text-black bg-white">
         <div className="container text-center text-md-left">
           <div className="row">
-          <div className="col-md-3 mx-auto footerbox footer-logo" >
-             
+            <div className="col-md-3 mx-auto footerbox footer-logo">
               <ul className="list-unstyled">
                 <img src="./logo.svg" alt="" />
               </ul>
-             
             </div>
 
             <hr className="clearfix w-100 d-md-none" />
-            <div className="col-md-3 mx-auto footerbox" >
+            <div className="col-md-3 mx-auto footerbox">
               <p className="font-weight-bold text-uppercase mt-3 mb-3">GIFT CARDS</p>
               <p className="font-weight-bold text-uppercase mt-3 mb-3">STUDENT DISCOUNT</p>
               <p className="font-weight-bold text-uppercase mt-3 mb-3">MILITARY DISCOUNT</p>
