@@ -5,19 +5,17 @@ import '../Styles/Defxv.css';
 
 const Defxv = () => {
   return (
-    <div className="containerdefxv">
-      <div className="left-content">
-        <div className="defxvh1">
-          <h1 className="text-white">
-            Your H1 Text Here Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, assumenda.
-          </h1>
-          <div className="def-btn">
-            <Link to="/products"><button className="learn-more-btn ">Learn More</button></Link>
-          </div>
+    <div className="row">
+      <div className="left">
+        <h1 className="content">
+          Your H1 Text Here Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, assumenda.
+        </h1>
+        <div className="def-btn">
+          <Link to="/products"><button className="learn-more-btn ">Learn More</button></Link>
         </div>
-      </div>
-      <div className="right-content">
-        <img src="/glasses2.jpg" alt="alternative_text" />
+    </div>
+      <div className="right">
+        <img src="/glasses2.png" alt="alternative_text" />
       </div>
     </div>
   );
