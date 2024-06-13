@@ -4,7 +4,8 @@ import "../Styles/TTS.css";
 const TextToSpeech = () => {
   const [isEnabled, setIsEnabled] = useState(true);
   const [showPopup, setShowPopup] = useState(true);
-  const [popupTimer, setPopupTimer] = useState(1000);
+  const [popupTimer, setPopupTimer] = useState(12);
+  const [soundAllowed, setSoundAllowed] = useState(true);
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
@@ -126,7 +127,7 @@ const TextToSpeech = () => {
       )}
       <button
         onClick={toggleTTS}
-        className="hover:border-black-2 fixed bottom-7 right-8 rounded-2xl bg-secondary bg-opacity-50 px-5 py-5 text-white transition-all duration-150 hover:bg-[#6e54ff] hover:bg-opacity-50"
+        className="hover:border-black-2 fixed bottom-7 right-8 rounded-2xl bg-secondary bg-opacity-50 px-5 py-5 text-white transition-all duration-150 hover:bg-[#151030] hover:bg-opacity-100"
       >
         {isEnabled ? "Disable" : "Enable"} Text-to-Speech
       </button>
