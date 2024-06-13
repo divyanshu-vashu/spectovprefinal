@@ -6,6 +6,7 @@ import "./index.css";
 import Defxv from "./components/Defxv";
 import Footer from "./components/Footer";
 import TextToSpeech from "./components/TextToSpeech.jsx";
+import Ms from "./components/Ms.jsx";
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const MainLayout = () => {
       <Works />
 
       <About />
-
+      <Ms/>
       <Contact />
       <Footer />
       <TextToSpeech />

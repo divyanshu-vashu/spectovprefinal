@@ -104,7 +104,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'
             />
             {errors.name && <span className='text-red-500'>{errors.name}</span>}
           </label>
@@ -116,7 +116,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'
             />
             {errors.email && <span className='text-red-500'>{errors.email}</span>}
           </label>
@@ -128,7 +128,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'
             />
             {errors.message && <span className='text-red-500'>{errors.message}</span>}
           </label>
