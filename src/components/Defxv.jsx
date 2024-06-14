@@ -5,16 +5,16 @@ import '../Styles/Defxv.css';
 
 const Defxv = () => {
   return (
-    <div className="row">
-      <div className="left">
-        <h1 className="content">
+    <div className="roww">
+      <div className="leftt">
+        <h1 className="contentt">
           Your H1 Text Here Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, assumenda.
         </h1>
-        <div className="def-btn">
+        <div className="def-btnn">
           <Link to="/products"><button className="learn-more-btn ">Learn More</button></Link>
         </div>
     </div>
-      <div className="right">
+      <div className="rightt">
         <img src="/glasses2.png" alt="alternative_text" />
       </div>
     </div>
