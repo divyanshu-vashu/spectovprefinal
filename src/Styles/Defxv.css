@@ -1,4 +1,4 @@
-.row {
+.roww {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,29 +8,29 @@
   padding: 20px;
 }
 
-.right, .left {
+.rightt, .leftt {
   flex: 1;
   margin: 10px;
 }
 
-.right {
+.rightt {
   order: 1;
 }
 
-.left {
+.leftt {
   order: 2;
 }
 
-.right img {
+.rightt img {
   max-width: 100%;
   height: auto;
 }
 
-.def-btn {
+.def-btnn {
   margin-top: 20px;
 }
 
-.learn-more-btn {
+.learn-more-btnn {
   background-color: #ffffff;
   color: black;
   border: none;
@@ -39,7 +39,7 @@
   transition: background-color 0.3s;
 }
 
-.learn-more-btn:hover {
+.learn-more-btnn:hover {
   background-color: #f0f0f0;
 }
 
@@ -48,12 +48,12 @@
     flex-direction: column;
   }
 
-  .right, .left {
+  .rightt, .leftt {
     margin: 0;
     padding: 10px;
   }
 
-  .def-btn {
+  .def-btnn {
     text-align: center;
   }
 }
