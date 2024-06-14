@@ -1,4 +1,4 @@
-.roww {
+.custom-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,29 +8,29 @@
   padding: 20px;
 }
 
-.rightt, .leftt {
+.custom-right, .custom-left {
   flex: 1;
   margin: 10px;
 }
 
-.rightt {
+.custom-right {
   order: 1;
 }
 
-.leftt {
+.custom-left {
   order: 2;
 }
 
-.rightt img {
+.custom-right img {
   max-width: 100%;
   height: auto;
 }
 
-.def-btnn {
+.custom-def-btn {
   margin-top: 20px;
 }
 
-.learn-more-btnn {
+.custom-learn-more-btn {
   background-color: #ffffff;
   color: black;
   border: none;
@@ -39,21 +39,21 @@
   transition: background-color 0.3s;
 }
 
-.learn-more-btnn:hover {
+.custom-learn-more-btn:hover {
   background-color: #f0f0f0;
 }
 
 @media (max-width: 768px) {
-  .row {
+  .custom-row {
     flex-direction: column;
   }
 
-  .rightt, .leftt {
+  .custom-right, .custom-left {
     margin: 0;
     padding: 10px;
   }
 
-  .def-btnn {
+  .custom-def-btn {
     text-align: center;
   }
 }
