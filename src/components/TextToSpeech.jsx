@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../Styles/TTS.css";
 
 const TextToSpeech = () => {
   const [isEnabled, setIsEnabled] = useState(true);
   const [showPopup, setShowPopup] = useState(true);
-  const [popupTimer, setPopupTimer] = useState(1000);
+  const [popupTimer, setPopupTimer] = useState(10);
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
