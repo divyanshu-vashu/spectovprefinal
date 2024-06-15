@@ -1,0 +1,22 @@
+.MS_container
+{
+    width: 100%;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-color: #151030;
+}
+
+.MSimg
+{
+    width: 50vw;
+    border-radius:auto ;
+    transition: ease-in 0.2s;
+}
+
+.MSimg:hover
+{
+    scale: 1.02;
+}
