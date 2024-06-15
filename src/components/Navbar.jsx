@@ -56,6 +56,16 @@ const Navbar = () => {
             } cursor-pointer text-[18px] font-medium hover:text-red-500`}
             onClick={() => setActive("Product")}
           >
+            <Link to="/Careers" className="block px-3 py-1 text-inherit">
+              Careers
+            </Link>
+          </li>
+          <li
+            className={`${
+              active === "Product" ? "text-red-500" : "text-black"
+            } cursor-pointer text-[18px] font-medium hover:text-red-500`}
+            onClick={() => setActive("Product")}
+          >
             <Link to="/products" className="block px-3 py-1 text-inherit">
               Product
             </Link>
