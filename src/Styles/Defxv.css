@@ -1,24 +1,59 @@
-.containerdefxv {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.custom-right, .custom-left {
+  flex: 1;
+  margin: 10px;
+}
+
+.custom-right {
+  order: 1;
+}
+
+.custom-left {
+  order: 2;
+}
+
+.custom-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-def-btn {
+  margin-top: 20px;
+}
+
+.custom-learn-more-btn {
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-learn-more-btn:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .custom-row {
+    flex-direction: column;
   }
-  
-  .left-content,
-  .right-content {
-    display: flex;
-    flex: 1; 
-    align-items: center;
+
+  .custom-right, .custom-left {
+    margin: 0;
+    padding: 10px;
   }
-  
-  .defxvh1 h1 {
-    color: white;
-    flex: 1;
+
+  .custom-def-btn {
+    text-align: center;
   }
-  
-  .right-content img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-  }
-  
+}
