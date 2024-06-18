@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ctestimg from "../assets/careerCardTestImage.jpeg";
+import ctestimg from "../assets/careerCardTestImage.png";
 import { Link } from "react-router-dom";
 let careers = [
   {

@@ -1,6 +1,13 @@
 import CareerCard from "../components/CareerCard";
 import { Navbar } from "../components/";
-import ctestimg from "../assets/careerCardTestImage.jpeg";
+import ctestimg from "../assets/careerCardTestImage.png";
+// import webimage from "../assets/careerCardTestImage.png";
+// import mlimage from "../assets/careerCardTestImage.png";
+// import dsaimage from "../assets/careerCardTestImage.png";
+// import dsaml from "../assets/careerCardTestImage.png";
+// import dsaweb from "../assets/careerCardTestImage.png";
+// import special from "../assets/careerCardTestImage.png";
+// import arvr from "../assets/careerCardTestImage.png";
 
 let careers = [
   {
@@ -33,14 +40,14 @@ let careers = [
   },
   {
     id: 4,
-    title: "Integrated 4+1",
+    title: "DSA And Web ",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
   },
   {
     id: 5,
-    title: "Integrated 4+2",
+    title: "DSA And ML",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -48,6 +55,13 @@ let careers = [
   {
     id: 6,
     title: "SpectoV Special",
+    subtitle: "Artificial Intelligence and Machine Learning",
+    content: "Artificial Intelligence and Machine Learning",
+    img: ctestimg,
+  },
+  {
+    id: 7,
+    title: "AR VR",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
