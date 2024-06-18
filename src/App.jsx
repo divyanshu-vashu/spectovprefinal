@@ -3,6 +3,7 @@ import { About, Contact, Hero, Navbar, Works, StarsCanvas } from "./components";
 import LoginPage from "./product1";
 import ProductPage from "./pages/Product.jsx";
 import CareerPage from "./pages/Career.jsx";
+import CareerDetails from "./pages/CareerDetails.jsx";
 import "./index.css";
 import Defxv from "./components/Defxv";
 import Footer from "./components/Footer";
@@ -16,6 +17,8 @@ const App = () => {
         <Route path="/" element={<MainLayout />} />
         <Route path="/products" element={<ProductPage />} />
         <Route path="/careers" element={<CareerPage />} />
+        <Route path="/careers/:item" element={<CareerDetails />} />
+        
       </Routes>
     </BrowserRouter>
   );

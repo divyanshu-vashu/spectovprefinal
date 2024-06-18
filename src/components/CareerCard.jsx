@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CareerCard(props) {
   return (
@@ -11,16 +12,16 @@ export default function CareerCard(props) {
         <h2 className="ml-2 pt-2 text-sm text-black md:text-xl">
           {props.subtitle}
         </h2>
-        <p className="ml-2 w-full text-wrap pt-2 break-words pr-5 text-xs md:text-xs">
+        <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs md:text-xs">
           {props.content}
         </p>
       </div>
-      <a
-        href="https://example.com"
+      <Link
         className="mt-2 flex h-16 w-full items-center justify-center rounded-xl bg-blue-600 text-white"
+        to={`/careers/${props.item}`} // Ensure the correct path is used here
       >
-        Press to enroll
-      </a>
+        Learn More
+      </Link>
     </div>
   );
 }

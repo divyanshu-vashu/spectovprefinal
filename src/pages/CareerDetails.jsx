@@ -1,7 +1,7 @@
-import CareerCard from "../components/CareerCard";
-import { Navbar } from "../components/";
+import React from "react";
+import { useParams } from "react-router-dom";
 import ctestimg from "../assets/careerCardTestImage.jpeg";
-
+import { Link } from "react-router-dom";
 let careers = [
   {
     id: 0,
@@ -54,25 +54,40 @@ let careers = [
   },
 ];
 
-export default function CareerPage() {
+export default function CareerDetails() {
+  const { item } = useParams();
+  const career = careers.find((c) => c.id === parseInt(item));
+
+  if (!career) {
+    return <p>Career not found</p>;
+  }
+
   return (
-    <>
-      <Navbar />
-      <h1 className="ml-5 mt-32 text-4xl font-bold text-black md:ml-24">
-        Careers At SpectoV
-      </h1>
-      <div className="w-100 m-10 ml-5 flex flex-wrap md:ml-20">
-        {careers.map((career) => (
-          <CareerCard
-            key={career.id}
-            item={career.id}
-            title={career.title}
-            subtitle={career.subtitle}
-            content={career.content}
-            img={career.img}
-          />
-        ))}
+    <div className="items-center md:flex md:p-10">
+          <Link
+        className="absolute bg-blue-400 p-4 top-3 rounded-xl m-4 text-white"
+        to={`/careers`}
+      >
+        Go Back
+      </Link>
+      <img className="w-full rounded-md md:w-1/2" src={career.img} alt="" />
+      <div className="md:flex md:flex-col">
+        <h1 className="p-5 pl-2 text-3xl font-bold text-black md:pl-5 md:text-4xl">
+          {career.title}
+        </h1>
+        <h2 className="pl-2 text-xl text-black md:pl-5 md:text-xl">
+          {career.subtitle}
+        </h2>
+        <p className="p-5 text-md w-full text-wrap break-words pr-5 pt-2 md:text-xs">
+          {career.content}
+        </p>
+        <a
+          className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+          href="https://www.example.com"
+        >
+          Learn More
+        </a>
       </div>
-    </>
+    </div>
   );
 }
