@@ -82,8 +82,8 @@ var i=0;
     e.preventDefault();
     console.log(inputs.transactionId, career.id, email,career.title);
     try {
-      const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}`);
-      await axios.put(`http://localhost:8080/api/enroll/approval/${email}/${career.id}`)
+      const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/enroll/approval/${email}/${career.id}`)
 
       setAccess('pending');
         alert('Enrollment Successful. Waiting for approval from owner');
