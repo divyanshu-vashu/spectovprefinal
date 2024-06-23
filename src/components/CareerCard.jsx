@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CareerCard(props) {
-
-
   const user = localStorage.getItem("token");
 
-  const courses=localStorage.getItem('courses')
+  // Initialize courses array
+  let initialArray = [];
 
-    const initialArray = courses.split(',');
+  // Only split courses if the user exists
+  if (user) {
+    const courses = localStorage.getItem('courses');
+    initialArray = courses ? courses.split(',') : [];
+  }
 
   return (
     <>
@@ -24,19 +27,20 @@ export default function CareerCard(props) {
           <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs md:text-xs">
             {props.content}
           </p>
-          
         </div>
         <Link
           className="mt-2 flex h-16 w-full items-center justify-center rounded-xl bg-blue-600 text-white"
-          to={user?`/careers/${props.item}`:'/careers'} onClick={()=>{user?console.log('login'):alert('login first to go to the course')}}state={initialArray[`${props.item}`]}// Ensure the correct path is used here
+          to={user ? `/careers/${props.item}` : '/careers'}
+          onClick={() => { user ? console.log('login') : alert('login first to go to the course') }}
+          state={initialArray[props.item]} // Ensure the correct path is used here
         >
-      {
-        initialArray[`${props.item}`] === 'true' && user
-          ? 'Open'
-          : initialArray[`${props.item}`] === 'pending' && user
-          ? 'Pending'
-          : 'Enroll'
-      }
+          {
+            initialArray[props.item] === 'true' && user
+              ? 'Open'
+              : initialArray[props.item] === 'pending' && user
+              ? 'Pending'
+              : 'Enroll'
+          }
         </Link>
       </div>
     </>
