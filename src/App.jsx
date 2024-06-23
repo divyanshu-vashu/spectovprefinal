@@ -16,7 +16,7 @@ import UserDetails from "./components/UserDetail.jsx";
 import Access from "./components/Access.jsx";
 import Naccess from "./components/Naccess.jsx";
 import Allrequest from "./components/Allrequest.jsx"
-
+import ForgetPassword from "./components/ForgetPassword.jsx";
 
 function App() {
 	const user = localStorage.getItem("token");
@@ -27,7 +27,8 @@ function App() {
 		<Route path="/" element={<MainLayout />} />
         <Route path="/products" element={<ProductPage />} />
 		<Route path="/admin/all-request" element={<Allrequest />} />
-        {!user && <Route path="/careers" element={<CareerPage />} />}
+        <Route path="/careers" element={<CareerPage />} />
+		<Route path="/forget-password" element={<ForgetPassword />} />
         {user && <Route path="/careers/:item" element={<CareerDetails />} />}
         {user&&<Route path="/details" exact element={<UserDetails />} />}
         {user && <Route path="/access" element={<Access />} />}
