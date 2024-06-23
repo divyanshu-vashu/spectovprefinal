@@ -1,7 +1,8 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation, useParams, Link } from "react-router-dom";
 import ctestimg from "../assets/careerCardTestImage.png";
-import { Link } from "react-router-dom";
+import axios from 'axios';
+
 let careers = [
   {
     id: 0,
@@ -33,14 +34,14 @@ let careers = [
   },
   {
     id: 4,
-    title: "Integrated 4+1",
+    title: "DSA And Web ",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
   },
   {
     id: 5,
-    title: "Integrated 4+2",
+    title: "DSA And ML",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -52,9 +53,21 @@ let careers = [
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
   },
+  {
+    id: 7,
+    title: "AR VR",
+    subtitle: "Artificial Intelligence and Machine Learning",
+    content: "Artificial Intelligence and Machine Learning",
+    img: ctestimg,
+  },
 ];
 
 export default function CareerDetails() {
+  const location = useLocation();
+  const data = location.state;
+  const user = localStorage.getItem("token");
+  const email = localStorage.getItem("email");
+
   const { item } = useParams();
   const career = careers.find((c) => c.id === parseInt(item));
 
@@ -62,11 +75,41 @@ export default function CareerDetails() {
     return <p>Career not found</p>;
   }
 
+  const [access, setAccess] = useState(data);
+  const [inputs, setInputs] = useState({ transactionId: '' });
+var i=0;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(inputs.transactionId, career.id, email,career.title);
+    try {
+      const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}`);
+      await axios.put(`http://localhost:8080/api/enroll/approval/${email}/${career.id}`)
+
+      setAccess('pending');
+        alert('Enrollment Successful. Waiting for approval from owner');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleChange = (e) => {
+    setInputs(prevState => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit1 = (event) => {
+    event.preventDefault();
+    document.getElementById("tid").style.display = "flex";
+    document.getElementById("tbtn").style.display = "flex";
+  };
+
   return (
     <div className="items-center md:flex md:p-10">
-          <Link
+      <Link
         className="absolute bg-blue-400 p-4 top-3 rounded-xl m-4 text-white"
-        to={`/careers`}
+        to={user ? '/page' : '/careers'}
       >
         Go Back
       </Link>
@@ -81,12 +124,61 @@ export default function CareerDetails() {
         <p className="p-5 text-md w-full text-wrap break-words pr-5 pt-2 md:text-xs">
           {career.content}
         </p>
-        <a
-          className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
-          href="https://www.example.com"
-        >
-          Learn More
-        </a>
+        {access === 'true' ? (
+          <Link
+            className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+            to="/access"
+          >
+            Open
+          </Link>
+        ) : (
+          (access === 'false'  )? (
+            <>
+              <button
+                className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+                onClick={handleSubmit1}
+              >
+                Enroll
+              </button>
+              <div style={{ display: "flex" }}>
+                <input
+                  type="text"
+                  id="tid"
+                  placeholder="Enter Transaction Id"
+                  name="transactionId"
+                  value={inputs.transactionId}
+                  style={{
+                    backgroundColor: "white",
+                    borderWidth: '0.1rem',
+                    borderColor: "black",
+                    width: '20rem',
+                    height: "3rem",
+                    textAlign: "center",
+                    marginTop: '2rem',
+                    display: "none",
+                    borderRadius: '10px'
+                  }}
+                  onChange={handleChange}
+                />
+                <button
+                  style={{ display: "none" }}
+                  id="tbtn"
+                  onClick={handleSubmit}
+                  className="ml-3 mt-8 block h-11 w-28 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+                >
+                  Submit
+                </button>
+              </div>
+            </>
+          ) : (
+            <Link
+              className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+              onClick={() => alert("Approval pending by owner.")}
+            >
+              Pending
+            </Link>
+          )
+        )}
       </div>
     </div>
   );
