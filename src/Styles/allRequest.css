@@ -1,0 +1,116 @@
+
+.parent{
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.no-users {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+
+.user-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.user-name {
+  margin: 0 0 10px;
+  color: #007bff;
+  font-size: 20px;
+}
+
+.user-email {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.section-title {
+  margin: 10px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 5px 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-item:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.course-status, .course-transaction, .course-name {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.approve-button, .reject-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 5px 0 0;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+.reject-button {
+  background-color: #ff4d4d;
+}
+
+.approve-button:hover, .reject-button:hover {
+  opacity: 0.8;
+}
+
+.approve-button:focus, .reject-button:focus {
+  outline: none;
+}

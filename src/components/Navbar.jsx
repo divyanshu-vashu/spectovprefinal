@@ -9,7 +9,9 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+	const user = localStorage.getItem("token");
+  //const username = localStorage.getItem("name");
+  //alert(username)
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -18,7 +20,7 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
-    };
+    }; 
 
     window.addEventListener("scroll", handleScroll);
 
@@ -55,8 +57,9 @@ const Navbar = () => {
               active === "Product" ? "text-red-500" : "text-black"
             } cursor-pointer text-[18px] font-medium hover:text-red-500`}
             onClick={() => setActive("Product")}
+            
           >
-            <Link to="/careers" className="block px-3 py-1 text-inherit">
+            <Link to={user?"/page":"/careers"} className="block px-3 py-1 text-inherit" >
               Careers
             </Link>
           </li>
@@ -69,6 +72,20 @@ const Navbar = () => {
             <Link to="/products" className="block px-3 py-1 text-inherit">
               Product
             </Link>
+
+          </li>
+          <li
+            className={`${
+              active === "Product" ? "text-red-500" : "text-black"
+            } cursor-pointer text-[18px] font-medium hover:text-red-500`}
+            onClick={() => setActive("Product")}
+            style={{display:"none"}}
+
+          >
+            <Link to="/login" className="block px-3 py-1 text-inherit" >
+              login
+            </Link>
+
           </li>
           {navLinks.map((nav) => (
             <li
@@ -111,7 +128,23 @@ const Navbar = () => {
                 <Link to="/products" className="block px-3 py-1">
                   Product
                 </Link>
+
               </li>
+              <li                className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                  active === "Product" ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("Product");
+                }}
+            style={{display:"none"}}
+
+          >
+            <Link to="/login" className="block px-3 py-1 text-inherit" >
+              login
+            </Link>
+
+          </li>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
