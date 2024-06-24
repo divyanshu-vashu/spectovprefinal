@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "../Styles/Login.css"; // Import the CSS file
+import "../Styles/Login.css"; 
 
 const LoginForm = () => {
   const [data, setData] = useState({ email: "", password: "" });
@@ -66,6 +66,14 @@ const LoginForm = () => {
           <h1 className="login-new-title">New Here ?</h1>
           <Link to="/signup">
             <button type="button" className="login-signup-button">Sign Up</button>
+          </Link>
+          <h1 className="login-new-title">Login as Admin ?</h1>
+          <Link to="/admin/all-request">
+            <button type="button" className="login-signup-button">Admin Login</button>
+          </Link>
+          <h1 className="login-new-title">Forget Password ?</h1>
+          <Link to="/forget-password">
+            <button type="button" className="login-signup-button">Reset Password</button>
           </Link>
         </div>
       </div>

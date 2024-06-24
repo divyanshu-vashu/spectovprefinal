@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import "../Styles/Signup.css"; // Import the CSS file
+import "../Styles/Signup.css"; 
 
 const Signup = () => {
   const [data, setData] = useState({
@@ -39,9 +39,17 @@ const Signup = () => {
     <div className="signup-container">
       <div className="signup-form-container">
         <div className="signup-left">
-          <h1 className="signup-title">Welcome Back</h1>
+          <h1 className="signup-title">Welcome</h1>
           <Link to="/login">
             <button type="button" className="signup-signin-button">Sign in</button>
+          </Link>
+          <h1 className="login-new-title">Login as Admin ?</h1>
+          <Link to="/admin/all-request">
+            <button type="button" className="login-signup-button">Admin Login</button>
+          </Link>
+          <h1 className="login-new-title">Forget Password ?</h1>
+          <Link to="/forget-password">
+            <button type="button" className="login-signup-button">Reset Password</button>
           </Link>
         </div>
         <div className="signup-right">

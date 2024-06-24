@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 export default function CareerCard(props) {
   const user = localStorage.getItem("token");
 
+
   // Initialize courses array
   let initialArray = [];
 
   // Only split courses if the user exists
+
   if (user) {
     const courses = localStorage.getItem('courses');
     initialArray = courses ? courses.split(',') : [];
@@ -32,7 +34,9 @@ export default function CareerCard(props) {
           className="mt-2 flex h-16 w-full items-center justify-center rounded-xl bg-blue-600 text-white"
           to={user ? `/careers/${props.item}` : '/careers'}
           onClick={() => { user ? console.log('login') : alert('login first to go to the course') }}
+
           state={initialArray[props.item]} // Ensure the correct path is used here
+
         >
           {
             initialArray[props.item] === 'true' && user
