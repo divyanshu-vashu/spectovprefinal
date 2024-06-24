@@ -20,11 +20,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users";
+      const url = "https://spectov-backend.onrender.com/api/users";
       const { data: res } = await axios.post(url, data);
       const referId=data.email.substring(0,data.email.indexOf('@'));
    //   alert(referId)
-      await axios.put(`http://localhost:8080/api/refer/${data.email}/${referId}`)
+      await axios.put(`https://spectov-backend.onrender.com/api/refer/${data.email}/${referId}`)
       navigate("/login");
       console.log(res.message);
     } catch (error) {

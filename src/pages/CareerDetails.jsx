@@ -86,23 +86,23 @@ export default function CareerDetails() {
       const referEmail = `${refer.referId}@gmail.com`;
 
       if(refer.referId!==""){
-      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/refer/${referEmail}`);
       }
       if(email===referEmail){
-        await axios.put(`http://localhost:8080/api/refer/error`);
+        await axios.put(`https://spectov-backend.onrender.com/api/refer/error`);
       }
       if(refer.referId!==""){
-      const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/${refer.referId}`);
+      const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/${refer.referId}`);
       }
       else{
-        const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/0`);
+        const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/0`);
 
       }
-      await axios.put(`http://localhost:8080/api/enroll/approval/${email}/${career.id}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/enroll/approval/${email}/${career.id}`);
      /* if(refer.referId!==""){
         const referEmail = `${refer.referId}@gmail.com`;
 
-      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/refer/${referEmail}`);
       }*/
       setAccess('pending');
       alert('Enrollment Successful. Waiting for approval from owner');
