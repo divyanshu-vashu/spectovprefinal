@@ -10,7 +10,7 @@ function UsersList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/all-request');
+        const response = await axios.get('https://spectov-backend.onrender.com/api/all-request');
         setUsers(response.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`http://localhost:8080/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`https://spectov-backend.onrender.com/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('Enrollment Successful.');
       window.location.reload();
     } catch (error) {
@@ -37,7 +37,7 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`http://localhost:8080/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`https://spectov-backend.onrender.com/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('You have rejected this enrollment.');
       window.location.reload()
     } catch (error) {

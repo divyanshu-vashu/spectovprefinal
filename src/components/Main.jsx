@@ -75,7 +75,7 @@ const Main = () => {
 	const email = localStorage.getItem("email");
 	const getCodeDetail=async()=>{
 	  try{
-		  const {data}=await axios.get(`http://localhost:8080/api/details/${email}`);
+		  const {data}=await axios.get(`https://spectov-backend.onrender.com/api/details/${email}`);
 			  setUser(data);
   
 	  }catch(error){
