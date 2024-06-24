@@ -11,7 +11,7 @@ const UserDetails = () => {
   useEffect(() => {
     const getCodeDetail = async () => {
       try {
-        const { data } = await axios.get(`https://spectov-backend.onrender.com/api/details/${email}`);
+        const { data } = await axios.get(`http://localhost:8080/api/details/${email}`);
         setUser(data);
         localStorage.setItem('name', data.firstName);
       } catch (error) {
@@ -35,6 +35,10 @@ const UserDetails = () => {
           <p id="user-firstname">First Name: {user.firstName}</p>
           <p id="user-lastname">Last Name: {user.lastName}</p>
           <p id="user-email">Email: {user.email}</p>
+          <p id="user-email">User Referal Id : {user.referId}</p>
+          <p id="user-email">Refer to : {user.referred} user</p>
+
+
         </div>
         <div id="user-header">
           <h1>Hi {user.firstName}</h1>
@@ -54,6 +58,8 @@ const UserDetails = () => {
               <p id={`course-status-${index}`}>Course Status: Approved by owner</p>
               <p id={`course-transaction-${index}`}>Transaction Id: {user.transaction[index]}</p>
               <p id={`course-name-${index}`}>Course Name: {user.coursename[index]}</p>
+              <p id={`course-name-${index}`}>Referred By : {user.referal[index]==="0"?"Not Referred" :user.referal[index]+"@gmail.com"}</p>
+
             </li>
           )
         ))}
@@ -66,6 +72,8 @@ const UserDetails = () => {
               <p id={`course-status-${index}`}>Course Status: Pending</p>
               <p id={`course-transaction-${index}`}>Transaction Id: {user.transaction[index]}</p>
               <p id={`course-name-${index}`}>Course Name: {user.coursename[index]}</p>
+              <p id={`course-name-${index}`}>Referred By : {user.referal[index]==="0"?"Not Referred" :user.referal[index]+"@gmail.com"}</p>
+
             </li>
           )
         ))}
