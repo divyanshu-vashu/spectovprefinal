@@ -10,7 +10,7 @@ function UsersList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://spectov-backend.onrender.com/api/all-request');
+        const response = await axios.get('http://localhost:8080/api/all-request');
         setUsers(response.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`https://spectov-backend.onrender.com/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`http://localhost:8080/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('Enrollment Successful.');
       window.location.reload();
     } catch (error) {
@@ -37,7 +37,7 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`https://spectov-backend.onrender.com/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`http://localhost:8080/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('You have rejected this enrollment.');
       window.location.reload()
     } catch (error) {
@@ -75,6 +75,8 @@ function UsersList() {
                       <p className="course-status">Course Status:&emsp;&emsp;&emsp; {course}</p>
                       <p className="course-transaction">Transaction Id:&emsp;&emsp;&emsp; {user.transaction[index]}</p>
                       <p className="course-name">Course Name:&emsp;&emsp;&emsp; {user.coursename[index]}</p>
+                      <p className="course-name">Referred By:&emsp;&emsp;&emsp; {user.referal[index]==="0"?"Not Referred":user.referal[index]+"@gmail.com"}</p>
+
                       <button className="approve-button" onClick={(e) => handleSubmit(e, user.email, index,)}>Approve</button>
                       <button className="reject-button"  onClick={(e) => handleSubmitReject(e, user.email, index,)}>Reject</button>
                     </li>
