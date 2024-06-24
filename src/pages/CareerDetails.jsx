@@ -77,23 +77,50 @@ export default function CareerDetails() {
 
   const [access, setAccess] = useState(data);
   const [inputs, setInputs] = useState({ transactionId: '' });
-var i=0;
+  const [refer, setRefer] = useState({ referId: '' });
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs.transactionId, career.id, email,career.title);
     try {
-      const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}`);
-      await axios.put(`https://spectov-backend.onrender.com/api/enroll/approval/${email}/${career.id}`)
+      const referEmail = `${refer.referId}@gmail.com`;
 
+      if(refer.referId!==""){
+      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      }
+      if(email===referEmail){
+        await axios.put(`http://localhost:8080/api/refer/error`);
+      }
+      if(refer.referId!==""){
+      const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/${refer.referId}`);
+      }
+      else{
+        const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/0`);
+
+      }
+      await axios.put(`http://localhost:8080/api/enroll/approval/${email}/${career.id}`);
+     /* if(refer.referId!==""){
+        const referEmail = `${refer.referId}@gmail.com`;
+
+      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      }*/
       setAccess('pending');
-        alert('Enrollment Successful. Waiting for approval from owner');
+      alert('Enrollment Successful. Waiting for approval from owner');
     } catch (error) {
-      console.log(error);
+      setError("Wrong Referral Id.");
+      //alert(error.message);
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange1 = (e) => {
     setInputs(prevState => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleChange2 = (e) => {
+    setRefer(prevState => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
@@ -102,6 +129,7 @@ var i=0;
   const handleSubmit1 = (event) => {
     event.preventDefault();
     document.getElementById("tid").style.display = "flex";
+    document.getElementById("rid").style.display = "flex";
     document.getElementById("tbtn").style.display = "flex";
   };
 
@@ -131,53 +159,71 @@ var i=0;
           >
             Open
           </Link>
-        ) : (
-          (access === 'false'  )? (
-            <>
-              <button
-                className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
-                onClick={handleSubmit1}
-              >
-                Enroll
-              </button>
-              <div style={{ display: "flex" }}>
-                <input
-                  type="text"
-                  id="tid"
-                  placeholder="Enter Transaction Id"
-                  name="transactionId"
-                  value={inputs.transactionId}
-                  style={{
-                    backgroundColor: "white",
-                    borderWidth: '0.1rem',
-                    borderColor: "black",
-                    width: '20rem',
-                    height: "3rem",
-                    textAlign: "center",
-                    marginTop: '2rem',
-                    display: "none",
-                    borderRadius: '10px'
-                  }}
-                  onChange={handleChange}
-                />
-                <button
-                  style={{ display: "none" }}
-                  id="tbtn"
-                  onClick={handleSubmit}
-                  className="ml-3 mt-8 block h-11 w-28 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
-                >
-                  Submit
-                </button>
-              </div>
-            </>
-          ) : (
-            <Link
+        ) : access === 'false' ? (
+          <>
+            <button
               className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
-              onClick={() => alert("Approval pending by owner.")}
+              onClick={handleSubmit1}
             >
-              Pending
-            </Link>
-          )
+              Enroll
+            </button>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <input
+                type="text"
+                id="tid"
+                placeholder="Enter Transaction Id"
+                name="transactionId"
+                value={inputs.transactionId}
+                style={{
+                  backgroundColor: "white",
+                  borderWidth: '0.1rem',
+                  borderColor: "black",
+                  width: '20rem',
+                  height: "3rem",
+                  textAlign: "center",
+                  marginTop: '2rem',
+                  display: "none",
+                  borderRadius: '10px'
+                }}
+                onChange={handleChange1}
+              />
+              <input
+                type="text"
+                id="rid"
+                placeholder="Have a referral?"
+                name="referId"
+                value={refer.referId}
+                style={{
+                  backgroundColor: "white",
+                  borderWidth: '0.1rem',
+                  borderColor: "black",
+                  width: '20rem',
+                  height: "3rem",
+                  textAlign: "center",
+                  marginTop: '2rem',
+                  display: "none",
+                  borderRadius: '10px'
+                }}
+                onChange={handleChange2}
+              />
+              <button
+                style={{ display: "none" }}
+                id="tbtn"
+                onClick={handleSubmit}
+                className="ml-3 mt-8 block h-11 w-28 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+              >
+                Submit
+              </button>
+              {error && <div className="login-error">{error}</div>}
+            </div>
+          </>
+        ) : (
+          <Link
+            className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+            onClick={() => alert("Approval pending by owner.")}
+          >
+            Pending
+          </Link>
         )}
       </div>
     </div>
