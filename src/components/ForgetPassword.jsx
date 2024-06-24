@@ -13,7 +13,7 @@ const ForgetPassword = () => {
     e.preventDefault();
     //console.log(inputemail.email, inputpass.password);
     try {
-      await axios.post(`http://localhost:8080/api/user/forget-password/${inputpass.password}/${inputemail.email}`);
+      await axios.post(`https://spectov-backend.onrender.com/api/user/forget-password/${inputpass.password}/${inputemail.email}`);
       navigate("/login")
       
     } catch (error) {
