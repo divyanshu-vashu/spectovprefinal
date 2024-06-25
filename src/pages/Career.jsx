@@ -3,7 +3,9 @@ import { Navbar } from "../components/";
 import ctestimg from "../assets/careerCardTestImage.png";
 import { Link } from "react-router-dom";
 import Timeline from "../components/Timeline";
-import Specs from "../components/Specs";
+import Demo from "../components/Demo";
+
+import Career_hero from "../components/Career_hero";
 
 
 
@@ -18,7 +20,7 @@ let careers = [
   },
   {
     id: 1,
-    title: "Artificial Intelligence and Machine Learning",
+    title: "Artificial Intelligence ",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -69,11 +71,30 @@ let careers = [
 
 export default function CareerPage() {
   return (
-    <div> 
-      <Navbar />
-      {/* <Specs/> */}
-      <Timeline/>
+    <div style={{ backgroundColor: 'black' }}>
+    
+    <Career_hero />
+    <Timeline />
+    
+    <div style={{display:"flex",justifyContent:"space-between ",color:"white"}}>
+      <h1 className="ml-5 mt-32 text-4xl text-white font-bold text-black md:ml-24">
+        Careers At SpectoV
+      </h1>      
       
-    </div>
+      </div>
+      <div className="w-100 m-10 ml-5 flex text-white flex-wrap md:ml-20" style={{ color: "white !important" }}>
+          {careers.map((career) => (
+          <CareerCard 
+            key={career.id}
+            item={career.id}
+            title={career.title}
+            // subtitle={career.subtitle}
+            content={career.content}
+            img={career.img}
+          />
+  ))}
+</div>
+
+  </div>
   );
 }
