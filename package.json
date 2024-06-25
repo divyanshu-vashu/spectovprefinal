@@ -18,6 +18,7 @@
     "express": "^4.19.2",
     "force": "^0.0.3",
     "framer-motion": "^9.0.7",
+    "gsap": "^3.12.5",
     "maath": "^0.5.2",
     "mongoose": "^8.3.3",
     "nodemon": "^3.1.0",
@@ -26,7 +27,9 @@
     "react-parallax-tilt": "^1.7.227",
     "react-router-dom": "^6.23.0",
     "react-scripts": "^5.0.1",
+    "react-scroll-trigger": "^0.6.14",
     "react-vertical-timeline-component": "^3.6.0",
+    "styled-components": "^6.1.11",
     "three": "^0.149.0",
     "typed.js": "^2.1.0",
     "web-vitals": "^3.5.2"
