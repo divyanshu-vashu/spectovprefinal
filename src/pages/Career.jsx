@@ -2,14 +2,11 @@ import CareerCard from "../components/CareerCard";
 import { Navbar } from "../components/";
 import ctestimg from "../assets/careerCardTestImage.png";
 import { Link } from "react-router-dom";
+import Timeline from "../components/Timeline";
+import Specs from "../components/Specs";
 
-// import webimage from "../assets/careerCardTestImage.png";
-// import mlimage from "../assets/careerCardTestImage.png";
-// import dsaimage from "../assets/careerCardTestImage.png";
-// import dsaml from "../assets/careerCardTestImage.png";
-// import dsaweb from "../assets/careerCardTestImage.png";
-// import special from "../assets/careerCardTestImage.png";
-// import arvr from "../assets/careerCardTestImage.png";
+
+
 
 let careers = [
   {
@@ -72,28 +69,11 @@ let careers = [
 
 export default function CareerPage() {
   return (
-    <> 
+    <div> 
       <Navbar />
-      <div style={{display:"flex",justifyContent:"space-between"}}>
-      <h1 className="ml-5 mt-32 text-4xl font-bold text-black md:ml-24">
-        Careers At SpectoV
-      </h1>      
-      <Link to="/login" className="ml-5 mt-32" >
-              <button style={{backgroundColor:"pink",color:"white",height:"2.5rem",borderRadius:"10px"}}>&emsp;login/Signup&emsp;</button>
-            </Link>
-      </div>
-      <div className="w-100 m-10 ml-5 flex flex-wrap md:ml-20">
-        {careers.map((career) => (
-          <CareerCard
-            key={career.id}
-            item={career.id}
-            title={career.title}
-            subtitle={career.subtitle}
-            content={career.content}
-            img={career.img}
-          />
-        ))}
-      </div>
-    </>
+      {/* <Specs/> */}
+      <Timeline/>
+      
+    </div>
   );
 }
