@@ -1,6 +1,7 @@
 // import * as React from "react";
 import React from "react";
 import "../Styles/Career_hero.css"
+import RotatingParagraphs from "./RotatingParagraphs";
 const Career_hero = () => {
     return (
 
@@ -192,6 +193,7 @@ const Career_hero = () => {
 
        
       </div>
+      <RotatingParagraphs/>
        {/*                          
        
        
