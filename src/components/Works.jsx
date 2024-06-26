@@ -42,7 +42,7 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText}`}>Our Products</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Features Of SpectoV</h2>
       </motion.div>
 
       <div className="flex w-full">

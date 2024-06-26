@@ -15,7 +15,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-black`}>
-            Hi, I'm <span className="text-[#0000FF]">DefXV</span>
+            Defxv from <span className="text-[#0000FF]">SpectoV</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2`}>
             Redefining Reality with <br className="hidden sm:block" />
@@ -47,3 +47,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

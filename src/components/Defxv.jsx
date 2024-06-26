@@ -8,7 +8,7 @@ const Defxv = () => {
     <div className="custom-row">
       <div className="custom-left">
         <h1 className="custom-content">
-          Your H1 Text Here Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, assumenda.
+        DEFxV: Bridging Worlds with AR/VR - Translate Sign Language and Experience Mobile Magic!
         </h1>
         <div className="custom-def-btn">
           <Link to="/products"><button className="custom-learn-more-btn">Learn More</button></Link>

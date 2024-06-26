@@ -76,6 +76,13 @@ export default function CareerPage() {
     <Career_hero />
     <Timeline />
     
+
+
+
+    {/* add componnet here  */}
+
+    {/* harshanth , your work will chnage below code  */}
+    
     <div style={{display:"flex",justifyContent:"space-between ",color:"white"}}>
       <h1 className="ml-5 mt-32 text-4xl text-white font-bold text-black md:ml-24">
         Careers At SpectoV

@@ -46,7 +46,7 @@ const Career_hero = () => {
             <div className="flex flex-col px-5 mt-24 max-md:mt-10 max-md:max-w-full">
               <div className="flex flex-col text-7xl max-md:max-w-full max-md:text-4xl">
                 <div class="spectov" >
-                  Specto V{" "}
+                  SpectoV{" "}
                 </div>
                 <div className="mt-3 text-white max-md:max-w-full max-md:text-4xl">
                   Training Program
@@ -84,12 +84,13 @@ const Career_hero = () => {
        {/*                                       microsoft section  */}
 
 
-      <div className="mt-20 text-xl text-center text-white max-md:mt-10 max-md:max-w-full">
+      {/* <div className="mt-20 text-xl text-center text-white max-md:mt-10 max-md:max-w-full">
         Proud to be patner with Microsoft
-      </div>
+      </div> */}
       <img
         loading="lazy"
         src="ms.png"
+        className="mt-10"
         // className="mt-10 w-full aspect-[5.26] max-w-[1237px] max-md:mt-10 max-md:max-w-full"
         style={{ width: 'full', height: 'auto' }}
       />
@@ -199,51 +200,7 @@ const Career_hero = () => {
        
        */}
       
-      <div className="pr-20 pl-4 mt-44 max-w-full rounded-3xl bg-[linear-gradient(267deg,#00F0FF_4.01%,#5200FF_57.55%,#FF2DF7_114.97%)] w-[1467px] max-md:pr-5 max-md:mt-10">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <img
-              loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5e2711b531ecc4099200ab5a92fb945895aa315f86d43e99947932807a4cd04c?apiKey=9a257399887b42c7b87198aa88395e96&"
-              className="self-stretch my-auto w-full shadow-2xl aspect-square max-md:mt-10 max-md:max-w-full"
-            />
-          </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col self-stretch my-auto text-white max-md:mt-10 max-md:max-w-full">
-              <div className="text-5xl max-md:max-w-full max-md:text-4xl">
-                <span className="text-white">Get exponential reach via </span>
-                <span className="font-bold">AI Marketing</span>
-              </div>
-              <div className="flex gap-3.5 mt-8 text-xl max-md:flex-wrap">
-                <div className="grow justify-center self-start px-9 py-2.5 rounded-3xl border-cyan-400 border-solid backdrop-blur-[20px] bg-white bg-opacity-20 border-[0.777px] w-fit max-md:px-5">
-                  Enter your work email
-                </div>
-                <div className="flex gap-2 px-7 py-4 bg-black border border-cyan-400 border-solid rounded-[50px] max-md:px-5">
-                  <div className="grow my-auto">Get in touch</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/12310904f4696c43b21204c552b44eb1ee7d77d26fbd5c2b328ef322d17b3cc0?apiKey=9a257399887b42c7b87198aa88395e96&"
-                    className="shrink-0 aspect-square w-[19px]"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-20 text-xl text-center text-white max-md:mt-10 max-md:max-w-full">
-        Trusted by the world’s most ambitious teams.
-      </div>
-      <div className="shrink-0 mt-32 max-w-full h-px w-[1467px] max-md:mt-10" />
-      <div className="flex gap-5 mt-4 w-full text-xl text-white max-w-[1467px] max-md:flex-wrap max-md:max-w-full">
-        <div className="flex-auto max-md:max-w-full">
-          Copyright © 2022 DOML. All rights reserved.
-        </div>
-        <div className="flex-auto text-right">
-          Terms of Use & Privacy Policy
-        </div>
-      </div>
+     
     </div>
         
         </>

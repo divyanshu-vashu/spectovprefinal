@@ -58,7 +58,7 @@ const MainLayout = () => {
 		<About />
 		<Ms/>
 		<Contact />
-		<Footer />
+		{/* <Footer /> */}
 		<TextToSpeech />
 	  </div>
 	);
