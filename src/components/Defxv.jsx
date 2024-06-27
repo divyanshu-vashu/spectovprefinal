@@ -5,7 +5,7 @@ import '../Styles/Defxv.css';
 
 const Defxv = () => {
   return (
-    <div className="custom-row rounded">
+    <div className="custom-row rounded-full">
       <div className="custom-left">
         <h1 className="custom-content">
         DEFxV: Bridging Worlds with AR/VR - Translate Sign Language and Experience Mobile Magic!
