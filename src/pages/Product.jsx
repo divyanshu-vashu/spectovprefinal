@@ -20,7 +20,6 @@ const product = () => {
         {/* <Navbar /> */}
         <Banner />
         <Catalouge />
-        <VideoBanner />
         <Table />
         <Specs />
         <Testimonials />

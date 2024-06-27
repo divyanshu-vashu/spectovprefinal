@@ -116,6 +116,22 @@ const Navbar = () => {
             } absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl bg-white p-6 shadow-lg`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
+            
+            <li
+                className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                  active === "Careers" ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("Careers");
+                }}
+              >
+                <Link to={user?"/page":"/careers"} className="block px-3 py-1">
+                  Careers
+                </Link>
+
+              </li>
+
               <li
                 className={`font-poppins cursor-pointer text-[16px] font-medium ${
                   active === "Product" ? "text-white" : "text-secondary"
