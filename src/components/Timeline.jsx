@@ -46,7 +46,8 @@ const Timeline = () => {
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit numquam labore itaque doloremque cum sunt nobis at aliquid dolor fugiat eveniet architecto quos, fugit saepe eaque recusandae expedita? Adipisci, animi!</p>
+          <h3 class="headertimiline">Comprehensive Training Program </h3>
+          <p class="texttimeline">Embark on your journey with our intensive training program, designed to equip you with essential skills across various courses. Upon completion, you will undergo an interview and project review. Successful candidates will then be selected for a prestigious paid internship.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -54,7 +55,8 @@ const Timeline = () => {
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis ex inventore optio culpa fuga doloremque! Quia veritatis cum ipsa sint. Iusto neque animi magnam reiciendis perferendis cumque laudantium alias!</p>
+          <h3 class="headertimiline"> Global Certification and Goodies</h3>
+          <p class="texttimeline">Receive a globally recognized certification and a selection of exclusive goodies. Spectov, in partnership with Microsoft, is committed to providing top-tier services and ensuring you receive the best in industry standards.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -62,7 +64,8 @@ const Timeline = () => {
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repudiandae natus possimus veritatis, quo voluptates similique saepe suscipit qui modi perspiciatis, iure aliquid porro error aspernatur quibusdam provident! Facilis, qui!</p>
+          <h3 class="headertimiline">Paid Internship Opportunity </h3>
+          <p class="texttimeline">Secure a paid internship with a stipend of up to ₹10,000. With a 100% chance of landing this opportunity, you will gain invaluable experience and further develop your professional skills in a real-world setting.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -70,7 +73,8 @@ const Timeline = () => {
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima animi fugiat velit odit facere suscipit dolorem obcaecati fuga voluptatum repellendus alias debitis deleniti consectetur maxime quo, accusamus consequuntur eligendi. Labore.</p>
+          <h3 class="headertimiline">Full-Time Employment Potential</h3>
+          <p class="texttimeline">Impress us with your dedication and exceptional work during your internship, and you will be considered for a full-time position at Spectov. We are always on the lookout for talented individuals to join our team permanently.</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

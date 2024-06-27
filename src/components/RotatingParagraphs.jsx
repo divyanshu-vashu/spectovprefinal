@@ -9,11 +9,11 @@ import cp from '../assets/cp.png'
 
 const RotatingParagraphs = () => {
   const paragraphs = [
-    { title: "Full Stack Developer", description: "Description for Paragraph 1 afdfasdddddddddddddddertegsregergegregsggerergdfsdddddddddddddddddddddddddddddd", image:fullstack},
-    { title: "Competitve Programmer", description: "Description for Paragraph 2",image:cp },
-    { title: "Artificial Intelligence", description: "Description for Paragraph 3" ,image:ai},
-    { title: "App Dev", description: "Description for Paragraph 4",image:appdev },
-    { title: "AR/VR", description: "Description for Paragraph 5",image:arvr }
+    { title: "Full Stack Developer", description: "Our Full Stack Development team at Spectov excels in creating robust and scalable web applications. With expertise in both front-end and back-end technologies, our developers build seamless and efficient systems. Whether it's developing responsive interfaces or designing complex server-side logic, we ensure that our solutions meet the highest standards of performance and usability", image:fullstack},
+    { title: "Competitve Programmer", description: "At Spectov, our focus on Data Structures and Algorithms ensures that our solutions are optimized for efficiency and performance. Our specialists employ advanced DSA techniques to solve complex problems, enabling faster processing and more effective resource management. This foundational expertise is crucial for developing high-performance applications and systems",image:cp },
+    { title: "Artificial Intelligence", description: "At Spectov, we leverage the power of Artificial Intelligence to transform data into actionable insights. Our AI team specializes in developing intelligent systems that can automate processes, enhance decision-making, and deliver personalized experiences. From machine learning models to natural language processing, we are at the forefront of AI innovation." ,image:ai},
+    { title: "App Dev", description: "Spectov’s App Development team is dedicated to creating user-friendly and high-performing mobile and web applications. We cover the entire development lifecycle, from concept and design to deployment and maintenance. Our apps are built with the latest technologies and best practices, ensuring they are secure, scalable, and tailored to meet our clients' specific needs.",image:appdev },
+    { title: "AR/VR", description: "Spectov is pioneering the future with cutting-edge AR and VR technologies. Our experts create immersive experiences that blend the physical and digital worlds. From virtual training simulations to augmented reality applications, we provide innovative solutions that redefine how users interact with technology",image:arvr }
   ];
 
   return (
@@ -24,8 +24,7 @@ const RotatingParagraphs = () => {
               <h2 className="who-are-we">Who are We</h2>
               <h1 className="main-title">Empowering Coders, Enabling Dreams</h1>
               <p className="description">
-                Unveil the essence of CodeHelp: a community-driven platform dedicated to empowering coders of all levels. 
-                Discover who we are and how we're shaping the future of coding education.
+              At SpectoV Pvt Ltd, we are committed to creating an environment that fosters innovation, learning, and professional growth. Our training programs are designed to bridge the gap between academic learning and industry requirements, ensuring our interns are well-prepared to tackle real-world challenges.
               </p>
               <button className="connect-button">Let's Connect</button>
             </div>

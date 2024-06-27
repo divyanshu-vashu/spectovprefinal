@@ -27,7 +27,7 @@ let careers = [
   },
   {
     id: 2,
-    title: "AR VR",
+    title: "Augmented Reality",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -62,7 +62,7 @@ let careers = [
   },
   {
     id: 7,
-    title: "AR VR",
+    title: "APP Development",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
