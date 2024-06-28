@@ -17,6 +17,7 @@ import Access from "./components/Access.jsx";
 import Naccess from "./components/Naccess.jsx";
 import Allrequest from "./components/Allrequest.jsx"
 import ForgetPassword from "./components/ForgetPassword.jsx";
+import Founder from "./components/Founder.jsx";
 
 function App() {
 	const user = localStorage.getItem("token");
@@ -55,6 +56,7 @@ const MainLayout = () => {
 		<About />
 		<Ms/>
 		<Contact />
+		<Founder />
 		{/* <Footer /> */}
 		<TextToSpeech />
 	  </div>
