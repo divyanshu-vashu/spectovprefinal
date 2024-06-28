@@ -6,73 +6,86 @@ import Timeline from "../components/Timeline";
 import Demo from "../components/Demo";
 
 import Career_hero from "../components/Career_hero";
+import CareerNavbar from "../components/CareerNavbar";
 
 
 
 
 let careers = [
-  {
-    id: 0,
-    title: "Full Stack Development",
-    subtitle: "Learn Full Stack Development",
-    content: "Learn Full Stack Development content",
-    img: ctestimg,
-  },
-  {
-    id: 1,
-    title: "Artificial Intelligence ",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 2,
-    title: "Augmented Reality",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 3,
-    title: "Logic Building and DSA",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 4,
-    title: "DSA And Web ",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 5,
-    title: "DSA And ML",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 6,
-    title: "SpectoV Special",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 7,
-    title: "APP Development",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-];
+	{
+		id: 0,
+	  title: "SpectoV Special",
+	  price:6500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	  
+	},
+	{
+	  id: 1,
+	  title: "Artificial Intelligence ",
+	  price:2500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+	{
+	  id: 2,
+	  title: "Augmented Reality",
+	  price:2500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+	{
+	  id: 3,
+	  title: "Logic Building and DSA",
+	  price:2500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+	{
+	  id: 4,
+	  title: "DSA And Web ",
+	  price:4000,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+	{
+	  id: 5,
+	  title: "DSA And AI",
+	  price:4000,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+	{
+		id: 6,
+		title: "Full Stack Development",
+		price:2500,
+		subtitle: "Learn Full Stack Development",
+		content: "Learn Full Stack Development content",
+		img: ctestimg,
+	},
+	{
+	  id: 7,
+	  title: "App Development",
+	  price:2500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ctestimg,
+	},
+  ];
+
+  
 
 export default function CareerPage() {
   return (
     <div style={{ backgroundColor: 'black' }}>
-    
+    <CareerNavbar/>
     <Career_hero />
     <Timeline />
     
@@ -99,8 +112,8 @@ export default function CareerPage() {
             content={career.content}
             img={career.img}
           />
-  ))}
-</div>
+   ))}
+   </div>
 
   </div>
   );
