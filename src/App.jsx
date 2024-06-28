@@ -33,14 +33,11 @@ function App() {
         {user&&<Route path="/details" exact element={<UserDetails />} />}
         {user && <Route path="/access" element={<Access />} />}
         {user && <Route path="/naccess" element={<Naccess />} />}
-
 			{user && <Route path="/page" exact element={<Main />} />}
 			<Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<LoginForm />} />
 			<Route path="/page" element={<Navigate replace to="/login" />} />
 			<Route path="/details" element={<Navigate replace to="/login" />} />
-
-
 		</Routes>
     </BrowserRouter>
 	);

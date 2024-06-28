@@ -8,7 +8,7 @@ const Defxv = () => {
     <div className="custom-row rounded-xl">
       <div className="custom-left">
         <h1 className="custom-content">
-        DEFxV: Bridging Worlds with AR/VR - Translate Sign Language and Experience Mobile Magic!
+        DefXV: Bridging Worlds with AR/VR - Translate Sign Language and Experience Mobile Magic!
         </h1>
         <div className="custom-def-btn">
           <Link to="/products"><button className="text-black custom-learn-more-btn" style={{border:"0.5rem", backgroundColor: 'red' }}>Learn More</button>
