@@ -1,14 +1,10 @@
 import CareerCard from "../components/CareerCard";
 import { Navbar } from "../components/";
 import ctestimg from "../assets/careerCardTestImage.png";
-import { Link } from "react-router-dom";
 import Timeline from "../components/Timeline";
 import Demo from "../components/Demo";
 
 import Career_hero from "../components/Career_hero";
-
-
-
 
 let careers = [
   {
@@ -71,27 +67,47 @@ let careers = [
 
 export default function CareerPage() {
   return (
-    <div style={{ backgroundColor: 'black' }}>
-    
-    <Career_hero />
-    <Timeline />
-    
+    <div style={{ backgroundColor: "black" }}>
+      <Career_hero />
+      <Timeline />
 
+      {/* add componnet here  */}
 
+      {/* harshanth , your work will chnage below code  */}
+      {/* thanks this helps a lot */}
 
-    {/* add componnet here  */}
-
-    {/* harshanth , your work will chnage below code  */}
-    
-    <div style={{display:"flex",justifyContent:"space-between ",color:"white"}}>
-      <h1 className="ml-5 mt-32 text-4xl text-white font-bold text-black md:ml-24">
-        Careers At SpectoV
-      </h1>      
-      
+      <div>
+        <h1 className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
+          Careers At SpectoV
+        </h1>
+        <div className="special h-full w-[96%] pt-4 pl-10">
+          <div className="border-stone-600 bg-[#192027] h-1/2 m-2 flex w-[4/5] flex-col justify-between text-wrap rounded-2xl border-[1px] border-solid p-5 sm:w-[98%]">
+            <div>
+              <img className="h-fit rounded-md" src={ctestimg} alt="" />
+              <h1 className="text-md ml-2 pt-8 font-bold text-white md:text-3xl">
+                Special
+              </h1>
+              <h2 className="ml-2 pt-2 text-sm text-white md:text-xl">
+                This is special course or something idk
+              </h2>
+              <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs text-white md:text-xs">
+                blah blah blah blah blah special
+              </p>
+            </div>
+            <div className="w-full flex items-center justify-center">
+              <a className="mt-2 flex h-16 w-1/2 items-center justify-center rounded-xl bg-blue-600 text-white">
+                Apply here
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-100 m-10 ml-5 flex text-white flex-wrap md:ml-20" style={{ color: "white !important" }}>
-          {careers.map((career) => (
-          <CareerCard 
+      <h1 className="ml-5 mt-16 text-4xl font-bold text-white md:ml-24">
+          Our Other courses
+        </h1>
+      <div className="w-100 m-10 mb-0 ml-5 flex flex-wrap pb-10 text-white md:ml-20">
+        {careers.map((career) => (
+          <CareerCard
             key={career.id}
             item={career.id}
             title={career.title}
@@ -99,9 +115,8 @@ export default function CareerPage() {
             content={career.content}
             img={career.img}
           />
-  ))}
-</div>
-
-  </div>
+        ))}
+      </div>
+    </div>
   );
 }
