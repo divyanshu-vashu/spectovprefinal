@@ -11,11 +11,12 @@ const Defxv = () => {
         DEFxV: Bridging Worlds with AR/VR - Translate Sign Language and Experience Mobile Magic!
         </h1>
         <div className="custom-def-btn">
-          <Link to="/products"><button className="custom-learn-more-btn">Learn More</button></Link>
+          <Link to="/products"><button className="text-black custom-learn-more-btn" style={{border:"0.5rem", backgroundColor: 'red' }}>Learn More</button>
+          </Link>
         </div>
     </div>
       <div className="custom-right">
-        <img src="/glasses2.png" alt="alternative_text" />
+        <img src="/glasses3.png" alt="alternative_text" />
       </div>
     </div>
   );
