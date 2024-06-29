@@ -1,14 +1,29 @@
 import React from "react";
 import "../Styles/Testimonials.css";
-import customer1 from "../assets/company/meta.png";
-import customer2 from "../assets/company/shopify.png";
-import customer3 from "../assets/company/starbucks.png";
-import customer4 from "../assets/company/tesla.png";
-import review1 from "../assets/product.webp";
+import microsoft from "../assets/company/microsoft_logo.jpg";
+import vnest from "../assets/company/vnest_logo.jpg";
+import fortis from "../assets/company/fortis_logo.jpg";
+import startupwala from "../assets/company/startupwala_logo.jpg";
 
 const Testimonials = () => {
-  const customers = [customer1, customer2, customer3, customer4]; // Add your customer images here
-  const reviews = [review1, review1, review1, review1, review1, review1]; // Add your review images here
+  const customers = [microsoft, vnest, fortis, startupwala]; // Add your customer images here
+  const reviews = [
+    {
+      name: "John Doe",
+      rating: 5,
+      text: "Great service, highly recommended!",
+    },
+    {
+      name: "Jane Smith",
+      rating: 4,
+      text: "Very good experience overall.",
+    },
+    {
+      name: "Mike Johnson",
+      rating: 5,
+      text: "Excellent support and great quality.",
+    },
+  ];
 
   return (
     <div className="testimonial_container">
@@ -23,7 +38,7 @@ const Testimonials = () => {
                 </div>
               ))}
               {customers.map((customer, index) => (
-                <div key={index} className="testimonial_card">
+                <div key={index + customers.length} className="testimonial_card">
                   <img src={customer} alt={`Customer ${index + 1}`} />
                 </div>
               ))}
@@ -34,13 +49,29 @@ const Testimonials = () => {
           <div className="marquee reverse">
             <div className="marquee_content">
               {reviews.map((review, index) => (
-                <div key={index} className="testimonial_card">
-                  <img src={review} alt={`Review ${index + 1}`} />
+                <div key={index} className="review_card">
+                  <div className="review_avatar"></div>
+                  <div className="review_content">
+                    <div className="review_name">{review.name}</div>
+                    <div className="review_rating">
+                      {"★".repeat(review.rating)}
+                      {"☆".repeat(5 - review.rating)}
+                    </div>
+                    <div className="review_text">{review.text}</div>
+                  </div>
                 </div>
               ))}
               {reviews.map((review, index) => (
-                <div key={index + reviews.length} className="testimonial_card">
-                  <img src={review} alt={`Review ${index + 1}`} />
+                <div key={index + reviews.length} className="review_card">
+                  <div className="review_avatar"></div>
+                  <div className="review_content">
+                    <div className="review_name">{review.name}</div>
+                    <div className="review_rating">
+                      {"★".repeat(review.rating)}
+                      {"☆".repeat(5 - review.rating)}
+                    </div>
+                    <div className="review_text">{review.text}</div>
+                  </div>
                 </div>
               ))}
             </div>

@@ -11,7 +11,7 @@ const UserDetails = () => {
   useEffect(() => {
     const getCodeDetail = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8080/api/details/${email}`);
+        const { data } = await axios.get(`https://spectov-backend.onrender.com/api/details/${email}`);
         setUser(data);
         localStorage.setItem('name', data.firstName);
       } catch (error) {
@@ -24,6 +24,10 @@ const UserDetails = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    localStorage.removeItem("name");
+    localStorage.removeItem("courses");
+
     window.location.reload();
   };
 

@@ -13,7 +13,7 @@ const ForgetPassword = () => {
     e.preventDefault();
     //console.log(inputemail.email, inputpass.password);
     try {
-      await axios.post(`http://localhost:8080/api/user/forget-password/${inputpass.password}/${inputemail.email}`);
+      await axios.post(`https://spectov-backend.onrender.com/api/user/forget-password/${inputpass.password}/${inputemail.email}`);
       navigate("/login")
       
     } catch (error) {
@@ -66,7 +66,7 @@ const ForgetPassword = () => {
             <button type="button" className="login-signup-button">Sign Up</button>
           </Link>
           <h1 className="login-new-title">Login as Admin ?</h1>
-          <Link to="/admin/all-request">
+          <Link to="/admin-login">
             <button type="button" className="login-signup-button">Admin Login</button>
           </Link>
           <h1 className="login-new-title">Already Registered ?</h1>

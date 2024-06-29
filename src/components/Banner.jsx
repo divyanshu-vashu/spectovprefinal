@@ -58,7 +58,7 @@ const Banner = () => {
               translation and intuitive gesture control.
             </p>
             <div className="banner_price">
-              $199
+              Coming Soon
               <button className="buy_now_button">Buy Now</button>
             </div>
           </div>

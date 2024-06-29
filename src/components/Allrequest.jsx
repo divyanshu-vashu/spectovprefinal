@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "../Styles/allRequest.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 function UsersList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+ const navigate=useNavigate()
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/all-request');
+       // window.location.reload()
+        const response = await axios.get('https://spectov-backend.onrender.com/api/all-request');
         setUsers(response.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +28,7 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`http://localhost:8080/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`https://spectov-backend.onrender.com/api/enroll/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('Enrollment Successful.');
       window.location.reload();
     } catch (error) {
@@ -37,17 +39,24 @@ function UsersList() {
     e.preventDefault();
    // alert(`User ID: ${userId}, Course Index: ${courseIndex}`);
     try {
-      await axios.put(`http://localhost:8080/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
+      await axios.put(`https://spectov-backend.onrender.com/api/reject/permission/${email}/${courseIndex}`, { index: courseIndex });
       alert('You have rejected this enrollment.');
       window.location.reload()
     } catch (error) {
       console.log(error);
     }
   };
- 
+
+  const handleLogout=()=>{
+   // navigate("/login")
+
+    localStorage.removeItem("AdminEmail");
+    window.location.reload();
+
+  }
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <h1>Loading...</h1>;
   }
 
   if (error) {
@@ -59,7 +68,12 @@ function UsersList() {
   return (
     <div className='parent'>
       <div className="container">
+        <div id="user-actions">
         <h1 className="header">Pending Requests</h1>
+            <Link  >
+              <button onClick={handleLogout} id="profile-button">Logout</button>
+            </Link>
+          </div>
         {filteredUsers.length === 0 ? (
           <p className="no-users">No users with pending courses found.</p>
         ) : (

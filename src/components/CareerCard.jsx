@@ -16,10 +16,10 @@ export default function CareerCard(props) {
       <div className="border-grey bg-grey-200 m-2 flex h-fit w-72 flex-col justify-between text-wrap rounded-2xl border-2 border-solid p-5">
         <div>
           <img className="w-full rounded-md" src={props.img} alt="" />
-          <h1 className="text-md ml-2 pt-8 font-bold text-black md:text-3xl">
+          <h1 className="text-md ml-2 pt-8 font-bold text-white md:text-3xl">
             {props.title}
           </h1>
-          <h2 className="ml-2 pt-2 text-sm text-black md:text-xl">
+          <h2 className="ml-2 pt-2 text-sm text-white md:text-xl">
             {props.subtitle}
           </h2>
           <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs md:text-xs">

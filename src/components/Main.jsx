@@ -4,61 +4,77 @@ import ctestimg from "../assets/careerCardTestImage.png";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import axios from 'axios';
+import Timeline from "../components/Timeline";
+import Demo from "../components/Demo";
+
+import Career_hero from "../components/Career_hero";
+
+
 
 
 let careers = [
 	{
-	  id: 0,
-	  title: "Full Stack Development",
-	  subtitle: "Learn Full Stack Development",
-	  content: "Learn Full Stack Development content",
+		id: 0,
+	  title: "SpectoV Special",
+	  price:6500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
+	  
 	},
 	{
 	  id: 1,
-	  title: "Artificial Intelligence and Machine Learning",
+	  title: "Artificial Intelligence ",
+	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
 	},
 	{
 	  id: 2,
-	  title: "AR VR",
+	  title: "Augmented Reality",
+	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
+	  
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
 	},
 	{
 	  id: 3,
 	  title: "Logic Building and DSA",
+	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
 	},
 	{
 	  id: 4,
-	  title: "DSA And Web ",
+	  title: "DSA And Full Stack Dev",
+	  price:4000,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
 	},
 	{
 	  id: 5,
-	  title: "DSA And ML",
+	  title: "DSA And Artificial Int",
+	  price:4000,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
 	},
 	{
-	  id: 6,
-	  title: "SpectoV Special",
-	  subtitle: "Artificial Intelligence and Machine Learning",
-	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+		id: 6,
+		title: "Full Stack Development",
+		price:2500,
+		subtitle: "Learn Full Stack Development",
+		content: "Learn Full Stack Development content",
+		img: ctestimg,
 	},
 	{
 	  id: 7,
-	  title: "AR VR",
+	  title: "App Development",
+	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
 	  img: ctestimg,
@@ -75,7 +91,7 @@ const Main = () => {
 	const email = localStorage.getItem("email");
 	const getCodeDetail=async()=>{
 	  try{
-		  const {data}=await axios.get(`http://localhost:8080/api/details/${email}`);
+		  const {data}=await axios.get(`https://spectov-backend.onrender.com/api/details/${email}`);
 			  setUser(data);
   
 	  }catch(error){
@@ -91,19 +107,22 @@ const Main = () => {
 	};
 	return (
 		<> 
-		<Navbar />
+		{/* <Navbar /> */}
+		<div style={{ backgroundColor: 'black' }}>
+    
+    	
 		<div style={{display:"flex",justifyContent:"space-between"}}>
-		<h1 className="ml-5 mt-32 text-4xl font-bold text-black md:ml-24">
+		<h1 className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
 		  Careers At SpectoV
 		</h1>
 		<div style={{display:"flex"}}>
-		<h1 className="mt-32">Hi {user.firstName}</h1>&emsp;
+		<h1 className="mt-9 text-white">Hi {user.firstName}</h1>&emsp;
 
-		<Link to="/details" className="mt-32"  >
-				<button style={{backgroundColor:"pink",color:"white",height:"2.5rem",borderRadius:"10px"}} >&emsp;Profile&emsp;</button>
+		<Link to="/details" className="mt-9"  >
+				<button style={{backgroundColor:"blue",color:"white",height:"2.5rem",borderRadius:"10px"}} >&emsp;Profile&emsp;</button>
 			  </Link>      &emsp;
-		<Link to="/login" className="mt-32" >
-				<button style={{backgroundColor:"pink",color:"white",height:"2.5rem",borderRadius:"10px"}}  onClick={handleLogout}>&emsp;logout&emsp;</button>
+		<Link to="/login" className="mt-9" >
+				<button style={{backgroundColor:"red",color:"white",height:"2.5rem",borderRadius:"10px"}}  onClick={handleLogout}>&emsp;logout&emsp;</button>
 			  </Link>&emsp;</div>
 		</div>
 	
@@ -113,12 +132,16 @@ const Main = () => {
 			  key={career.id}
 			  item={career.id}
 			  title={career.title}
-			  subtitle={career.subtitle}
-			  content={career.content}
+			//   price={career.price}
+			//   subtitle={career.subtitle}
+			//   content={career.content}
 			  img={career.img}
 			  //courses={user.courses}
 			/>
 		  ))}
+		</div>
+		<Career_hero />
+    	<Timeline />
 		</div>
 	  </>
 

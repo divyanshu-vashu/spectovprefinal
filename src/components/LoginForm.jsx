@@ -14,7 +14,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/auth";
+      const url = "https://spectov-backend.onrender.com/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
       localStorage.setItem("email", data.email);
@@ -68,7 +68,7 @@ const LoginForm = () => {
             <button type="button" className="login-signup-button">Sign Up</button>
           </Link>
           <h1 className="login-new-title">Login as Admin ?</h1>
-          <Link to="/admin/all-request">
+          <Link to="/admin-login">
             <button type="button" className="login-signup-button">Admin Login</button>
           </Link>
           <h1 className="login-new-title">Forget Password ?</h1>
