@@ -73,7 +73,9 @@ let careers = [
     subtitle:
       "Learn Full Stack Development and Learn With Industry Experience ",
     content: "Learn Full Stack Development content",
-	{
+	 img: fullstack,
+  }, ⁠
+  {
 	  id: 7,
 	  title: "App Development",
 	  price:2500,
