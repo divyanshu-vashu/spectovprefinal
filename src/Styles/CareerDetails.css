@@ -14,8 +14,9 @@
   }
   
   .career-details-container img {
-    width: 100%;
-    height: 65vh;
+    object-fit: contain;
+    width: fit-content;
+    height: fit-content;
     aspect-ratio: 16/9;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
@@ -25,7 +26,6 @@
   .career-details-container h1,
   .career-details-container h2 {
     color: #333;
-    text-align: center;
   }
   
   .career-details-container h1 {

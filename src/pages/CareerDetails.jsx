@@ -171,13 +171,14 @@ export default function CareerDetails() {
       >
         Go Back
       </Link>
-      <img src={career.img} alt={career.title} />
+      <img 
+       src={career.img} alt={career.title} />
       <div className="career-details-content-container">
 
       <div className="career-details-qr">
-          <div className="qr-heading">QR Code</div>
-          <img src={qr} className="qr_code"/>
           <div className="qr-heading">Scan to Pay</div>
+          <img src={qr} className="qr_code"/>
+          <div className="qr-heading">QR Code</div>
       </div>
       
       <div className="career-details-content">
