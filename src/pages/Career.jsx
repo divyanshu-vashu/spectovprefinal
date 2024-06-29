@@ -18,7 +18,7 @@ let careers = [
 	  price:6500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: ctesting,
 	  
 	},
 	{
@@ -44,7 +44,7 @@ let careers = [
 	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: "/dsa.png",
 	},
 	{
 	  id: 4,
@@ -68,7 +68,7 @@ let careers = [
 		price:2500,
 		subtitle: "Learn Full Stack Development",
 		content: "Learn Full Stack Development content",
-		img: ctestimg,
+		img: "/fullstack.png,
 	},
 	{
 	  id: 7,
