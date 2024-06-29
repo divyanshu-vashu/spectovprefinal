@@ -16,6 +16,8 @@ import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
 
+import { Link } from "react-router-dom";
+
 let careers = [
   {
     id: 0,
@@ -88,8 +90,16 @@ let careers = [
 ];
 
 export default function CareerPage() {
+	const user = localStorage.getItem("token");
+
+  let initialArray = [];
+
+  if (user) {
+    const courses = localStorage.getItem("courses");
+    initialArray = courses ? courses.split(",") : [];
+  }
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div className="bg-black">
       <CareerNavbar />
       <Career_hero />
       <Timeline />
@@ -119,9 +129,22 @@ export default function CareerPage() {
 				  </p>
 				</div>
 				<div className="flex w-full items-center justify-center">
-				  <a className="mt-2 flex h-16 w-1/2 items-center justify-center rounded-xl bg-blue-600 text-white">
-					Apply here
-				  </a>
+				<Link
+          className="mt-2 flex h-16 w-full items-center justify-center rounded-xl bg-blue-600 text-white"
+          to={user ? `/careers/0}` : "/careers"}
+          onClick={() => {
+            user
+              ? console.log("login")
+              : alert("login first to go to the course");
+          }}
+          state={initialArray[0]}
+        >
+          {initialArray[0] === "true" && user
+            ? "Open"
+            : initialArray[0] === "pending" && user
+              ? "Pending"
+              : "Enroll"}
+        </Link>
 				</div>
 			  </div>
 			</div>
