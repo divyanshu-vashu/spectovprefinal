@@ -1,9 +1,18 @@
+import React from "react";
+import { useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
+import "../Styles/Access.css";
 
-import React, { useState } from "react";
-export default function Access(){
-    return(
+export default function Access() {
+  const location = useLocation();
+  const data = location.state;
+  return (
     <>
-    <h1>You have access</h1>
+      <Navbar />
+      <div>
+        <h1 className="data-text">{data}</h1>
+        <h1 className="coming-soon">Coming Soon...</h1>
+      </div>
     </>
-    )
+  );
 }

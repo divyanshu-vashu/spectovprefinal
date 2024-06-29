@@ -165,7 +165,8 @@ export default function CareerDetails() {
         {access === 'true' ? (
           <Link
             className="open-btn"
-            to="/access"
+            to="/access" 
+            state={career.title}
           >
             Open
           </Link>
@@ -185,12 +186,13 @@ export default function CareerDetails() {
               name="transactionId"
               value={inputs.transactionId}
               onChange={handleChange1}
+              style={{backgroundColor:"white"}}
             />
             <input
               type="text"
               id="rid"
 
-              style={{display:"none"}}
+              style={{display:"none",backgroundColor:"white"}}
 
               className="input-field"
               placeholder="Have a referral?"
