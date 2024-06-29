@@ -28,8 +28,8 @@ export default function Founder() {
           <img className="md:h-full md:w-1/2 object-contain" src={FounderImage} alt="Jane Doe" />
           <div className="md:absolute md:top-0 md:left-0 w-full h-full flex items-center">
             <div className="p-10 md:ml-[50%] md:w-1/2">
-              <h1 className="text-5xl mb-5">Jane Doe</h1>
-              <h3 className="text-3xl mb-5">Co-Founder of something idk</h3>
+              <h1 className="text-5xl mb-5">Shivang Singh</h1>
+              <h3 className="text-3xl mb-5">Co-Founder of SpectoV</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed placeat
                 minima dolor quisquam doloribus rem adipisci dolorem temporibus ipsum
@@ -43,8 +43,8 @@ export default function Founder() {
           <img className="md:h-full md:w-1/2  object-contain" src={FounderImage} alt="John Doe" />
           <div className="md:absolute md:top-0 md:left-0 w-full h-full flex items-center">
             <div className="p-10 md:ml-[50%] md:w-1/2">
-              <h1 className="text-5xl mb-5">John Doe</h1>
-              <h3 className="text-3xl mb-5">Founder of something idk</h3>
+              <h1 className="text-5xl mb-5">Vanshmani Jha</h1>
+              <h3 className="text-3xl mb-5">Founder of SpectoV</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed placeat
                 minima dolor quisquam doloribus rem adipisci dolorem temporibus ipsum

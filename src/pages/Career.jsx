@@ -5,8 +5,7 @@ import Timeline from "../components/Timeline";
 import Demo from "../components/Demo";
 
 import Career_hero from "../components/Career_hero";
-import CareerNavbar from "../components/CareerNavbar";
-
+import CareerNavbar from "../components/CareerNavbar"
 import ai from "../assets/aibanner.png";
 import appdev from "../assets/app_devBanner.png";
 import ar from "../assets/arbanner.png";
@@ -15,7 +14,6 @@ import combodsaweb from "../assets/combo_dsa_web.png";
 import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
-
 let careers = [
   {
     id: 0,
@@ -75,17 +73,14 @@ let careers = [
     subtitle:
       "Learn Full Stack Development and Learn With Industry Experience ",
     content: "Learn Full Stack Development content",
-
-    img: fullstack,
-  },
-  {
-    id: 7,
-    title: "App Development",
-    price: 2500,
-    subtitle: "Learn Flutter , Learn App Dev with Industry Leader",
-    content: "Artificial Intelligence and Machine Learning",
-    img: appdev,
-  },
+	{
+	  id: 7,
+	  title: "App Development",
+	  price:2500,
+	  subtitle: "Learn Flutter , Learn App Dev with Industry Leader",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: appdev,
+	},
 ];
 
 export default function CareerPage() {

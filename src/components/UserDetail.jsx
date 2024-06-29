@@ -24,6 +24,10 @@ const UserDetails = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    localStorage.removeItem("name");
+    localStorage.removeItem("courses");
+
     window.location.reload();
   };
 

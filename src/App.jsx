@@ -18,16 +18,26 @@ import Naccess from "./components/Naccess.jsx";
 import Allrequest from "./components/Allrequest.jsx"
 import ForgetPassword from "./components/ForgetPassword.jsx";
 import Founder from "./components/Founder.jsx";
+import AdminLogin from "./components/AdminLogin.jsx";
+
 
 function App() {
 	const user = localStorage.getItem("token");
-
+	const admin = localStorage.getItem("AdminEmail");
+	var temp=!import.meta.env.VITE_REACT_APP_VAR1;
+	if (admin===import.meta.env.VITE_REACT_APP_EMAIL)
+		{
+			temp=import.meta.env.VITE_REACT_APP_VAR2;
+		}
 	return (
     <BrowserRouter>
 		<Routes>
 		<Route path="/" element={<MainLayout />} />
         <Route path="/products" element={<ProductPage />} />
-		<Route path="/admin/all-request" element={<Allrequest />} />
+		<Route path="/admin-login" element={<AdminLogin />} />
+
+		{temp && <Route path="/admin/all-request" element={<Allrequest />} />}
+
         <Route path="/careers" element={<CareerPage />} />
 		<Route path="/forget-password" element={<ForgetPassword />} />
         {user && <Route path="/careers/:item" element={<CareerDetails />} />}
@@ -38,6 +48,10 @@ function App() {
 			<Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<LoginForm />} />
 			<Route path="/page" element={<Navigate replace to="/login" />} />
+
+			<Route path="/admin/all-request" element={<Navigate replace to="/login" />} />
+
+
 			<Route path="/details" element={<Navigate replace to="/login" />} />
 		</Routes>
     </BrowserRouter>

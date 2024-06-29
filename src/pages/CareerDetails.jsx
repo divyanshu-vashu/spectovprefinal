@@ -5,64 +5,86 @@ import qr from "../assets/QR_sample.png";
 import axios from 'axios';
 import "../Styles/CareerDetails.css"; 
 
+
+import ai from "../assets/aibanner.png";
+import appdev from "../assets/app_devBanner.png";
+import ar from "../assets/arbanner.png";
+import combodsaai from "../assets/combo_dsa_ai.png";
+import combodsaweb from "../assets/combo_dsa_web.png";
+import dsa from "../assets/dsabanner.png";
+import fullstack from "../assets/fullstackbanner.png";
+import special from "../assets/specialbanner.png";
+
 let careers = [
-  {
-    id: 0,
-    title: "Full Stack Development",
-    subtitle: "Learn Full Stack Development",
-    content: "Learn Full Stack Development content",
-    img: ctestimg,
-  },
-  {
-    id: 1,
-    title: "Artificial Intelligence and Machine Learning",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 2,
-    title: "AR VR",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 3,
-    title: "Logic Building and DSA",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 4,
-    title: "DSA And Web ",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 5,
-    title: "DSA And ML",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 6,
-    title: "SpectoV Special",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-  {
-    id: 7,
-    title: "AR VR",
-    subtitle: "Artificial Intelligence and Machine Learning",
-    content: "Artificial Intelligence and Machine Learning",
-    img: ctestimg,
-  },
-];
+	{
+		id: 0,
+	  title: "SpectoV Special",
+	  price:6500,
+	  subtitle: "combo of dsa , web dev ,AI , ,App dev our premium program  ar vr ",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: special,
+	  
+	},
+	{
+	  id: 1,
+	  title: "Artificial Intelligence ",
+	  price:2500,
+	  subtitle: "Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ai,
+	},
+	{
+	  id: 2,
+	  title: "Augmented Reality",
+	  price:2500,
+	  subtitle: "Learn Blender, Learn how ar vr is made ",
+	  
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: ar,
+	},
+	{
+	  id: 3,
+	  title: "Logic Building and DSA",
+	  price:2500,
+	  subtitle: "This course in c++",
+	  content: "",
+	  img: dsa,
+	},
+	{
+	  id: 4,
+	  title: "DSA And Full Stack Dev",
+	  price:4000,
+	  subtitle: "This course is combo of dsa and full stack Mern dev",
+	  content: "",
+	  img: combodsaweb,
+	},
+	{
+	  id: 5,
+	  title: "DSA And Artificial Int",
+	  price:4000,
+	  subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: combodsaai,
+	},
+	{
+		id: 6,
+		title: "Full Stack Development",
+		price:2500,
+		subtitle: "Learn Full Stack Development and Learn With Industry Experience ",
+		content: "Learn Full Stack Development content",
+
+		img: fullstack,
+
+	},
+	{
+	  id: 7,
+	  title: "App Development",
+	  price:2500,
+	  subtitle: "Learn Flutter , Learn App Dev with Industry Leader",
+	  content: "Artificial Intelligence and Machine Learning",
+	  img: appdev,
+	},
+  ];
 
 export default function CareerDetails() {
   const location = useLocation();
@@ -85,6 +107,11 @@ export default function CareerDetails() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if(inputs.transactionId==="")
+        {
+          setError("Enter Transaction Id")
+        }
+      else{
       const referEmail = `${refer.referId}@gmail.com`;
 
       if(refer.referId!==""){
@@ -108,6 +135,7 @@ export default function CareerDetails() {
       }*/
       setAccess('pending');
       alert('Enrollment Successful. Waiting for approval from owner');
+    }
     } catch (error) {
       setError("Wrong Referral Id.");
       //alert(error.message);
@@ -159,7 +187,8 @@ export default function CareerDetails() {
         {access === 'true' ? (
           <Link
             className="open-btn"
-            to="/access"
+            to="/access" 
+            state={career.title}
           >
             Open
           </Link>
@@ -179,10 +208,14 @@ export default function CareerDetails() {
               name="transactionId"
               value={inputs.transactionId}
               onChange={handleChange1}
+              style={{backgroundColor:"white"}}
             />
             <input
               type="text"
               id="rid"
+
+              style={{display:"none",backgroundColor:"white"}}
+
               className="input-field"
               placeholder="Have a referral?"
               name="referId"
@@ -193,6 +226,9 @@ export default function CareerDetails() {
               id="tbtn"
               className="submit-btn"
               onClick={handleSubmit}
+
+              style={{display:"none"}}
+
             >
               Submit
             </button>

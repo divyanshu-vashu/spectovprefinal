@@ -1,0 +1,17 @@
+
+.data-text {
+    font-size: 2rem; 
+    color: #4a90e2; 
+    font-weight: bold;
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-top: 10rem;
+  }
+  
+  .coming-soon {
+    font-size: 3em; 
+    font-weight: bold;
+    color: #ff0000;
+    text-align: center; 
+  }
+  
