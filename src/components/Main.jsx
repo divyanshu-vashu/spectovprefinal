@@ -10,16 +10,23 @@ import Demo from "../components/Demo";
 import Career_hero from "../components/Career_hero";
 
 
-
+import ai from "../assets/aibanner.png";
+import appdev from "../assets/app_devBanner.png";
+import ar from "../assets/arbanner.png";
+import combodsaai from "../assets/combo_dsa_ai.png";
+import combodsaweb from "../assets/combo_dsa_web.png";
+import dsa from "../assets/dsabanner.png";
+import fullstack from "../assets/fullstackbanner.png";
+import special from "../assets/specialbanner.png";
 
 let careers = [
 	{
 		id: 0,
 	  title: "SpectoV Special",
 	  price:6500,
-	  subtitle: "Artificial Intelligence and Machine Learning",
+	  subtitle: "combo of dsa , web dev ,AI , ,App dev our premium program  ar vr ",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: special,
 	  
 	},
 	{
@@ -28,58 +35,58 @@ let careers = [
 	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: ai,
 	},
 	{
 	  id: 2,
 	  title: "Augmented Reality",
 	  price:2500,
-	  subtitle: "Artificial Intelligence and Machine Learning",
+	  subtitle: "Learn Blender, Learn how ar vr is made ",
 	  
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: ar,
 	},
 	{
 	  id: 3,
 	  title: "Logic Building and DSA",
 	  price:2500,
-	  subtitle: "Artificial Intelligence and Machine Learning",
-	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  subtitle: "This course in c++",
+	  content: "",
+	  img: dsa,
 	},
 	{
 	  id: 4,
 	  title: "DSA And Full Stack Dev",
 	  price:4000,
-	  subtitle: "Artificial Intelligence and Machine Learning",
-	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  subtitle: "This course is combo of dsa and full stack Mern dev",
+	  content: "",
+	  img: combodsaweb,
 	},
 	{
 	  id: 5,
 	  title: "DSA And Artificial Int",
 	  price:4000,
-	  subtitle: "Artificial Intelligence and Machine Learning",
+	  subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: combodsaai,
 	},
 	{
 		id: 6,
 		title: "Full Stack Development",
 		price:2500,
-		subtitle: "Learn Full Stack Development",
+		subtitle: "Learn Full Stack Development and Learn With Industry Experience ",
 		content: "Learn Full Stack Development content",
 
-		img: ctestimg,
+		img: fullstack,
 
 	},
 	{
 	  id: 7,
 	  title: "App Development",
 	  price:2500,
-	  subtitle: "Artificial Intelligence and Machine Learning",
+	  subtitle: "Learn Flutter , Learn App Dev with Industry Leader",
 	  content: "Artificial Intelligence and Machine Learning",
-	  img: ctestimg,
+	  img: appdev,
 	},
   ];
   
