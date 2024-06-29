@@ -68,7 +68,7 @@ const LoginForm = () => {
             <button type="button" className="login-signup-button">Sign Up</button>
           </Link>
           <h1 className="login-new-title">Login as Admin ?</h1>
-          <Link to="/admin/all-request">
+          <Link to="/admin-login">
             <button type="button" className="login-signup-button">Admin Login</button>
           </Link>
           <h1 className="login-new-title">Forget Password ?</h1>

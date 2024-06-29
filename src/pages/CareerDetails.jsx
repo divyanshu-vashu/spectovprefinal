@@ -57,7 +57,7 @@ let careers = [
   },
   {
     id: 7,
-    title: "AR VR",
+    title: "Web Development",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -85,6 +85,11 @@ export default function CareerDetails() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if(inputs.transactionId==="")
+        {
+          setError("Enter Transaction Id")
+        }
+      else{
       const referEmail = `${refer.referId}@gmail.com`;
 
       if(refer.referId!==""){
@@ -108,6 +113,7 @@ export default function CareerDetails() {
       }*/
       setAccess('pending');
       alert('Enrollment Successful. Waiting for approval from owner');
+    }
     } catch (error) {
       setError("Wrong Referral Id.");
       //alert(error.message);
@@ -183,6 +189,9 @@ export default function CareerDetails() {
             <input
               type="text"
               id="rid"
+
+              style={{display:"none"}}
+
               className="input-field"
               placeholder="Have a referral?"
               name="referId"
@@ -193,6 +202,9 @@ export default function CareerDetails() {
               id="tbtn"
               className="submit-btn"
               onClick={handleSubmit}
+
+              style={{display:"none"}}
+
             >
               Submit
             </button>
