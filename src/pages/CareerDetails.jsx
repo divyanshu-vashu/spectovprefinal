@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
-import ctestimg from "../assets/careerCardTestImage.png";
+import ctestimg from "../assets/logo.svg";
+import qr from "../assets/QR_sample.png";
 import axios from 'axios';
+import "../Styles/CareerDetails.css"; 
 
 let careers = [
   {
@@ -55,7 +57,7 @@ let careers = [
   },
   {
     id: 7,
-    title: "AR VR",
+    title: "Web Development",
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "Artificial Intelligence and Machine Learning",
     img: ctestimg,
@@ -83,29 +85,35 @@ export default function CareerDetails() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if(inputs.transactionId==="")
+        {
+          setError("Enter Transaction Id")
+        }
+      else{
       const referEmail = `${refer.referId}@gmail.com`;
 
       if(refer.referId!==""){
-      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/refer/${referEmail}`);
       }
       if(email===referEmail){
-        await axios.put(`http://localhost:8080/api/refer/error`);
+        await axios.put(`https://spectov-backend.onrender.com/api/refer/error`);
       }
       if(refer.referId!==""){
-      const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/${refer.referId}`);
+      const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/${refer.referId}`);
       }
       else{
-        const response = await axios.put(`http://localhost:8080/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/0`);
+        const response = await axios.put(`https://spectov-backend.onrender.com/api/transaction/${email}/${career.id}/${inputs.transactionId}/${career.title}/0`);
 
       }
-      await axios.put(`http://localhost:8080/api/enroll/approval/${email}/${career.id}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/enroll/approval/${email}/${career.id}`);
      /* if(refer.referId!==""){
         const referEmail = `${refer.referId}@gmail.com`;
 
-      await axios.put(`http://localhost:8080/api/refer/${referEmail}`);
+      await axios.put(`https://spectov-backend.onrender.com/api/refer/${referEmail}`);
       }*/
       setAccess('pending');
       alert('Enrollment Successful. Waiting for approval from owner');
+    }
     } catch (error) {
       setError("Wrong Referral Id.");
       //alert(error.message);
@@ -134,27 +142,29 @@ export default function CareerDetails() {
   };
 
   return (
-    <div className="items-center md:flex md:p-10">
+    <div className="career-details-container">
       <Link
-        className="absolute bg-blue-400 p-4 top-3 rounded-xl m-4 text-white"
+        className=" bg-blue-400 p-4 top-3 rounded-xl m-4 text-white back_btn"
         to={user ? '/page' : '/careers'}
       >
         Go Back
       </Link>
-      <img className="w-full rounded-md md:w-1/2" src={career.img} alt="" />
-      <div className="md:flex md:flex-col">
-        <h1 className="p-5 pl-2 text-3xl font-bold text-black md:pl-5 md:text-4xl">
-          {career.title}
-        </h1>
-        <h2 className="pl-2 text-xl text-black md:pl-5 md:text-xl">
-          {career.subtitle}
-        </h2>
-        <p className="p-5 text-md w-full text-wrap break-words pr-5 pt-2 md:text-xs">
-          {career.content}
-        </p>
+      <img src={career.img} alt={career.title} />
+      <div className="career-details-content-container">
+
+      <div className="career-details-qr">
+          <div className="qr-heading">QR Code</div>
+          <img src={qr} className="qr_code"/>
+          <div className="qr-heading">Scan to Pay</div>
+      </div>
+      
+      <div className="career-details-content">
+        <h1>{career.title}</h1>
+        <h2>{career.subtitle}</h2>
+        <p>{career.content}</p>
         {access === 'true' ? (
           <Link
-            className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+            className="open-btn"
             to="/access"
           >
             Open
@@ -162,70 +172,50 @@ export default function CareerDetails() {
         ) : access === 'false' ? (
           <>
             <button
-              className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+              className="enroll-btn"
               onClick={handleSubmit1}
             >
               Enroll
             </button>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <input
-                type="text"
-                id="tid"
-                placeholder="Enter Transaction Id"
-                name="transactionId"
-                value={inputs.transactionId}
-                style={{
-                  backgroundColor: "white",
-                  borderWidth: '0.1rem',
-                  borderColor: "black",
-                  width: '20rem',
-                  height: "3rem",
-                  textAlign: "center",
-                  marginTop: '2rem',
-                  display: "none",
-                  borderRadius: '10px'
-                }}
-                onChange={handleChange1}
-              />
-              <input
-                type="text"
-                id="rid"
-                placeholder="Have a referral?"
-                name="referId"
-                value={refer.referId}
-                style={{
-                  backgroundColor: "white",
-                  borderWidth: '0.1rem',
-                  borderColor: "black",
-                  width: '20rem',
-                  height: "3rem",
-                  textAlign: "center",
-                  marginTop: '2rem',
-                  display: "none",
-                  borderRadius: '10px'
-                }}
-                onChange={handleChange2}
-              />
-              <button
-                style={{ display: "none" }}
-                id="tbtn"
-                onClick={handleSubmit}
-                className="ml-3 mt-8 block h-11 w-28 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
-              >
-                Submit
-              </button>
-              {error && <div className="login-error">{error}</div>}
-            </div>
+            <input
+              type="text"
+              id="tid"
+              className="input-field"
+              placeholder="Enter Transaction Id"
+              name="transactionId"
+              value={inputs.transactionId}
+              onChange={handleChange1}
+            />
+            <input
+              type="text"
+              id="rid"
+              style={{display:"none"}}
+              className="input-field"
+              placeholder="Have a referral?"
+              name="referId"
+              value={refer.referId}
+              onChange={handleChange2}
+            />
+            <button
+              id="tbtn"
+              className="submit-btn"
+              onClick={handleSubmit}
+              style={{display:"none"}}
+            >
+              Submit
+            </button>
+            {error && <div className="login-error">{error}</div>}
           </>
         ) : (
           <Link
-            className="ml-4 mt-2 block h-16 w-48 items-center justify-center rounded-xl bg-blue-600 py-4 text-center text-white"
+            className="pending-btn"
             onClick={() => alert("Approval pending by owner.")}
           >
             Pending
           </Link>
         )}
       </div>
+      </div>
     </div>
   );
-}
+} 

@@ -17,10 +17,9 @@ const product = () => {
     <div>
       <div className="product_container cursor-none">
         <Cursor />
-        <Navbar />
+        {/* <Navbar /> */}
         <Banner />
         <Catalouge />
-        <VideoBanner />
         <Table />
         <Specs />
         <Testimonials />
