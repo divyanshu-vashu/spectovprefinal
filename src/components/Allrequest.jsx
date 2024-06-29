@@ -11,7 +11,9 @@ function UsersList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
+
        // window.location.reload()
+
         const response = await axios.get('https://spectov-backend.onrender.com/api/all-request');
         setUsers(response.data);
         setLoading(false);

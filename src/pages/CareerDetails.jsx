@@ -189,7 +189,9 @@ export default function CareerDetails() {
             <input
               type="text"
               id="rid"
+
               style={{display:"none"}}
+
               className="input-field"
               placeholder="Have a referral?"
               name="referId"
@@ -200,7 +202,9 @@ export default function CareerDetails() {
               id="tbtn"
               className="submit-btn"
               onClick={handleSubmit}
+
               style={{display:"none"}}
+
             >
               Submit
             </button>

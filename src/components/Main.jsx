@@ -69,7 +69,9 @@ let careers = [
 		price:2500,
 		subtitle: "Learn Full Stack Development",
 		content: "Learn Full Stack Development content",
+
 		img: ctestimg,
+
 	},
 	{
 	  id: 7,
