@@ -40,7 +40,7 @@ let careers = [
 	{
 	  id: 2,
 	  title: "Augmented Reality",
-	  price:2500,
+	  price:3000,
 	  subtitle: "Learn Blender, Learn how ar vr is made ",
 	  
 	  content: "Artificial Intelligence and Machine Learning",

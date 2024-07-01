@@ -12,6 +12,9 @@ export default function Access() {
       <div>
         <h1 className="data-text">{data}</h1>
         <h1 className="coming-soon">Coming Soon...</h1>
+        <p></p>
+        <p></p>
+        <h1 className="text-black text-center text-4xl">Your Training Program Will Start from August 1</h1>
       </div>
     </>
   );

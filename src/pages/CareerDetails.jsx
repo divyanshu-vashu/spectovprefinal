@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import ctestimg from "../assets/logo.svg";
-import qr from "../assets/QR_sample.png";
+// import qr from "../assets/QR_sample.png";
+import qr from "../assets/qr.jpg";
 import axios from 'axios';
 import "../Styles/CareerDetails.css"; 
+
 
 
 import ai from "../assets/aibanner.png";
@@ -36,7 +38,7 @@ let careers = [
 	{
 	  id: 2,
 	  title: "Augmented Reality",
-	  price:2500,
+	  price:3000,
 	  subtitle: "Learn Blender, Learn how ar vr is made ",
 	  
 	  content: "Artificial Intelligence and Machine Learning",
@@ -171,16 +173,24 @@ export default function CareerDetails() {
       >
         Go Back
       </Link>
-      <img src={career.img} alt={career.title} />
-      <div className="career-details-content-container">
-
-      <div className="career-details-qr">
-          <div className="qr-heading">QR Code</div>
-          <img src={qr} className="qr_code"/>
-          <div className="qr-heading">Scan to Pay</div>
+      <div class="flex justify-center items-center">
+      <img src={career.img} alt={career.title} class="w-full h-[45vh] aspect-[16/9] rounded-lg mb-6 shadow-md" />
       </div>
       
-      <div className="career-details-content">
+      <div className="career-details-content-container">
+
+      {/* <div className="career-details-qr">
+          
+      </div> */}
+      <div className="flex flex-col md:flex-row gap-4">
+      <div className="career-details-qr mt-12 md:w-25rem flex flex-col items-center justify-center h-auto w-full md:w-96 shadow-md p-4">
+      <div className="qr-heading">QR Code</div>
+          <img src={qr} className="qr_code"/>
+          <h1>Rs.{career.price}</h1>
+          <div className="qr-heading">Scan to Pay</div>
+      </div>
+
+      <div className="career-details-content text-left">
         <h1>{career.title}</h1>
         <h2>{career.subtitle}</h2>
         <p>{career.content}</p>
@@ -242,8 +252,12 @@ export default function CareerDetails() {
             Pending
           </Link>
         )}
+        
       </div>
       </div>
+      </div>
+      <h1>Any Doubt or issue contact at spectov.pvt.ltd@gmail.com</h1>
     </div>
+    
   );
 } 
