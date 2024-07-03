@@ -71,7 +71,7 @@ const MainLayout = () => {
 		<Ms/>
 		<Contact />
 		<Founder />
-		{/* <Footer /> */}
+		<Footer />
 		<TextToSpeech />
 	  </div>
 	);

@@ -71,9 +71,9 @@ function Specs() {
                     iPhone*, Android, MacBook, Steam Deck, ROG Ally, Windows PC
                     and more.
                   </li>
-                  <li>3DoF: XREAL Beam</li>
+                  <li>3DoF: spectov Beam</li>
                   <li>
-                    *For models with Lightning connectivity, the use of an XREAL
+                    *For models with Lightning connectivity, the use of an spectov
                     Adapter or Beam is necessary.
                   </li>
                 </ul>
@@ -106,7 +106,7 @@ function Specs() {
                   <li>Cleaning cloth</li>
                   <li>Protective case</li>
                   <li>User manual</li>
-                  <li>* XREAL Adapter or HDMI-C cable is not included.</li>
+                  <li>* spectov Adapter or HDMI-C cable is not included.</li>
                 </ul>
               </td>
             </tr>

@@ -23,7 +23,7 @@ let careers = [
 	  title: "SpectoV Special",
 	  price:6500,
 	  subtitle: "combo of dsa , web dev ,AI , ,App dev our premium program  ar vr ",
-	  content: "Artificial Intelligence and Machine Learning",
+	  content: "coming soon",
 	  img: special,
 	  
 	},
@@ -32,7 +32,7 @@ let careers = [
 	  title: "Artificial Intelligence ",
 	  price:2500,
 	  subtitle: "Artificial Intelligence and Machine Learning",
-	  content: "Artificial Intelligence and Machine Learning",
+	  content: "coming soon",
 	  img: ai,
 	},
 	{
@@ -41,7 +41,7 @@ let careers = [
 	  price:3000,
 	  subtitle: "Learn Blender, Learn how ar vr is made ",
 	  
-	  content: "Artificial Intelligence and Machine Learning",
+	  content: "coming soon",
 	  img: ar,
 	},
 	{
@@ -49,7 +49,7 @@ let careers = [
 	  title: "Logic Building and DSA",
 	  price:2500,
 	  subtitle: "This course in c++",
-	  content: "",
+	  content: "coming soon",
 	  img: dsa,
 	},
 	{
@@ -57,7 +57,7 @@ let careers = [
 	  title: "DSA And Full Stack Dev",
 	  price:4000,
 	  subtitle: "This course is combo of dsa and full stack Mern dev",
-	  content: "",
+	  content: "coming soon",
 	  img: combodsaweb,
 	},
 	{
@@ -65,7 +65,7 @@ let careers = [
 	  title: "DSA And Artificial Int",
 	  price:4000,
 	  subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
-	  content: "Artificial Intelligence and Machine Learning",
+	  content: "coming soon",
 	  img: combodsaai,
 	},
 	{
@@ -73,7 +73,7 @@ let careers = [
 		title: "Full Stack Development",
 		price:2500,
 		subtitle: "Learn Full Stack Development and Learn With Industry Experience ",
-		content: "Learn Full Stack Development content",
+		content: "coming soon",
 
 		img: fullstack,
 
@@ -83,7 +83,7 @@ let careers = [
 	  title: "App Development",
 	  price:2500,
 	  subtitle: "Learn Flutter , Learn App Dev with Industry Leader",
-	  content: "Artificial Intelligence and Machine Learning",
+	  content: "coming soon",
 	  img: appdev,
 	},
   ];

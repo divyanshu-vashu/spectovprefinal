@@ -112,10 +112,10 @@ export default function CareerPage() {
 					Special
 				  </h1>
 				  <h2 className="ml-2 pt-2 text-sm text-white md:text-xl">
-					This is special course or something idk
+					This brings you the bunder of skill and happiness ; 
 				  </h2>
 				  <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs text-white md:text-xs">
-					blah blah blah blah blah special
+					If you are part of spectov special means , You means alot !!! We trained you from industry experience person and fundamental of our company 
 				  </p>
 				</div>
 				<div className="flex w-full items-center justify-center">
@@ -137,7 +137,7 @@ export default function CareerPage() {
             item={career.id}
             title={career.title}
             // subtitle={career.subtitle}
-            content={career.content}
+            // content={career.content}
             img={career.img}
           />
         ))}
