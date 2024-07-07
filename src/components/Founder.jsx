@@ -42,21 +42,21 @@ export default function Founder() {
         <div className="relative w-full md:h-[30rem] h-fit bg-indigo-950 text-white rounded-3xl ">
           <h1 className="text-white text-center text-3xl mt-5">Board Member of SpectoV</h1>
       {/* First Team Member */}
-      <div className="inline-block md:w-1/3 bg-indigo-950 p-6 rounded-l-3xl ">
+      <div className="inline-block md:w-1/3 bg-indigo-950 p-6  ">
         <img src="/shivang.jpeg" alt="Team Member" className="w-full h-auto rounded-full mb-4" />
         <h1 className="text-2xl font-bold mb-2 text-center" >Shivang</h1>
         <h3 className="text-lg mb-2 text-center">Director of SpectoV</h3>
       </div>
 
       {/* Second Team Member */}
-      <div className="inline-block md:w-1/3 bg-indigo-950 p-6 rounded-r-3xl">
+      <div className="inline-block md:w-1/3 bg-indigo-950 p-6 ">
         <img src="/anj.jpg" alt="Team Member" className="w-full h-auto rounded-full mb-4" />
         <h1 className="text-2xl font-bold mb-2 text-center">Anjaneya</h1>
         <h3 className="text-lg mb-2 text-center">Director of SpectoV</h3>
       </div>
 
       {/* Third Team Member */}
-      <div className="inline-block md:w-1/3 bg-indigo-950 p-6 rounded-r-3xl">
+      <div className="inline-block md:w-1/3 bg-indigo-950 p-6 ">
         <img src="/52792b.jpg" alt="Team Member" className="w-full h-auto rounded-full mb-4" />
         <h1 className="text-2xl font-bold mb-2">Dr.Vijayaprabakaran K</h1>
         <h3 className="text-lg mb-2">Board Member of SpectoV</h3>
