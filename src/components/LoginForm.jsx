@@ -68,9 +68,13 @@ const LoginForm = () => {
             <button type="button" className="login-signup-button">Sign Up</button>
           </Link>
           <h1 className="login-new-title">Login as Admin ?</h1>
-          <Link to="/admin-login">
+          {/* <Link to="/admin-login">
             <button type="button" className="login-signup-button">Admin Login</button>
-          </Link>
+          </Link> */}
+          <a href="https://admin-allrequest.vercel.app/">
+             <button type="button" className="login-signup-button">Admin Login</button>
+          </a>
+
           <h1 className="login-new-title">Forget Password ?</h1>
           <Link to="/forget-password">
             <button type="button" className="login-signup-button">Reset Password</button>

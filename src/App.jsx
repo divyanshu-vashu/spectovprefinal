@@ -15,10 +15,10 @@ import Ms from "./components/Ms.jsx";
 import UserDetails from "./components/UserDetail.jsx";
 import Access from "./components/Access.jsx";
 import Naccess from "./components/Naccess.jsx";
-import Allrequest from "./components/Allrequest.jsx"
+// import Allrequest from "./components/Allrequest.jsx"
 import ForgetPassword from "./components/ForgetPassword.jsx";
 import Founder from "./components/Founder.jsx";
-import AdminLogin from "./components/AdminLogin.jsx";
+// import AdminLogin from "./components/AdminLogin.jsx";
 
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
 		<Routes>
 		<Route path="/" element={<MainLayout />} />
         <Route path="/products" element={<ProductPage />} />
-		<Route path="/admin-login" element={<AdminLogin />} />
+		{/* <Route path="/admin-login" element={<AdminLogin />} /> */}
 
-		{temp && <Route path="/admin/all-request" element={<Allrequest />} />}
+		{/* {temp && <Route path="/admin/all-request" element={<Allrequest />} />} */}
 
         <Route path="/careers" element={<CareerPage />} />
 		<Route path="/forget-password" element={<ForgetPassword />} />
@@ -49,7 +49,7 @@ function App() {
 			<Route path="/login" exact element={<LoginForm />} />
 			<Route path="/page" element={<Navigate replace to="/login" />} />
 
-			<Route path="/admin/all-request" element={<Navigate replace to="/login" />} />
+			{/* <Route path="/admin/all-request" element={<Navigate replace to="/login" />} /> */}
 
 
 			<Route path="/details" element={<Navigate replace to="/login" />} />
