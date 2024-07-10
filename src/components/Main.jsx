@@ -64,7 +64,7 @@ let careers = [
 	},
 	{
 	  id: 5,
-	  title: "DSA And Artificial Int",
+	  title: "Artificial Int & Ar/Vr",
 	  price:4000,
 	  subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
 	  content: "Artificial Intelligence and Machine Learning",
