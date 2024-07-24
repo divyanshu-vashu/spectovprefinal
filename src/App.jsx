@@ -10,7 +10,7 @@ import CareerDetails from "./pages/CareerDetails.jsx";
 import "./index.css";
 import Defxv from "./components/Defxv";
 import Footer from "./components/Footer";
-import TextToSpeech from "./components/TextToSpeech.jsx";
+
 import Ms from "./components/Ms.jsx";
 import UserDetails from "./components/UserDetail.jsx";
 import Access from "./components/Access.jsx";
@@ -72,7 +72,7 @@ const MainLayout = () => {
 		<Contact />
 		<Founder />
 		<Footer />
-		<TextToSpeech />
+	
 	  </div>
 	);
   };

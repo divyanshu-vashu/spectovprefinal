@@ -9,7 +9,7 @@ import Catalouge from "../components/Catalouge";
 import Testimonials from "../components/Testimonials";
 import Specs from "../components/Specs";
 import Table from "../components/Table";
-import TextToSpeech from "../components/TextToSpeech";
+
 import Cursor from "../components/Cursor";
 
 const product = () => {
@@ -23,7 +23,7 @@ const product = () => {
         <Table />
         <Specs />
         <Testimonials />
-        <TextToSpeech />
+        
       </div>
     </div>
   );
