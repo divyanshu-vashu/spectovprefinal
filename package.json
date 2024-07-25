@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "npm run dev",
     "build": "chmod +x node_modules/.bin/vite && vite build",
     "preview": "vite preview"
   },
@@ -34,7 +33,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
-    "three": "^0.166.1", 
+    "three": "^0.149.0",
     "typed.js": "^2.1.0",
     "web-vitals": "^3.5.2"
   },

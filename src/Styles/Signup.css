@@ -21,7 +21,6 @@
   .signup-right {
     padding: 40px;
     flex: 1;
-    text-align: center;
   }
   
   .signup-form {
@@ -30,14 +29,14 @@
   }
   
   .signup-title {
-    margin: 5px;
+    margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
     color: #333;
   }
   
   .signup-input {
-    margin: 5px;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -45,7 +44,7 @@
   }
   
   .signup-error {
-    margin: 5px;
+    margin-bottom: 20px;
     color: #f00;
     font-size: 14px;
   }
@@ -73,55 +72,8 @@
     font-size: 16px;
     cursor: pointer;
   }
-
   
   .signup-signin-button:hover {
     background-color: #0069d9;
-  }
-  
-
-  @media (max-width: 768px) {
-    .signup-form-container {
-      flex-direction: column;
-      max-width: 100%;
-      margin: 20px;
-    }
-  
-    .signup-form-left,
-    .signup-form-right {
-      padding: 20px;
-    }
-  
-    .signup-title,
-    .signup-new-title {
-      font-size: 20px;
-    }
-  
-    .signup-input,
-    .signup-button,
-    .signup-signup-button {
-      font-size: 14px;
-      padding: 8px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .signup-form-left,
-    .signup-form-right {
-      padding: 10px;
-    }
-  
-    .signup-title,
-    .signup-new-title {
-      font-size: 18px;
-    }
-  
-    .signup-input,
-    .signup-button,
-    .signup-signup-button {
-      font-size: 12px;
-      padding: 6px;
-    }
-    
   }
   
