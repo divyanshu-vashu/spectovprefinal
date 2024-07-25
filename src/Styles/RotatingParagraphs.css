@@ -87,9 +87,16 @@
   .sliding-container:hover {
     animation-play-state: paused;
   }
-  
-  .codehelp-container:hover
-  {
-    border: 2px solid #109FE7;
-    border-radius: 10px;
+
+  @media (max-width: 767px) {
+    .codehelp-container {
+      display: block;
+    }
+    .sliding-container {
+      animation: slide 25s linear infinite;
+    }
+    .right-section
+    {
+      margin-top: 25px;
+    }
   }
