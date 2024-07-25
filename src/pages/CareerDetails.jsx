@@ -1,7 +1,10 @@
+// carrers/0 or carrers/1 ----->career detail page 
+
+
 import React, { useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import ctestimg from "../assets/logo.svg";
-import qr from "../assets/qr.jpg";
+import qr from "../assets/qr.png";
 import axios from 'axios';
 import "../Styles/CareerDetails.css";
 

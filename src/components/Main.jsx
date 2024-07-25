@@ -122,7 +122,7 @@ const Main = () => {
     	
 		<div style={{display:"flex",justifyContent:"space-between"}}>
 		<h1 className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
-		  Careers At SpectoV
+		  Careers At SpectoVX 
 		</h1>
 		<div style={{display:"flex"}}>
 		<h1 className="mt-9 text-white">Hi {user.firstName}</h1>&emsp;

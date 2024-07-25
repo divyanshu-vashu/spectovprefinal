@@ -94,14 +94,10 @@ export default function CareerPage() {
       <Career_hero />
       <Timeline />
 
-      {/* add componnet here  */}
-
-      {/* harshanth , your work will chnage below code  */}
-      {/* thanks this helps a lot */}
 
       <div>
         <h1 className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
-          Careers At SpectoV
+          Careers At SpectoV 
         </h1>
         <div className="w-full flex justify-center">
 			<div className="special h-full w-fit pl-10 pt-4 mt-8">
