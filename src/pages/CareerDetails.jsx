@@ -157,12 +157,12 @@ export default function CareerDetails() {
         Go Back
       </Link>
       <div className="flex justify-center items-center">
-        <img src={career.img} alt={career.title} className="w-full h-[45vh] aspect-[16/9] rounded-lg mb-6 shadow-md" />
+        <img src={career.img} alt={career.title} className="w-full" />
       </div>
 
       <div className="career-details-content-container">
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="career-details-qr mt-12 md:w-25rem flex flex-col items-center justify-center h-auto w-full md:w-96 shadow-md p-4">
+          <div className="career-details-qr mt-4 md:mt-12 md:w-25rem flex flex-col items-center justify-center h-auto w-full md:w-96 shadow-md p-4">
             <div className="qr-heading">QR Code</div>
             <img src={qr} className="qr_code" />
             <h1>Rs.{career.price}</h1>

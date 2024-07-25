@@ -1,8 +1,7 @@
 import {
-  EarthCanvas,
-  BallCanvas,
+  
   ComputersCanvas,
-  StarsCanvas,
+  
 } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
@@ -18,8 +17,6 @@ export {
   Works,
   Contact,
   CanvasLoader,
-  EarthCanvas,
-  BallCanvas,
   ComputersCanvas,
-  StarsCanvas,
+  
 };
