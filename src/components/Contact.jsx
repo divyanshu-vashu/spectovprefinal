@@ -82,7 +82,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row gap-10 overflow-hidden rounded-2xl bg-white p-8 xl:mt-12">
+    <div id='contact' className="flex flex-col xl:flex-row gap-10 overflow-hidden rounded-2xl bg-white p-8 xl:mt-12">
       
 
       <div className="flex flex-col xl:flex-1 xl:w-1/2">
