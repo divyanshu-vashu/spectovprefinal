@@ -18,7 +18,7 @@ const RotatingParagraphs = () => {
 
   return (
     <div className="mt-24 w-full max-w-[1288px] max-md:mt-10 max-md:max-w-full">
-        {/* <div className="flex gap-5 max-md:flex-col max-md:gap-0"> */}
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="codehelp-container">
             <div className="left-section">
               <h2 className="who-are-we">Who are We</h2>
@@ -51,7 +51,7 @@ const RotatingParagraphs = () => {
               </div>
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </div>
   );
 };
