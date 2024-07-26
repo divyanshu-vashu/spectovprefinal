@@ -29,14 +29,14 @@
 }
 
 .login-title {
-  margin-bottom: 20px;
+  margin:5px;
   font-size: 24px;
   font-weight: bold;
   color: #333;
 }
 
 .login-input {
-  margin-bottom: 20px;
+  margin:5px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -44,7 +44,7 @@
 }
 
 .login-error {
-  margin-bottom: 20px;
+  margin: 5px;
   color: #f00;
   font-size: 14px;
 }
@@ -67,7 +67,7 @@
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 20px;
+  margin: 5px;
 }
 
 .login-signup-button {
@@ -80,6 +80,56 @@
   cursor: pointer;
 }
 
+.login-form-right
+  {
+    text-align: center;
+  }
+
 .login-signup-button:hover {
   background-color: #0069d9;
+}
+
+@media (max-width: 768px) {
+  .login-form-container {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .login-form-left,
+  .login-form-right {
+    padding: 20px;
+  }
+
+  .login-title,
+  .login-new-title {
+    font-size: 20px;
+  }
+
+  .login-input,
+  .login-button,
+  .login-signup-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-left,
+  .login-form-right {
+    padding: 10px;
+  }
+
+  .login-title,
+  .login-new-title {
+    font-size: 18px;
+  }
+
+  .login-input,
+  .login-button,
+  .login-signup-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+  
 }
