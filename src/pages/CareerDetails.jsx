@@ -31,7 +31,7 @@ let careers = [
     title: "Artificial Intelligence",
     price: 2500,
     subtitle: "Artificial Intelligence and Machine Learning",
-    content: "comingsoon.com",
+    content: "https://docs.google.com/document/d/1r-urup_5fblXSp75H0-oHdir_b6H8U6kJB-mfz3cEXU/edit?usp=sharing",
     img: ai,
   },
   {
