@@ -4,9 +4,9 @@ import RotatingParagraphs from "./RotatingParagraphs";
 import Learninnovategrow from "./Learninnovategrow";
 import CareerLIG from "./CareerLIG";
 import CareerNavbar from "./CareerNavbar";
-import sankalp from "../assets/Sankalp_updated.png";
-import DVideo from "../assets/Bridging Silence, Building Connections.mp4";
-import DVideoMobile from "../assets/SpectovM.mp4";
+import sankalp from "../assets/sankalp.png";
+import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
+import DVideoMobile from "../assets/SpectovM.mp4"; 
 
 const Career_hero = () => {
   return (
