@@ -22,20 +22,33 @@
   gap: 15px; /* Reduced gap between social media icons */
 }
 
+.footer-socialmedia-link a
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer-socialmedia-link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.footer-socialmedia-link p
+{
+  padding: 0;
 }
 
 .footer-socialmedia-link img {
   max-width: 40px; /* Reduced icon size */
   max-height: 40px; /* Reduced icon size */
+  /* margin-left: 10px; */
 }
 
 .footer-socialmedia-link p {
-  margin: 5px 0; /* Added slight margin to keep text and icons close */
+  margin:  0; /* Added slight margin to keep text and icons close */
 }
 
 @media (max-width: 400px) {

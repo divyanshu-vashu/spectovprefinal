@@ -146,8 +146,8 @@ const Main = () => {
         <div className="container mx-auto p-12" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <video src={videoSrc} controls autoPlay loop muted className="mt-2 rounded-lg w-full max-w-full object-contain h-screen" style={{ borderRadius: '15px' }} />
         </div>
-        <h1 className="ml-5 mt-15 text-4xl font-bold text-white md:ml-24">
-          Careers At SpectoVX
+        <h1 id="careers_section" className="ml-5 mt-15 text-4xl font-bold text-white md:ml-24">
+          Careers At SpectoV
         </h1>
         <div className="w-100 m-10 ml-5 flex flex-wrap md:ml-20">
           {careers.map((career) => (

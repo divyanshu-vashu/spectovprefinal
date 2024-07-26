@@ -127,7 +127,7 @@ const CareerPage = () => {
 
 
       <div>
-        <h1 className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
+        <h1 id="careers_section" className="ml-5 mt-32 text-4xl font-bold text-white md:ml-24">
           Careers At SpectoV 
         </h1>
         <div className="w-full flex justify-center">
