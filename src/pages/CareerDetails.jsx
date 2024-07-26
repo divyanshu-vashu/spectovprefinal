@@ -11,7 +11,7 @@ import "../Styles/CareerDetails.css";
 import ai from "../assets/aibanner.png";
 import appdev from "../assets/app_devBanner.png";
 import ar from "../assets/arbanner.png";
-import combodsaai from "../assets/combo_dsa_ai.png";
+import xrai from "../assets/AIXAR.png";
 import combodsaweb from "../assets/combo_dsa_web.png";
 import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
@@ -64,7 +64,7 @@ let careers = [
     price: 4000,
     subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
     content: "https://docs.google.com/document/d/1MCSKAIcaKT2TW-P02O2vAslgKvJ2_m6TpU-BTpByKeg/edit?usp=sharing",
-    img: combodsaai,
+    img: xrai,
   },
   {
     id: 6,
