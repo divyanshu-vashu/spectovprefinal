@@ -41,20 +41,6 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <div className="signup-form-container">
-        <div className="signup-left">
-          <h1 className="signup-title">Welcome</h1>
-          <Link to="/login">
-            <button type="button" className="signup-signin-button">Sign in</button>
-          </Link>
-          <h1 className="login-new-title">Login as Admin ?</h1>
-          <Link to="/admin-login">
-            <button type="button" className="login-signup-button">Admin Login</button>
-          </Link>
-          <h1 className="login-new-title">Forget Password ?</h1>
-          <Link to="/forget-password">
-            <button type="button" className="login-signup-button">Reset Password</button>
-          </Link>
-        </div>
         <div className="signup-right">
           <form onSubmit={handleSubmit} className="signup-form">
             <h1 className="signup-title">Create Account</h1>
@@ -100,6 +86,20 @@ const Signup = () => {
             />
             {error && <div className="signup-error">{error}</div>}
             <button type="submit" className="signup-button">Sign Up</button>
+            <div className="signup-left">
+          <h1 className="signup-title">Welcome</h1>
+          <Link to="/login">
+            <button type="button" className="signup-signin-button">Sign in</button>
+          </Link>
+          <h1 className="login-new-title">Login as Admin ?</h1>
+          <Link to="/admin-login">
+            <button type="button" className="login-signup-button">Admin Login</button>
+          </Link>
+          <h1 className="login-new-title">Forget Password ?</h1>
+          <Link to="/forget-password">
+            <button type="button" className="login-signup-button">Reset Password</button>
+          </Link>
+        </div>
           </form>
         </div>
       </div>
