@@ -15,6 +15,7 @@ import combodsaweb from "../assets/combo_dsa_web.png";
 import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
+import sankalp from "../assets/Sankalp_updated.png"
 
 let careers = [
   {
@@ -120,7 +121,7 @@ const Main = () => {
           </div>
         </div>
         <div className="container mx-auto p-12" style={{display:"flex",justifyContent:"center",alignItems:"center" }} >
-          <img src="src/assets/Sankalp_updated.png" alt="Sankalp image" className="mt-9 rounded-lg w-full max-w-full object-contain" style={{  borderRadius: '15px' }} />
+          <img src={sankalp} alt="Sankalp image" className="mt-9 rounded-lg w-full max-w-full object-contain" style={{  borderRadius: '15px' }} />
         </div>
         <h1 className="ml-5 mt-15 text-4xl font-bold text-white md:ml-24">
           Careers At SpectoVX
