@@ -41,9 +41,9 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer-socialmedia-link">
-              <a href="https://twitter.com/spectov" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/wired/64/000000/x.png" alt="Twitter" />
-                <p className="pt-3">Twitter</p>
+              <a href="https://wa.me/917042860263" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/wired/64/000000/whatsapp.png" alt="Twitter" />
+                <p className="pt-3">Whatsapp</p>
               </a>
             </div>
             <div className="footer-socialmedia-link">

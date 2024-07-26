@@ -136,20 +136,20 @@ const CareerPage = () => {
 				<div>
 				  <img className="h-fit rounded-md" src={special} alt="" />
 				  <h1 className="text-md ml-2 pt-8 font-bold text-white md:text-3xl">
-					Special
+					SpectoV Special
 				  </h1>
-				  <h2 className="ml-2 pt-2 text-sm text-white md:text-xl">
+				  {/* <h2 className="ml-2 pt-2 text-sm text-white md:text-xl">
 					This brings you the bunder of skill and happiness ; 
-				  </h2>
-				  <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs text-white md:text-xs">
+				  </h2> */
+				  /* <p className="ml-2 w-full text-wrap break-words pr-5 pt-2 text-xs text-white md:text-xs">
 					If you are part of spectov special means , You means alot !!! We trained you from industry experience person and fundamental of our company 
-				  </p>
+				  </p> */}
 				</div>
-				<div className="flex w-full items-center justify-center">
-				  <a className="mt-2 flex h-16 w-1/2 items-center justify-center rounded-xl bg-blue-600 text-white">
+				{/* <div className="flex w-full items-center justify-center">
+				  <a href="https://www.example.com/apply" className="mt-2 flex h-16 w-1/2 items-center justify-center rounded-xl bg-blue-600 text-white">
 					Apply here
 				  </a>
-				</div>
+				</div> */}
 			  </div>
 			</div>
 		</div>

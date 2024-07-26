@@ -26,7 +26,10 @@ const RotatingParagraphs = () => {
               <p className="description">
               At SpectoV Pvt Ltd, we are committed to creating an environment that fosters innovation, learning, and professional growth. Our training programs are designed to bridge the gap between academic learning and industry requirements, ensuring our interns are well-prepared to tackle real-world challenges.
               </p>
-              <button className="connect-button">Let's Connect</button>
+              {/* <button className="connect-button">Let's Connect</button> */}
+              <a href="https://wa.me/917042860263" className="connect-button-link">
+  <button className="connect-button">Let's Connect</button>
+</a>
             </div>
             <div className="right-section">
               <div className="sliding-container">
