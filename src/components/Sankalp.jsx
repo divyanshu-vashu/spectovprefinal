@@ -1,8 +1,3 @@
-
-
-
-
-
 import sankalp from "../assets/Sankalp_updated.png";
 import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
