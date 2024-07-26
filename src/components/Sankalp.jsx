@@ -1,4 +1,4 @@
-import sankalp from "../assets/Sankalp_updated.png";
+import sankalp from "../assets/sankalp.png";
 import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 import React, { useState, useEffect } from "react";

@@ -16,7 +16,7 @@ import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
 import Sankalp from "../components/Sankalp";
-import sankalpimg from "../assets/Sankalp_updated.png";
+import sankalpimg from "../assets/sankalp.png";
 import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 
