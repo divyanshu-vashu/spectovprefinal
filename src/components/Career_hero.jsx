@@ -43,7 +43,7 @@ const Career_hero = () => {
               <div className="flex flex-col px-5 mt-24 max-md:mt-10 max-md:max-w-full">
                 <div className="flex flex-col text-7xl max-md:max-w-full max-md:text-4xl">
                   <div className="spectov">
-                    SpectoV{" "}
+                    Sankalp{" "}
                   </div>
                   <div className="mt-3 text-white max-md:max-w-full max-md:text-4xl">
                     Training Program
