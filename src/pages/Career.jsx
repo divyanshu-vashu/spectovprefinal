@@ -3,7 +3,7 @@ import { Navbar } from "../components/";
 import ctestimg from "../assets/careerCardTestImage.png";
 import Timeline from "../components/Timeline";
 import Demo from "../components/Demo";
-
+import React, { useState, useEffect } from "react";
 import Career_hero from "../components/Career_hero";
 import CareerNavbar from "../components/CareerNavbar";
 
@@ -15,6 +15,10 @@ import combodsaweb from "../assets/combo_dsa_web.png";
 import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
+import Sankalp from "../components/Sankalp";
+import sankalpimg from "../assets/Sankalp_updated.png";
+import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
+import DVideoMobile from "../assets/SpectovM.mp4"; 
 
 let careers = [
   {
@@ -87,10 +91,37 @@ let careers = [
   },
 ];
 
-export default function CareerPage() {
+const CareerPage = () => {
+
+  const [videoSrc, setVideoSrc] = useState(DVideo);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        setVideoSrc(DVideoMobile);
+      } else {
+        setVideoSrc(DVideo);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize); 
+    };
+  }, []);
+
   return (
     <div style={{ backgroundColor: "black" }}>
       <CareerNavbar />
+       <Sankalp/>
+       {/* <div className="container mx-auto p-12" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img src={sankalp} alt="Sankalp image" className="mt-9 rounded-lg w-full max-w-full object-contain" style={{ borderRadius: '15px' }} />
+      </div>
+      <div className="container mx-auto p-12" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <video src={videoSrc} controls autoPlay loop muted className="mt-2 rounded-lg w-full max-w-full object-contain " style={{ borderRadius: '15px' }} />
+      </div> */}
       <Career_hero />
       <Timeline />
 
@@ -141,3 +172,5 @@ export default function CareerPage() {
     </div>
   );
 }
+
+export default CareerPage

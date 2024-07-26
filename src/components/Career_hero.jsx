@@ -9,35 +9,11 @@ import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 
 const Career_hero = () => {
-  const [videoSrc, setVideoSrc] = useState(DVideo);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.matchMedia('(max-width: 768px)').matches) {
-        setVideoSrc(DVideoMobile);
-      } else {
-        setVideoSrc(DVideo);
-      }
-    };
-
-    handleResize(); 
-    window.addEventListener('resize', handleResize); 
-
-    return () => {
-      window.removeEventListener('resize', handleResize); 
-    };
-  }, []);
 
   return (
     <>
       <div className="flex flex-col items-center pb-20 bg-black">
         <div className="mt-24 w-full max-w-[1288px] max-md:mt-10 max-md:max-w-full">
-          <div className="container mx-auto p-12" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src={sankalp} alt="Sankalp image" className="mt-9 rounded-lg w-full max-w-full object-contain" style={{ borderRadius: '15px' }} />
-          </div>
-          <div className="container mx-auto p-12" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <video src={videoSrc} controls autoPlay loop muted className="mt-2 rounded-lg w-full max-w-full object-contain " style={{ borderRadius: '15px' }} />
-          </div>
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[57%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col px-5 mt-24 max-md:mt-10 max-md:max-w-full">
