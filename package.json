@@ -24,6 +24,7 @@
     "mongoose": "^8.3.3",
     "nodemon": "^3.1.0",
     "react": "^18.3.1",
+    "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.3.1",
     "react-parallax-tilt": "^1.7.227",
     "react-router-dom": "^6.23.0",

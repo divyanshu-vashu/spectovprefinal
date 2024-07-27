@@ -18,6 +18,7 @@ import Naccess from "./components/Naccess.jsx";
 // import Allrequest from "./components/Allrequest.jsx"
 import ForgetPassword from "./components/ForgetPassword.jsx";
 import Founder from "./components/Founder.jsx";
+import CoursePage from "./pages/CoursePage.jsx";
 // import AdminLogin from "./components/AdminLogin.jsx";
 
 
@@ -53,6 +54,7 @@ function App() {
 
 
 			<Route path="/details" element={<Navigate replace to="/login" />} />
+			<Route path="/course" exact element={<CoursePage />}/>
 		</Routes>
     </BrowserRouter>
 	);
