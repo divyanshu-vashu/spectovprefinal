@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../Styles/Career_hero.css";
 import RotatingParagraphs from "./RotatingParagraphs";
 import Learninnovategrow from "./Learninnovategrow";
@@ -9,7 +9,6 @@ import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 
 const Career_hero = () => {
-
   return (
     <>
       <div className="flex flex-col items-center pb-20 bg-black">
@@ -18,18 +17,14 @@ const Career_hero = () => {
             <div className="flex flex-col w-[57%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col px-5 mt-24 max-md:mt-10 max-md:max-w-full">
                 <div className="flex flex-col text-7xl max-md:max-w-full max-md:text-4xl">
-                  <div className="spectov">
-                    Sankalp{" "}
-                  </div>
-                  <div className="mt-3 text-white max-md:max-w-full max-md:text-4xl">
-                    Training Program
-                  </div>
+                  <div className="spectov">Sankalp{" "}</div>
+                  <div className="mt-3 text-white max-md:max-w-full max-md:text-4xl">Training Program</div>
                 </div>
                 <div className="mt-12 text-2xl text-white max-md:mt-10 max-md:max-w-full">
                   Bridging Silence, Building Connections
                 </div>
                 <div className="shrink-0 mt-12 h-px max-md:mt-10 max-md:max-w-full" />
-                <a href="#course" className="flex items-center">
+                <a href="#careers_section" className="flex items-center">
                   <div className="flex gap-4 self-start px-9 py-3.5 mt-12 text-xl text-white rounded-3xl border-cyan-400 border-solid border-[0.777px] max-md:px-5 max-md:mt-10">
                     <div className="grow my-auto">Get Started</div>
                     <img
@@ -56,7 +51,7 @@ const Career_hero = () => {
           loading="lazy"
           src="ms.png"
           className="mt-10"
-          style={{ width: 'full', height: 'auto' }}
+          style={{ width: "full", height: "auto" }}
         />
 
         {/* Trusted section */}
