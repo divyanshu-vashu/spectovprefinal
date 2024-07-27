@@ -6,7 +6,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import "../styles/coursePage.css";
+import "../Styles/coursePage.css";
 
 const Content = ({ content }) => {
   return <h1>{content}</h1>;
