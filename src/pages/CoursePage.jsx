@@ -14,9 +14,8 @@ const Content = ({ content }) => {
 
 export default function Example() {
   const [content, setContent] = useState("Click here");
-  const [videoLink, setVideoLink] = useState(
-    "https://player.vimeo.com/video/794492622?h=31cc9f209b",
-  );
+  const [videoLink, setVideoLink] = useState("");
+
   const days = 5; // Set how many days you want
 
   const handleAccordionClick = (title) => {
@@ -26,6 +25,11 @@ export default function Example() {
   const handleResourceClick = () => {
     setContent("Some content text");
     setVideoLink(""); // Clear the video link if you want to hide the video when resources are clicked
+  };
+
+  const handleVideoClick = (link) => {
+    setContent("");
+    setVideoLink(link);
   };
 
   const generateAccordionItems = () => {
@@ -41,8 +45,10 @@ export default function Example() {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <div onClick={handleResourceClick}>Resources</div> <br />
-            <div onClick={() => setContent("Some content")}>Video</div>
+            <div onClick={handleResourceClick}>Resources</div><br />
+            <div onClick={() => handleVideoClick("https://www.youtube.com/embed/jnLSYfObARA?si=MycJSAZTYJQ8AOs5")}>
+              Video
+            </div>
           </AccordionItemPanel>
         </AccordionItem>,
       );
@@ -70,20 +76,17 @@ export default function Example() {
         <div className="contain mt-20 w-1/5 md:mt-0">
           <Accordion>{generateAccordionItems()}</Accordion>
         </div>
-        <div className="h-[40rem] w-[80rem] bg-slate-400">
+        <div className="relative h-[40rem] w-[80rem] bg-slate-400">
           {videoLink ? (
-            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+            <div className="absolute inset-0">
               <iframe
+                className="absolute inset-0 w-full h-full"
                 src={videoLink}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
               ></iframe>
             </div>
           ) : (
