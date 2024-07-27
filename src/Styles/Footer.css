@@ -1,21 +1,25 @@
 .footer-container {
   padding: 20px;
+  text-align: center;
+  margin-top: 20px; /* Add margin above the whole section */
 }
 
 .footer-container h1 {
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Reduced margin below heading */
 }
 
 .type {
   margin-bottom: 10px;
+  height: fit-content;
+  padding-bottom: 0;
 }
 
 .footer-socialmedia {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: -100px;
+  gap: 15px; /* Reduced gap between social media icons */
 }
 
 .footer-socialmedia-link {
@@ -26,26 +30,26 @@
 }
 
 .footer-socialmedia-link img {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 40px; /* Reduced icon size */
+  max-height: 40px; /* Reduced icon size */
 }
 
 .footer-socialmedia-link p {
-  margin: 0;
+  margin: 5px 0; /* Added slight margin to keep text and icons close */
 }
 
 @media (max-width: 400px) {
   .footer-socialmedia {
-    flex-wrap: nowrap;
+    gap: 10px; /* Adjusted gap for small screens */
   }
 
   .footer-socialmedia-link img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 30px; /* Reduced icon size for very small screens */
+    max-height: 30px; /* Reduced icon size for very small screens */
   }
 
   .footer-socialmedia-link p {
-    font-size: 11px;
+    font-size: 10px; /* Reduced font size for very small screens */
   }
 }
 
@@ -61,4 +65,10 @@
   .footerbox {
     text-align: center;
   }
+}
+
+.page-footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
 }

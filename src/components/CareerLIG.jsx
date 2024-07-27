@@ -119,7 +119,7 @@ const CareerLIG = () => {
     <div className="flex flex-col grow mt-16 max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col self-start px-5 text-4xl">
         <div class="spectov">
-        GROWTH
+        GROW
         </div>
         <div className="mt-3 text-white">Empowering Success</div>
       </div>

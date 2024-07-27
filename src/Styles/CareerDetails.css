@@ -1,11 +1,3 @@
-
-/* Add this CSS file to your project and import it in the CareerDetails component */
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .career-details-container {
     display: flex;
     flex-direction: column;

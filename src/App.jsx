@@ -2,7 +2,7 @@ import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import Main from "./components/Main";
 import Signup from "./components/Signup";
 import LoginForm from "./components/LoginForm";
-import { About, Contact, Hero, Navbar, Works, StarsCanvas } from "./components";
+import { About, Contact, Hero, Navbar, Works } from "./components";
 import LoginPage from "./product1";
 import ProductPage from "./pages/Product.jsx";
 import CareerPage from "./pages/Career.jsx";

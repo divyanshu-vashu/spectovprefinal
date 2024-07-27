@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -59,13 +57,13 @@ const Contact = () => {
           to_email: import.meta.env.VITE_EMAILJS_TO_EMAIL,
           message: form.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
           alert(
-            "Thank you for reaching to us. We will get back to you as soon as possible😊.",
+            "Thank you for reaching out to us. We will get back to you as soon as possible😊."
           );
 
           setForm({
@@ -79,18 +77,15 @@ const Contact = () => {
           console.error(error);
 
           alert("Ahh, something went wrong. Please try again.");
-        },
+        }
       );
   };
 
   return (
-    <div
-      className={`flex flex-col-reverse gap-10 overflow-hidden rounded-2xl bg-white xl:mt-12 xl:flex-row`}
-    >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] rounded-2xl bg-white p-8"
-      >
+    <div id='contact' className="flex flex-col xl:flex-row gap-10 overflow-hidden rounded-2xl bg-white p-8 xl:mt-12">
+      
+
+      <div className="flex flex-col xl:flex-1 xl:w-1/2">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
@@ -147,19 +142,18 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
-      >
-        {/* <EarthCanvas /> */}
-        <div className="contact-img">
-          <img src="/c2.png" alt="" />
+      </div>
+      <div className="w-full xl:w-1/2 flex justify-center xl:justify-end">
+        <div className="w-full max-w-md xl:max-w-none xl:w-full">
+          <img
+            src="/c2.png"
+            alt="Contact"
+            className="w-full h-auto rounded-2xl"
+          />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

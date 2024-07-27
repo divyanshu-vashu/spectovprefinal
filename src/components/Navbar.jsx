@@ -9,9 +9,8 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-	const user = localStorage.getItem("token");
-  //const username = localStorage.getItem("name");
-  //alert(username)
+  const user = localStorage.getItem("token");
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -20,7 +19,7 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
-    }; 
+    };
 
     window.addEventListener("scroll", handleScroll);
 
@@ -47,19 +46,23 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
           <p className="flex cursor-pointer text-[18px] font-bold text-black">
             SpectoV &nbsp;
-            <span className="hidden sm:block"> | </span>
+            {/* <span className="hidden sm:block"> | </span> */}
           </p>
         </Link>
 
         <ul className="hidden list-none flex-row gap-10 sm:flex">
           <li
             className={`${
-              active === "Product" ? "text-red-500" : "text-black"
+              active === "Careers" ? "text-red-500" : "text-black"
             } cursor-pointer text-[18px] font-medium hover:text-red-500`}
-            onClick={() => setActive("Product")}
-            
+            onClick={() => setActive("Careers")}
           >
-            <Link to={user?"/page":"/careers"} className="block px-3 py-1 text-inherit" >
+            <Link
+              to={user ? "/page" : "/careers"}
+              className={`block px-3 py-1 text-inherit ${
+                active === "Careers" && "bg-gray-200 rounded"
+              }`}
+            >
               Careers
             </Link>
           </li>
@@ -69,23 +72,30 @@ const Navbar = () => {
             } cursor-pointer text-[18px] font-medium hover:text-red-500`}
             onClick={() => setActive("Product")}
           >
-            <Link to="/products" className="block px-3 py-1 text-inherit">
+            <Link
+              to="/products"
+              className={`block px-3 py-1 text-inherit ${
+                active === "Product" && "bg-gray-200 rounded"
+              }`}
+            >
               Product
             </Link>
-
           </li>
           <li
             className={`${
-              active === "Product" ? "text-red-500" : "text-black"
+              active === "Login" ? "text-red-500" : "text-black"
             } cursor-pointer text-[18px] font-medium hover:text-red-500`}
-            onClick={() => setActive("Product")}
-            style={{display:"none"}}
-
+            onClick={() => setActive("Login")}
+            style={{ display: "none" }}
           >
-            <Link to="/login" className="block px-3 py-1 text-inherit" >
-              login
+            <Link
+              to="/login"
+              className={`block px-3 py-1 text-inherit ${
+                active === "Login" && "bg-gray-200 rounded"
+              }`}
+            >
+              Login
             </Link>
-
           </li>
           {navLinks.map((nav) => (
             <li
@@ -95,7 +105,12 @@ const Navbar = () => {
               } cursor-pointer text-[18px] font-medium hover:text-red-500`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`} className="block px-3 py-1">
+              <a
+                href={`#${nav.id}`}
+                className={`block px-3 py-1 ${
+                  active === nav.title && "bg-gray-200 rounded"
+                }`}
+              >
                 {nav.title}
               </a>
             </li>
@@ -106,7 +121,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="h-[28px] w-[28px] cursor-pointer object-contain"
+            className="h-7 w-7 cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
@@ -116,63 +131,78 @@ const Navbar = () => {
             } absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl bg-white p-6 shadow-lg`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
-            
-            <li
+              <li
                 className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                  active === "Careers" ? "text-white" : "text-secondary"
+                  active === "Careers" ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
                   setActive("Careers");
                 }}
               >
-                <Link to={user?"/page":"/careers"} className="block px-3 py-1">
+                <Link
+                  to={user ? "/page" : "/careers"}
+                  className={`block px-3 py-1 ${
+                    active === "Careers" && "bg-gray-200 rounded"
+                  }`}
+                >
                   Careers
                 </Link>
-
               </li>
-
               <li
                 className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                  active === "Product" ? "text-white" : "text-secondary"
+                  active === "Product" ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
                   setActive("Product");
                 }}
               >
-                <Link to="/products" className="block px-3 py-1">
+                <Link
+                  to="/products"
+                  className={`block px-3 py-1 ${
+                    active === "Product" && "bg-gray-200 rounded"
+                  }`}
+                >
                   Product
                 </Link>
-
               </li>
-              <li                className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                  active === "Product" ? "text-white" : "text-secondary"
+              <li
+                className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                  active === "Login" ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
-                  setActive("Product");
+                  setActive("Login");
                 }}
-            style={{display:"none"}}
-
-          >
-            <Link to="/login" className="block px-3 py-1 text-inherit" >
-              login
-            </Link>
-
-          </li>
+                style={{ display: "none" }}
+              >
+                <Link
+                  to="/login"
+                  className={`block px-3 py-1 ${
+                    active === "Login" && "bg-gray-200 rounded"
+                  }`}
+                >
+                  Login
+                </Link>
+              </li>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title ? "text-red-500" : "text-black"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`} className="block px-3 py-1">
+                  <a
+                    href={`#${nav.id}`}
+                    className={`block px-3 py-1 ${
+                      active === nav.title && "bg-gray-200 rounded"
+                    }`}
+                  >
                     {nav.title}
                   </a>
                 </li>
