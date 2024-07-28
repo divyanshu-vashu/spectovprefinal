@@ -46,7 +46,8 @@ export default function Example() {
           </AccordionItemHeading>
           <AccordionItemPanel>
             <div onClick={handleResourceClick}>Resources</div><br />
-            <div onClick={() => handleVideoClick("https://www.youtube.com/embed/jnLSYfObARA?si=MycJSAZTYJQ8AOs5")}>
+            <div onClick={() => handleVideoClick("https://drive.google.com/file/d/1MVaoq6WhxwqDnjDK7OvCXvj_JymTUVyS/preview")}>
+{/*             <div onClick={() => handleVideoClick("https://www.youtube.com/embed/jnLSYfObARA?si=MycJSAZTYJQ8AOs5")}> */}
               Video
             </div>
           </AccordionItemPanel>
