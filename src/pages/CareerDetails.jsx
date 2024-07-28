@@ -188,8 +188,8 @@ export default function CareerDetails() {
               {access === 'true' ? (
                 <Link
                   className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-                  to="/access"
-                  state={career.title}
+                  to="/course" 
+                  state={career}
                 >
                   Open
                 </Link>

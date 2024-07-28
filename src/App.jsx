@@ -45,6 +45,8 @@ function App() {
         {user&&<Route path="/details" exact element={<UserDetails />} />}
         {user && <Route path="/access" element={<Access />} />}
         {user && <Route path="/naccess" element={<Naccess />} />}
+		{user && <Route path="/course" element={<CoursePage />} />}
+
 			{user && <Route path="/page" exact element={<Main />} />}
 			<Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<LoginForm />} />
@@ -54,7 +56,13 @@ function App() {
 
 
 			<Route path="/details" element={<Navigate replace to="/login" />} />
-			<Route path="/course" exact element={<CoursePage />}/>
+			<Route path="/course"  element={<Navigate replace to="/login" />}/>
+			<Route path="/access"  element={<Navigate replace to="/login" />}/>
+			<Route path="/naccess"  element={<Navigate replace to="/login" />}/>
+			<Route path="/careers/:item"  element={<Navigate replace to="/login" />}/>
+
+
+
 		</Routes>
     </BrowserRouter>
 	);
