@@ -7,7 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import "../styles/coursePage.css";
+import "../Styles/coursePage.css";
 import { Navbar } from "../components";
 import { useLocation, useNavigate } from "react-router-dom";
 
