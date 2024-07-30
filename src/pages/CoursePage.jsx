@@ -10,7 +10,7 @@ import {
 import "../Styles/coursePage.css";
 import { Navbar } from "../components";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import bgImg from '../../public/yue-ma-mQEjK67BCTA-unsplash.jpg'
 const Content = ({ content }) => {
   return <div>
 <h1
@@ -100,6 +100,9 @@ export default function Example() {
   return (
     <>
       <Navbar />
+      <img src={bgImg} alt="" srcset=""
+      className="object-cover w-full h-full absolute -z-10"
+      />
       <div>
         <h1 className="mb-2 pb-0 pt-20 text-lg font-bold text-black md:text-2xl">
           {data?.title}
