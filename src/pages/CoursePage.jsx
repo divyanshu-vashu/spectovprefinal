@@ -10,7 +10,7 @@ import {
 import "../Styles/coursePage.css";
 import { Navbar } from "../components";
 import { useLocation, useNavigate } from "react-router-dom";
-import bgImg from '../public/yue-ma-mQEjK67BCTA-unsplash.jpg'
+import bgImg from '../../public/yue-ma-mQEjK67BCTA-unsplash.jpg'
 const Content = ({ content }) => {
   return <div>
 <h1
