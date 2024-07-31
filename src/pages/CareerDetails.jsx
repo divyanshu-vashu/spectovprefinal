@@ -16,6 +16,20 @@ import combodsaweb from "../assets/combo_dsa_web.png";
 import dsa from "../assets/dsabanner.png";
 import fullstack from "../assets/fullstackbanner.png";
 import special from "../assets/specialbanner.png";
+import join512 from "../assets/join512.png";
+
+import specialqr from "../assets/specialqr.jpg";
+import fullstackqr from "../assets/fullstackqr.jpg";
+import dsaqr from "../assets/dsaqr.jpg";
+import combodsawebqr from "../assets/combodsawebqr.jpg";
+import xraiqr from "../assets/xraiqr.jpg";
+import arqr from "../assets/arqr.jpg";
+import appdevqr from "../assets/appdevqr.jpg";
+import aiqr from "../assets/aiqr.jpg";
+
+
+
+
 
 let careers = [
   {
@@ -25,6 +39,10 @@ let careers = [
     subtitle: "combo of dsa, web dev, AI, App dev our premium program ar vr",
     content: "https://drive.google.com/file/d/1cc3SSmGQX7XOVYEwrTm1WehPs929iQMt/view?usp=sharing",
     img: special,
+    link: "https://chat.whatsapp.com/IygldyZVZ4dKDIK150cAoT",
+    qr : specialqr,
+    
+
   },
   {
     id: 1,
@@ -33,6 +51,10 @@ let careers = [
     subtitle: "Artificial Intelligence and Machine Learning",
     content: "https://docs.google.com/document/d/1r-urup_5fblXSp75H0-oHdir_b6H8U6kJB-mfz3cEXU/edit?usp=sharing",
     img: ai,
+    link: "https://chat.whatsapp.com/JdaZUI35eLz413ACtTrj4Q",
+    qr : aiqr,
+    
+
   },
   {
     id: 2,
@@ -41,6 +63,9 @@ let careers = [
     subtitle: "Learn Blender, Learn how ar vr is made",
     content: "https://docs.google.com/document/d/1n4QqiHa_nQQ0Oa7gUNhU6Gu9GBIdGIFn/edit?usp=sharing&ouid=111997764254682934776&rtpof=true&sd=true",
     img: ar,
+    link: "https://chat.whatsapp.com/B6XVZRVa7bA0pqSvVkGrqT",
+    qr : arqr,
+    
   },
   {
     id: 3,
@@ -49,6 +74,9 @@ let careers = [
     subtitle: "This course in c++",
     content: "https://docs.google.com/document/d/12UoDZsnpOAe4rMwMNOntIS4b2-GQIC84GalgHBPyUfU/edit?usp=sharing",
     img: dsa,
+    link: "https://chat.whatsapp.com/EaRCWPW6cJt9LZoxjlGoyb",
+    qr : dsaqr,
+    
   },
   {
     id: 4,
@@ -57,6 +85,9 @@ let careers = [
     subtitle: "This course is combo of dsa and full stack Mern dev",
     content: "https://docs.google.com/document/d/1BnrIXoR0fS4GalP4aKfcA3OUTuY8vBnNmpTkbeDNnsY/edit?usp=sharing",
     img: combodsaweb,
+    link: "https://chat.whatsapp.com/ID00z5jQt11GspIYoGwVc6",
+    qr : combodsawebqr,
+    
   },
   {
     id: 5,
@@ -65,6 +96,9 @@ let careers = [
     subtitle: "This course is combo of DSA and Artificial Intelligence and Machine Learning",
     content: "https://docs.google.com/document/d/1MCSKAIcaKT2TW-P02O2vAslgKvJ2_m6TpU-BTpByKeg/edit?usp=sharing",
     img: xrai,
+    link: "https://chat.whatsapp.com/KbtCHbXcd6L62dmswCatiQ",
+    qr : xraiqr,
+    
   },
   {
     id: 6,
@@ -73,6 +107,9 @@ let careers = [
     subtitle: "Learn Full Stack Development and Learn With Industry Experience",
     content: "https://docs.google.com/document/d/1zokS-0ZnLo1Rsomwfpy1hxQboo01r857/edit?usp=sharing&ouid=111997764254682934776&rtpof=true&sd=true",
     img: fullstack,
+    link: "https://chat.whatsapp.com/KlYx8Q8yUVhExEs43Pcp79",
+    qr : fullstackqr,
+    
   },
   {
     id: 7,
@@ -82,6 +119,9 @@ let careers = [
     content: "https://drive.google.com/file/d/1b1JdfxBpx39dP2-FnByFjeLmdqdykLJP/view?usp=sharing",
 
     img: appdev,
+    link: "https://chat.whatsapp.com/LLLkY9Wp1qGIC9xmUbmApy",
+    qr : appdevqr,
+    
   },
 ];
 
