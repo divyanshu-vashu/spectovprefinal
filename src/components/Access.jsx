@@ -15,6 +15,8 @@ export default function Access() {
         <p></p>
         <p></p>
         <h1 className="text-black text-center text-4xl">Your Training Program Will Start from August 1</h1>
+
+        <h1 className="text-black text-center text-4xl">All the content will live at 7 pm , till Hold on !!!</h1>
       </div>
     </>
   );
