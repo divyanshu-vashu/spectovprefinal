@@ -1,5 +1,6 @@
 import React from "react";
-import FounderImage from "../assets/FounderImage.png";
+import FounderImage from "../assets/FounderIMG.png";
+
 
 export default function Founder() {
   return (
@@ -9,11 +10,11 @@ export default function Founder() {
           <img
             className="md:h-full md:w-1/2 object-contain rounded-3xl"
             src={FounderImage}
-            alt="John Doe"
+            alt="Vanshmani Jha "
           />
           <div className="md:ml-10 md:w-1/2 mt-4 md:mt-0">
             <h1 className="text-3xl md:text-5xl mb-3 md:mb-5 text-white text-start p-0">Vanshmani Jha</h1>
-            <h3 className="text-xl md:text-3xl mb-3 md:mb-5 text-white text-start">Founder of SpectoV</h3>
+            <h3 className="text-xl md:text-3xl mb-3 md:mb-5 text-white text-start">Founder of SpectoV | CEO</h3>
             <p className="text-sm md:text-base text-white text-start m-0 p-0">
               Founding SpectoV was my bold step to revolutionize virtual reality and enhance human experiences. Despite challenges, I built a dynamic, collaborative workspace, valuing every team member. SpectoV’s rapid growth in VR solutions and strategic partnerships showcases our determination and innovation. We’re excited about the future and pushing VR boundaries further.
             </p>
