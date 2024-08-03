@@ -20,6 +20,7 @@ import ForgetPassword from "./components/ForgetPassword.jsx";
 import Founder from "./components/Founder.jsx";
 import CoursePage from "./pages/CoursePage.jsx";
 // import AdminLogin from "./components/AdminLogin.jsx";
+import Donations from "./components/Donations.jsx";
 
 
 function App() {
@@ -60,6 +61,8 @@ function App() {
 			<Route path="/access"  element={<Navigate replace to="/login" />}/>
 			<Route path="/naccess"  element={<Navigate replace to="/login" />}/>
 			<Route path="/careers/:item"  element={<Navigate replace to="/login" />}/>
+			<Route path="/donations" element={<div>Thank you for your donation!</div>} />
+
 
 
 
@@ -81,6 +84,7 @@ const MainLayout = () => {
 		<Ms/>
 		<Contact />
 		<Founder />
+		<Donations/>
 		<Footer />
 	
 	  </div>
