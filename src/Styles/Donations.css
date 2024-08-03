@@ -1,7 +1,7 @@
 .donations-container {
   text-align: center;
   padding: 20px;
-  background-image: url('/assets/donations_bg.png'); /* Update the path accordingly */
+  background-image: url('../assets/donations_bg.png'); /* Update the path accordingly */
   background-size: cover;
   background-position: center;
   height: 100vh; 
