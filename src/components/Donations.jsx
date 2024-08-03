@@ -1,3 +1,5 @@
+// src/components/Donations.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -18,7 +20,7 @@ const Donations = () => {
 
   const handleAccept = () => {
     closeModal();
-    navigate('/donations');
+    navigate('/donation'); // Navigate to the DonationPage
   };
 
   return (
