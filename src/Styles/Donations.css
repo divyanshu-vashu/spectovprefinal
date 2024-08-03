@@ -1,0 +1,130 @@
+.donations-container {
+  text-align: center;
+  padding: 20px;
+  background-image: url('C:\\SpectoV3\\spectovprefinal\\src\\assets\\donations_bg.png'); /* Update the path accordingly */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  font-size: larger;
+}
+
+.banner h1 {
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.banner ul {
+  list-style-type: disc; 
+  margin: 20px 0;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.banner li {
+  margin-bottom: 10px;
+}
+
+.donate-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.accept-button, .close-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.accept-button:hover, .close-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .donations-container {
+      padding: 10px;
+      align-items: center;
+  }
+
+  .banner {
+      padding: 10px;
+      align-items: center;
+      font-size: medium;
+  }
+
+  .banner h1 {
+      font-size: 2rem;
+  }
+
+  .banner ul {
+      margin: 10px 0;
+      padding: 0 10px;
+      text-align: center;
+  }
+
+  .banner li {
+      margin-bottom: 5px;
+  }
+
+  .donate-button {
+      padding: 8px 16px;
+      margin: 10px;
+  }
+
+  .modal-content {
+      width: 90%;
+      padding: 10px;
+  }
+
+  .accept-button, .close-button {
+      padding: 8px 16px;
+      margin: 5px;
+  }
+}
