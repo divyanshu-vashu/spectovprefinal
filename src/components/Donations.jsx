@@ -18,7 +18,7 @@ const Donations = () => {
 
   const handleAccept = () => {
     closeModal();
-    navigate('/spectov/donations');
+    navigate('/donations');
   };
 
   return (
