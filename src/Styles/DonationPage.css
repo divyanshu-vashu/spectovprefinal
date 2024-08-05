@@ -1,0 +1,92 @@
+/* src/Styles/DonationPage.css */
+
+.donation-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .poster-section {
+    background-image: url('/kk.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; /* Adjust padding for space */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .poster-content {
+    max-width: 40%; /* Limit width so content doesn't stretch too far */
+    padding: 20px;
+  }
+  
+  .poster-content h1 {
+    font-size: 2.25rem;
+    margin: 0;
+    color: blue;
+    padding-bottom: 10%;
+  }
+
+  .poster-content h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color:black;
+  }
+  
+  .details-section {
+    padding: 40px 20px;
+    background-color: #e3dc1d; 
+  }
+  
+  .details-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .qr-code {
+    max-width:45%;
+    height: auto;
+  }
+  
+  .right-section {
+    flex: 1;
+    padding-left: 12px;
+  }
+  
+  .right-section h2 {
+    margin-bottom: 40px;
+    font-size: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }
+  
+  .right-section ul {
+    list-style-type: disc;
+    padding-left: 70px;
+  }
+  
+  .build-with-us-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .build-with-us-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .build-with-us-section p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer {
+    margin-top: 40px;
+  }
+  

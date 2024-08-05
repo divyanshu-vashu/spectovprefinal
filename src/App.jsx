@@ -10,7 +10,7 @@ import CareerDetails from "./pages/CareerDetails.jsx";
 import "./index.css";
 import Defxv from "./components/Defxv";
 import Footer from "./components/Footer";
-
+import DonationPage from "./components/DonationPage";
 import Ms from "./components/Ms.jsx";
 import UserDetails from "./components/UserDetail.jsx";
 import Access from "./components/Access.jsx";
@@ -61,7 +61,8 @@ function App() {
 			<Route path="/access"  element={<Navigate replace to="/login" />}/>
 			<Route path="/naccess"  element={<Navigate replace to="/login" />}/>
 			<Route path="/careers/:item"  element={<Navigate replace to="/login" />}/>
-			<Route path="/donations" element={<div>Thank you for your donation!</div>} />
+			<Route path="/donations" element={<Donations />} />
+			<Route path="/donation" element={<DonationPage />} />
 
 
 
