@@ -24,7 +24,8 @@ export default function Founder() {
 
       <div className="relative w-full md:w-4/5 bg-indigo-950 text-white rounded-3xl p-6 md:p-10">
         <h1 className="text-center text-2xl md:text-3xl mb-4 md:mb-5 text-white">Board Members of SpectoV</h1>
-        <div className="md:flex justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
+{/*         <div className="md:flex justify-between items-center space-y-10 md:space-y-0 md:space-x-10"> */}
+        <div className="md:flex justify-center items-center space-y-10 md:space-y-0 md:space-x-10">
           {/* First Team Member */}
           {/* <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
             <img
