@@ -26,7 +26,7 @@ export default function Founder() {
         <h1 className="text-center text-2xl md:text-3xl mb-4 md:mb-5 text-white">Board Members of SpectoV</h1>
         <div className="md:flex justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
           {/* First Team Member */}
-          <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
+          {/* <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
             <img
               src="/shivang.jpeg"
               alt="Team Member"
@@ -34,10 +34,10 @@ export default function Founder() {
             />
             <h1 className="text-lg md:text-2xl font-bold mb-2 text-white">Shivang</h1>
             <h3 className="text-base md:text-lg mb-2 text-white">Director of SpectoV</h3>
-          </div>
+          </div> */}
 
           {/* Second Team Member */}
-          <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
+          {/* <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
             <img
               src="/anj.jpg"
               alt="Team Member"
@@ -45,7 +45,7 @@ export default function Founder() {
             />
             <h1 className="text-lg md:text-2xl font-bold mb-2 text-white">Anjaneya</h1>
             <h3 className="text-base md:text-lg mb-2 text-white">Director of SpectoV</h3>
-          </div>
+          </div> */}
 
           {/* Third Team Member */}
           <div className="bg-indigo-950 p-4 md:p-6 text-center rounded-3xl">
