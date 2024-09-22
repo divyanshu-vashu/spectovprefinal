@@ -9,6 +9,15 @@ import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 
 const Career_hero = () => {
+  const liveContests = [
+    {
+      name: "Sankalp Coding Contest",
+      link: "https://www.hackerrank.com/spectov-sankalp-coding-contest",
+      date: "September 22, 2024",
+      startTime: "19:30",
+      endTime: "20:30 PM",
+    },
+  ];
   return (
     <>
       <div className="flex flex-col items-center pb-20 bg-black">
@@ -46,6 +55,38 @@ const Career_hero = () => {
           </div>
         </div>
 
+        {/* Live Contest Section */}
+        <div className="mt-20 w-full max-w-[1288px] px-5 text-white mb-16">
+          <h2 className="text-3xl text-center mb-10 text-white">Live Contests</h2>
+          <div className="flex flex-col gap-5 items-center">
+            {liveContests.map((contest, index) => (
+              <div key={index} className="w-full max-w-[600px] bg-gray-900 p-5 rounded-lg flex justify-between items-center">
+                {/* Contest Details */}
+                <div className="flex flex-col">
+                  <span className="text-xl text-white">{contest.name}</span>
+                  <div className="text-sm text-gray-400">
+                    <p>{contest.date}</p>
+                    <p>Start: {contest.startTime} - End: {contest.endTime}</p>
+                  </div>
+                </div>
+                {/* Button */}
+                <a 
+                  href={contest.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-cyan-400 text-black py-2 px-5 rounded-lg hover:bg-cyan-500 transition-colors"
+                >
+                  Take Test
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+
+
+
+
         {/* Microsoft section */}
         <img
           loading="lazy"
@@ -54,7 +95,12 @@ const Career_hero = () => {
           style={{ width: "full", height: "auto" }}
         />
 
+
+
         {/* Trusted section */}
+
+
+
         <div className="mt-20 text-xl text-center text-white max-md:mt-10 max-md:max-w-full">
           Trusted by the world’s most ambitious teams.
         </div>
