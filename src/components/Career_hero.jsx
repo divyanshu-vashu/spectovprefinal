@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Career_hero.css";
 import RotatingParagraphs from "./RotatingParagraphs";
 import Learninnovategrow from "./Learninnovategrow";
@@ -7,17 +7,34 @@ import CareerNavbar from "./CareerNavbar";
 import sankalp from "../assets/sankalp.png";
 import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
+import contestres from "../assets/SankalpCodingContest1.png"
 
 const Career_hero = () => {
   const liveContests = [
     {
-      name: "Sankalp Coding Contest",
+      name: "Sankalp Coding Contest 1",
       link: "https://www.hackerrank.com/spectov-sankalp-coding-contest",
       date: "September 22, 2024",
       startTime: "19:30",
       endTime: "20:30 PM",
+      status: "completed", 
+      resultImage: contestres, 
     },
+
   ];
+  const [showResult, setShowResult] = useState(
+    liveContests.map(() => false) // Initial state for each contest to hide results
+  );
+
+  // Toggle the result display
+  const toggleResult = (index) => {
+    setShowResult((prevState) => {
+      const updatedShowResult = [...prevState];
+      updatedShowResult[index] = !updatedShowResult[index]; // Toggle the specific contest
+      return updatedShowResult;
+    });
+  };
+
   return (
     <>
       <div className="flex flex-col items-center pb-20 bg-black">
@@ -55,35 +72,59 @@ const Career_hero = () => {
           </div>
         </div>
 
-        {/* Live Contest Section */}
-        <div className="mt-20 w-full max-w-[1288px] px-5 text-white mb-16">
+       {/* Live Contest Section */}
+        <div className="mt-20 w-full max-w-[1288px] px-5 text-white">
           <h2 className="text-3xl text-center mb-10 text-white">Live Contests</h2>
           <div className="flex flex-col gap-5 items-center">
             {liveContests.map((contest, index) => (
-              <div key={index} className="w-full max-w-[600px] bg-gray-900 p-5 rounded-lg flex justify-between items-center">
-                {/* Contest Details */}
-                <div className="flex flex-col">
-                  <span className="text-xl text-white">{contest.name}</span>
-                  <div className="text-sm text-gray-400">
-                    <p>{contest.date}</p>
-                    <p>Start: {contest.startTime} - End: {contest.endTime}</p>
+              <div key={index} className="w-full max-w-[600px] bg-gray-900 p-5 rounded-lg flex flex-col gap-4">
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-col">
+                    {/* Contest Name */}
+                    <span className="text-xl text-white">{contest.name}</span>
+                    {/* Contest Date and Time */}
+                    <div className="text-sm text-gray-400">
+                      <p>{contest.date}</p>
+                      <p>Start: {contest.startTime} - End: {contest.endTime}</p>
+                    </div>
                   </div>
+                  {/* Button (only for ongoing/upcoming contests) */}
+                  {contest.status !== "completed" && (
+                    <a 
+                      href={contest.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="bg-cyan-400 text-black py-2 px-5 rounded-lg hover:bg-cyan-500 transition-colors"
+                    >
+                      Take Test
+                    </a>
+                  )}
                 </div>
-                {/* Button */}
-                <a 
-                  href={contest.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-cyan-400 text-black py-2 px-5 rounded-lg hover:bg-cyan-500 transition-colors"
-                >
-                  Take Test
-                </a>
+
+                {/* Result Button for Completed Contests */}
+                {contest.status === "completed" && (
+                  <div>
+                    <button
+                      onClick={() => toggleResult(index)}
+                      className="bg-cyan-400 text-black py-2 px-5 rounded-lg hover:bg-cyan-500 transition-colors"
+                    >
+                      {showResult[index] ? "Hide Result" : "Show Result"}
+                    </button>
+
+                    {/* Conditional Rendering of Result Image */}
+                    {showResult[index] && contest.resultImage && (
+                      <img
+                        src={contest.resultImage}
+                        alt={`${contest.name} Result`}
+                        className="mt-4 w-full h-auto rounded-lg"
+                      />
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
-        
-
 
 
 
