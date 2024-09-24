@@ -8,6 +8,7 @@ import sankalp from "../assets/sankalp.png";
 import DVideo from "../assets/Bridging Silence, Building Connections.mp4"
 import DVideoMobile from "../assets/SpectovM.mp4"; 
 import contestres from "../assets/SankalpCodingContest1.png"
+import contestres2 from "../assets/contest2.png"
 
 const Career_hero = () => {
   const liveContests = [
@@ -19,6 +20,15 @@ const Career_hero = () => {
       endTime: "20:30 PM",
       status: "completed", 
       resultImage: contestres, 
+    },
+    {
+      name: "Sankalp Contest 2",
+      link: "#",
+      date: "September 22, 2024",
+      startTime: "22:40 PM",
+      endTime: "23:40 PM",
+      status: "completed", 
+      resultImage: contestres2, 
     },
 
   ];
